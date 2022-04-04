@@ -10,7 +10,7 @@ import Foundation
 class TrailSearchModule {
     
     
-    func getTrailResults() -> [TrailSearchResult] {
+    func getTrailResults(city: String, state: String, country: String, limit: Int=30) -> [TrailSearchResult] {
         return [testTrailSearchResult, testTrailSearchResult, testTrailSearchResult]
     }
   
