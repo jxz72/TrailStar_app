@@ -13,3 +13,14 @@ struct TrailData {
     var description: String
     var directionsBlurb: String
 }
+
+//--MARK: Test Values
+
+let TEST_TRAIL_DATA: TrailData = TrailData(
+    name: "name",
+    city: "city",
+    country: "country",
+    length: 0.0,
+    description: "description",
+    directionsBlurb: "directions"
+)

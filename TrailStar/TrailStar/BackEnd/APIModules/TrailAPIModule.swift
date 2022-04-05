@@ -57,14 +57,13 @@ class TrailAPIModule {
             throw callError!
         }
         
-        var trailDataList: [TrailData] = []
-
         
-//        for trailEncoding in encodedTrailMap.values {
-//            var trailData: TrailData = decodeTrail(encoding: trailEncoding)
-//            trailDataList.append(newElement: trailData!)
-//
-//        }
+        var trailDataList: [TrailData] = []
+        
+        for trailEncoding in encodedTrailMap.values {
+            let trailData: TrailData = decodeTrail(encoding: trailEncoding)
+            trailDataList.append(trailData)
+        }
         
         
         return trailDataList

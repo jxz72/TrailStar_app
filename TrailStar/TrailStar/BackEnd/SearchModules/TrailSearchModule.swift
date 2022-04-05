@@ -10,25 +10,25 @@ import Foundation
 class TrailSearchModule {
     
     
-    func getTrailResults(city: String, state: String, country: String, limit: Int=30) -> [TrailSearchResult] {
-        return [testTrailSearchResult, testTrailSearchResult, testTrailSearchResult]
+    static func getTrailResults(city: String, state: String, country: String, limit: Int=30) throws -> [TrailSearchResult] {
+        
+        let trailList: [TrailData] = try TrailAPIModule.generateTrailList(city: city, state: state, country: country, limit: limit)
+        
+        var trailResultList: [TrailSearchResult] = []
+        
+        for trailData in trailList {
+            let trailResult: TrailSearchResult = TrailSearchResult(trail: trailData)
+            trailResultList.append(trailResult)
+        }
+        
+        return trailResultList
+        
     }
-  
-    let testTrailSearchResult: TrailSearchResult = TrailSearchResult(
-        trail: TrailData(
-            name: "name",
-            city: "city",
-            country: "country",
-            length: 0.0,
-            description: "description",
-            directionsBlurb: "directions"
-        ),
-        weather: WeatherData(
-            
-        ),
-        score: ResultScore(
-            score: 0
-        )
-    )
+    
+    //--MARK: Test data
+    
+    static func getTestTrailResults(city: String, state: String, country: String, limit: Int=30) -> [TrailSearchResult] {
+        return [TEST_TRAIL_SEARCH_RESULT, TEST_TRAIL_SEARCH_RESULT, TEST_TRAIL_SEARCH_RESULT]
+    }
     
 }

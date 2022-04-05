@@ -8,12 +8,24 @@
 struct TrailSearchResult {
     
     //Data about the trail
-    var trail: TrailData
+    var trail: TrailData?
     
     //The weather during the specified time
-    var weather: WeatherData
+    var weather: WeatherData?
     
     //The search result's relative score
-    var score: ResultScore
+    var score: ResultScore?
     
 }
+
+//--MARK: Test Values
+
+let TEST_TRAIL_SEARCH_RESULT: TrailSearchResult = TrailSearchResult(
+    trail: TEST_TRAIL_DATA,
+    weather: WeatherData(
+        
+    ),
+    score: ResultScore(
+        score: 0
+    )
+)
