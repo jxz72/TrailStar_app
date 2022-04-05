@@ -30,15 +30,22 @@ class TrailAPIModule {
         var callError: Error?
         
         let session = URLSession.shared
+        
+        let group = DispatchGroup()
+        group.enter()
+        
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             
             
             guard error == nil else {
                 callError = APIError.connectionFailed
+                group.leave()
                 return;
             }
+            
             guard let jsonData = data else {
                 callError = APIError.invalidData
+                group.leave()
                 return;
             }
 
@@ -49,9 +56,13 @@ class TrailAPIModule {
             } catch {
                 callError = APIError.unexpected(code: 0)
             }
+            
+            group.leave()
         })
-
+        
         dataTask.resume()
+        
+        group.wait()
         
         guard callError == nil else {
             throw callError!
@@ -64,6 +75,7 @@ class TrailAPIModule {
             let trailData: TrailData = decodeTrail(encoding: trailEncoding)
             trailDataList.append(trailData)
         }
+        
         
         
         return trailDataList
