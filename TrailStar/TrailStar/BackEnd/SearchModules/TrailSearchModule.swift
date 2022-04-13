@@ -9,15 +9,17 @@ import Foundation
 
 class TrailSearchModule {
     
-    
-    static func getTrailResults(city: String, state: String, country: String, limit: Int=30) throws -> [TrailSearchResult] {
+    static func getTrailResults(city: String, state: String, country: String, limit: Int=30, date: String, days: Int) throws -> [TrailSearchResult] {
         
         let trailList: [TrailData] = try TrailAPIModule.generateTrailList(city: city, state: state, country: country, limit: limit)
         
         var trailResultList: [TrailSearchResult] = []
         
         for trailData in trailList {
-            let trailResult: TrailSearchResult = TrailSearchResult(trail: trailData)
+            var trailResult: TrailSearchResult = TrailSearchResult(trail: trailData)
+            let weatherForTrail: WeatherData = try WeatherAPIModule.generateWeather(trailData: trailData, date: date, days: days)
+            trailResult.weather = weatherForTrail
+            
             trailResultList.append(trailResult)
         }
         
