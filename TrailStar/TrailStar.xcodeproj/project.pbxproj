@@ -20,6 +20,7 @@
 		5E48F8BA27EADABE00893A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E48F8B827EADABE00893A3F /* Main.storyboard */; };
 		5E48F8BC27EADAC300893A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E48F8BB27EADAC300893A3F /* Assets.xcassets */; };
 		5E48F8BF27EADAC300893A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E48F8BD27EADAC300893A3F /* LaunchScreen.storyboard */; };
+		CD25672C28075786007FEA50 /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD25672B28075786007FEA50 /* Homepage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5E48F8BB27EADAC300893A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E48F8BE27EADAC300893A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E48F8C027EADAC300893A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD25672B28075786007FEA50 /* Homepage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Homepage.storyboard; path = ../../../../../Homepage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				5E48F8B827EADABE00893A3F /* Main.storyboard */,
+				CD25672B28075786007FEA50 /* Homepage.storyboard */,
 				5E48F8BD27EADAC300893A3F /* LaunchScreen.storyboard */,
 				5E48F8BB27EADAC300893A3F /* Assets.xcassets */,
 			);
@@ -194,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD25672C28075786007FEA50 /* Homepage.storyboard in Resources */,
 				5E48F8BF27EADAC300893A3F /* LaunchScreen.storyboard in Resources */,
 				5E48F8BC27EADAC300893A3F /* Assets.xcassets in Resources */,
 				5E48F8BA27EADABE00893A3F /* Main.storyboard in Resources */,
