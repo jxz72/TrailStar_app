@@ -22,9 +22,7 @@ struct TrailSearchResult {
 
 let TEST_TRAIL_SEARCH_RESULT: TrailSearchResult = TrailSearchResult(
     trail: TEST_TRAIL_DATA,
-    weather: WeatherData(
-        
-    ),
+    weather: TEST_WEATHER_DATA,
     score: ResultScore(
         score: 0
     )

@@ -93,6 +93,7 @@ class TrailAPIModule {
         return TrailData(
             name: encoding.name,
             city: encoding.city,
+            state: encoding.state,
             country: encoding.country,
             length: Float(encoding.activities.hiking.length)!,
             description: encoding.trailsDescription,
