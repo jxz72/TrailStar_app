@@ -20,7 +20,7 @@ class TrailAPIModule {
             "x-rapidapi-key": "c089a61c79msh55e4f2311111661p15f8dbjsn40de6114c9d2"
         ]
 
-        let request = NSMutableURLRequest(url: NSURL(string: String(format: "https://trailapi-trailapi.p.rapidapi.com/activity/?limit=%d&q-city_cont=%@&q-country_cont=%@&q-state_cont=%@&q-activities_activity_type_name_eq=hiking",	
+        let request = NSMutableURLRequest(url: NSURL(string: String(format: "https://trailapi-trailapi.p.rapidapi.com/activity/?limit=%d&q-city_cont=%@&q-country_cont=%@&q-state_cont=%@&q-activities_activity_type_name_eq=hiking",
                                                                     limit, formatURLQuery(query: city), formatURLQuery(query: country), formatURLQuery(query: state)
                                                                    ))! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,

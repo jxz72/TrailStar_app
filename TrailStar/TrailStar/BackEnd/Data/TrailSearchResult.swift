@@ -8,7 +8,7 @@
 struct TrailSearchResult {
     
     //Data about the trail
-    var trail: TrailData?
+    var trail: TrailData
     
     //The weather during the specified time
     var weather: WeatherData?

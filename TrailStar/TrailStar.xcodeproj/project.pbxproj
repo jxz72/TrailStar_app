@@ -14,6 +14,7 @@
 		3F75D43B27F3991800DE21AB /* TrailAPIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D43A27F3991800DE21AB /* TrailAPIModule.swift */; };
 		3F75D43D27F39D8200DE21AB /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D43C27F39D8200DE21AB /* APIError.swift */; };
 		3F75D44027F3A53800DE21AB /* TrailSearchModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D43F27F3A53800DE21AB /* TrailSearchModule.swift */; };
+		3F75D44427FC0C7700DE21AB /* JW_RSG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D44327FC0C7700DE21AB /* JW_RSG.swift */; };
 		5E48F8B327EADABD00893A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B227EADABD00893A3F /* AppDelegate.swift */; };
 		5E48F8B527EADABE00893A3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B427EADABD00893A3F /* SceneDelegate.swift */; };
 		5E48F8B727EADABE00893A3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B627EADABE00893A3F /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		3F75D43A27F3991800DE21AB /* TrailAPIModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailAPIModule.swift; sourceTree = "<group>"; };
 		3F75D43C27F39D8200DE21AB /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		3F75D43F27F3A53800DE21AB /* TrailSearchModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailSearchModule.swift; sourceTree = "<group>"; };
+		3F75D44327FC0C7700DE21AB /* JW_RSG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JW_RSG.swift; sourceTree = "<group>"; };
 		5E48F8AF27EADABD00893A3F /* TrailStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E48F8B227EADABD00893A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E48F8B427EADABD00893A3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				3F75D43F27F3A53800DE21AB /* TrailSearchModule.swift */,
+				3F75D44327FC0C7700DE21AB /* JW_RSG.swift */,
 			);
 			path = SearchModules;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			files = (
 				5E48F8B727EADABE00893A3F /* ViewController.swift in Sources */,
 				5E48F8B327EADABD00893A3F /* AppDelegate.swift in Sources */,
+				3F75D44427FC0C7700DE21AB /* JW_RSG.swift in Sources */,
 				3F75D40827F16B4F00DE21AB /* TrailData.swift in Sources */,
 				3F75D43B27F3991800DE21AB /* TrailAPIModule.swift in Sources */,
 				3F75D40A27F16BB000DE21AB /* ResultScore.swift in Sources */,
