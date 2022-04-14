@@ -14,7 +14,7 @@ class TrailAPIModule {
     /*
      Generates trails from a given latitude and longitude
      */
-    static func generateTrailList(latitude: Float, longitude: Float, limit: Int=30) throws -> [TrailData] {
+    static func generateTrailList(latitude: Double, longitude: Double, limit: Int=30) throws -> [TrailData] {
         let request = NSMutableURLRequest(url: NSURL(string: String(format: "https://trailapi-trailapi.p.rapidapi.com/activity/?lat=%f&limit=30&lon=%f&radius=20&q-activities_activity_type_name_eq=hiking",latitude,longitude  ))! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)

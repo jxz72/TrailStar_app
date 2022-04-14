@@ -29,7 +29,7 @@ class TrailSearchModule {
         
     }
     
-    static func getTrailResults(latitude: Float, longitude: Float, limit: Int=30, date: String, days: Int) throws -> [TrailSearchResult] {
+    static func getTrailResults(latitude: Double, longitude: Double, limit: Int=30, date: String, days: Int) throws -> [TrailSearchResult] {
         
         let trailList: [TrailData] = try TrailAPIModule.generateTrailList(latitude: latitude, longitude: longitude, limit: limit)
         
@@ -37,7 +37,7 @@ class TrailSearchModule {
         
         for trailData in trailList {
             var trailResult: TrailSearchResult = TrailSearchResult(trail: trailData)
-            let weatherForTrail: WeatherData = try WeatherAPI.generateWeather(trailData: trailData, date: date, days: days)
+            let weatherForTrail: WeatherData = TEST_WEATHER_DATA
             trailResult.weather = weatherForTrail
             
             trailResultList.append(trailResult)

@@ -19,6 +19,9 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var Description2: UILabel!
     let locationManager = CLLocationManager()
     
+    var latitude: Double = 35.9954
+    var longitude: Double = -78.9019
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,23 +34,39 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
         
         let group = DispatchGroup()
         group.enter()
-        
-        initializeLocationManagement();
+        locationManager.requestAlwaysAuthorization()
+                locationManager.requestWhenInUseAuthorization()
+                if CLLocationManager.locationServicesEnabled() {
+                    locationManager.delegate = self
+                    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                    locationManager.startUpdatingLocation()
+                }
         group.leave()
    
         do {
             
-            if (locationManager.location == nil){
-                throw APIError.connectionFailed
+            let nearbyTrails: [TrailSearchResult] = try TrailSearchModule.getTrailResults(latitude: latitude, longitude: longitude, date: "2022-14-05", days: 0)
+            
+            if (nearbyTrails.count == 0) {
+                throw APIError.dataNotFound
             }
             
-            var latitude: Float = Float(locationManager.location!.coordinate.latitude)
+            var trail1: TrailSearchResult = nearbyTrails.randomElement()!
             
-            var longitude: Float = Float(locationManager.location!.coordinate.longitude)
+            Description1.text = trail1.trail.name  + " - " + trail1.trail.description
             
-            let nearbyTrails: [TrailSearchResult] = try TrailSearchModule.getTrailResults(latitude: latitude, longitude: longitude, date: "2022-14-05", days: 0)
-        } catch {
+            var trail2: TrailSearchResult = nearbyTrails.randomElement()!
+            
+            Description2.text = trail2.trail.name  + " - " + trail2.trail.description
+            
+           
+            
+        } catch APIError.locationParsingFailure {
             print("Error: Couldn't find location");
+        } catch APIError.dataNotFound {
+            print("No data found for the specified location");
+        } catch {
+            print("Error connecting to API");
         }
         
         
@@ -55,19 +74,11 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
     }
     
-    func initializeLocationManagement() {
-        self.locationManager.requestAlwaysAuthorization()
-
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        latitude = manager.location!.coordinate.latitude
+        longitude = manager.location!.coordinate.longitude
         }
-        
-    }
     
 
     /*

@@ -14,5 +14,9 @@ enum APIError: Error {
     
     case dataParsingError
     
+    case locationParsingFailure
+    
+    case dataNotFound
+    
     case unexpected(code: Int)
 }
