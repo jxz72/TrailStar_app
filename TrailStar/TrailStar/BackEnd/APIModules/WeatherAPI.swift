@@ -71,8 +71,6 @@ class WeatherAPI {
 
                 }
                 
-            } catch {
-                callError = APIError.unexpected(code: 0)
             }
             
             group.leave()
