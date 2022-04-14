@@ -19,7 +19,7 @@ class TrailSearchModule {
         
         for trailData in trailList {
             var trailResult: TrailSearchResult = TrailSearchResult(trail: trailData)
-            let weatherForTrail: WeatherData = try WeatherAPIModule.generateWeather(trailData: trailData, date: date, days: days)
+            let weatherForTrail: WeatherData = try WeatherAPI.generateWeather(trailData: trailData, date: date, days: days)
             trailResult.weather = weatherForTrail
             
             trailResultList.append(trailResult)
