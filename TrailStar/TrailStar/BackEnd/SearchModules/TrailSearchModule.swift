@@ -29,6 +29,25 @@ class TrailSearchModule {
         
     }
     
+    static func getTrailResults(latitude: Float, longitude: Float, limit: Int=30, date: String, days: Int) throws -> [TrailSearchResult] {
+        
+        let trailList: [TrailData] = try TrailAPIModule.generateTrailList(latitude: latitude, longitude: longitude, limit: limit)
+        
+        var trailResultList: [TrailSearchResult] = []
+        
+        for trailData in trailList {
+            var trailResult: TrailSearchResult = TrailSearchResult(trail: trailData)
+            let weatherForTrail: WeatherData = try WeatherAPI.generateWeather(trailData: trailData, date: date, days: days)
+            trailResult.weather = weatherForTrail
+            
+            trailResultList.append(trailResult)
+        }
+        
+        return trailResultList
+        
+    }
+    
+    
     //--MARK: Test data
     
     static func getTestTrailResults(city: String, state: String, country: String, limit: Int=30) -> [TrailSearchResult] {
