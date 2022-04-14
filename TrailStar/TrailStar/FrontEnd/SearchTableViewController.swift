@@ -6,7 +6,7 @@ import UIKit
 class SearchTableViewController: UITableViewController {
 
     @IBOutlet var table: UITableView!
-    let searchController = UISearchController(searchResultsController: nil)
+    //let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()

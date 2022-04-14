@@ -28,6 +28,7 @@
 		5E48F8BC27EADAC300893A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E48F8BB27EADAC300893A3F /* Assets.xcassets */; };
 		A02FF8862808B25E00B63B69 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FF8842808B25D00B63B69 /* SearchTableViewController.swift */; };
 		A02FF8872808B25E00B63B69 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FF8852808B25E00B63B69 /* SearchTableViewCell.swift */; };
+		A02FF88D2808BFB400B63B69 /* UserInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FF88C2808BFB400B63B69 /* UserInputViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		5E48F8C027EADAC300893A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A02FF8842808B25D00B63B69 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		A02FF8852808B25E00B63B69 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		A02FF88C2808BFB400B63B69 /* UserInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				5E48F8B227EADABD00893A3F /* AppDelegate.swift */,
 				5E48F8B427EADABD00893A3F /* SceneDelegate.swift */,
 				5E48F8B627EADABE00893A3F /* ViewController.swift */,
+				A02FF88C2808BFB400B63B69 /* UserInputViewController.swift */,
 				3F75D4542807DEC700DE21AB /* HomepageViewController.swift */,
 				3F75D4562807DEF800DE21AB /* DetailedTrailViewController.swift */,
 			);
@@ -254,6 +257,7 @@
 				A02FF8872808B25E00B63B69 /* SearchTableViewCell.swift in Sources */,
 				3F75D40627F16A2600DE21AB /* WeatherData.swift in Sources */,
 				3F75D44F2807D88D00DE21AB /* WeatherAPI.swift in Sources */,
+				A02FF88D2808BFB400B63B69 /* UserInputViewController.swift in Sources */,
 				5E48F8B527EADABE00893A3F /* SceneDelegate.swift in Sources */,
 				3F75D43D27F39D8200DE21AB /* APIError.swift in Sources */,
 				3F75D4572807DEF800DE21AB /* DetailedTrailViewController.swift in Sources */,
