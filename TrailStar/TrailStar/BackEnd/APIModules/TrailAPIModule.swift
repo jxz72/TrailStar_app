@@ -10,8 +10,38 @@ import Foundation
 class TrailAPIModule {
 
     
-    // MARK: - getTrail
+    // MARK: - Trail generation
+    /*
+     Generates trails from a given latitude and longitude
+     */
+    static func generateTrailList(latitude: Float, longitude: Float, limit: Int=30) throws -> [TrailData] {
+        let request = NSMutableURLRequest(url: NSURL(string: String(format: "https://trailapi-trailapi.p.rapidapi.com/activity/?lat=%f&limit=30&lon=%f&radius=20&q-activities_activity_type_name_eq=hiking",latitude,longitude  ))! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
+        
+        return try generateTrailList(request: request);
+    }
+    
+    /*
+     Generates trails from a given city, state, and country name
+     */
     static func generateTrailList(city: String, state: String, country: String, limit: Int=30) throws -> [TrailData] {
+    
+        let request = NSMutableURLRequest(url: NSURL(string: String(format: "https://trailapi-trailapi.p.rapidapi.com/activity/?limit=%d&q-city_cont=%@&q-country_cont=%@&q-state_cont=%@&q-activities_activity_type_name_eq=hiking",
+                                                                    limit, formatURLQuery(query: city), formatURLQuery(query: country), formatURLQuery(query: state)
+                                                                   ))! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
+        
+        return try generateTrailList(request: request);
+        
+    }
+    
+    /*
+     Generates trails from a given request
+     */
+    static func generateTrailList(request: NSMutableURLRequest) throws -> [TrailData] {
+        
         
         var encodedTrailMap: TrailEncodingMap = [:]
         
@@ -20,12 +50,6 @@ class TrailAPIModule {
             "x-rapidapi-key": "c089a61c79msh55e4f2311111661p15f8dbjsn40de6114c9d2"
         ]
 
-        let request = NSMutableURLRequest(url: NSURL(string: String(format: "https://trailapi-trailapi.p.rapidapi.com/activity/?limit=%d&q-city_cont=%@&q-country_cont=%@&q-state_cont=%@&q-activities_activity_type_name_eq=hiking",	
-                                                                    limit, formatURLQuery(query: city), formatURLQuery(query: country), formatURLQuery(query: state)
-                                                                   ))! as URL,
-                                                cachePolicy: .useProtocolCachePolicy,
-                                            timeoutInterval: 10.0)
-        
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
 
