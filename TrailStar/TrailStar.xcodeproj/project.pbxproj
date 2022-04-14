@@ -21,6 +21,7 @@
 		3F75D4552807DEC700DE21AB /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4542807DEC700DE21AB /* HomepageViewController.swift */; };
 		3F75D4572807DEF800DE21AB /* DetailedTrailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4562807DEF800DE21AB /* DetailedTrailViewController.swift */; };
 		3F75D45A2807E26300DE21AB /* StockImageModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4592807E26300DE21AB /* StockImageModule.swift */; };
+		5E02423528080509007E4ADA /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02423428080509007E4ADA /* mapViewController.swift */; };
 		5E48F8B327EADABD00893A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B227EADABD00893A3F /* AppDelegate.swift */; };
 		5E48F8B527EADABE00893A3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B427EADABD00893A3F /* SceneDelegate.swift */; };
 		5E48F8B727EADABE00893A3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B627EADABE00893A3F /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		3F75D4542807DEC700DE21AB /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		3F75D4562807DEF800DE21AB /* DetailedTrailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTrailViewController.swift; sourceTree = "<group>"; };
 		3F75D4592807E26300DE21AB /* StockImageModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockImageModule.swift; sourceTree = "<group>"; };
+		5E02423428080509007E4ADA /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		5E48F8AF27EADABD00893A3F /* TrailStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E48F8B227EADABD00893A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E48F8B427EADABD00893A3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = ImageModules;
 			sourceTree = "<group>";
 		};
+		5E0242312807EF2D007E4ADA /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				5E02423428080509007E4ADA /* mapViewController.swift */,
+			);
+			path = MapKit;
+			sourceTree = "<group>";
+		};
 		5E48F8A627EADABD00893A3F = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		5E48F8B127EADABD00893A3F /* TrailStar */ = {
 			isa = PBXGroup;
 			children = (
+				5E0242312807EF2D007E4ADA /* MapKit */,
 				3F75D3FE27F1696300DE21AB /* BackEnd */,
 				3F75D3FD27F1691600DE21AB /* FrontEnd */,
 				3F75D3FC27F168E700DE21AB /* UI */,
@@ -242,6 +253,7 @@
 				3F75D44027F3A53800DE21AB /* TrailSearchModule.swift in Sources */,
 				3F75D40627F16A2600DE21AB /* WeatherData.swift in Sources */,
 				3F75D44F2807D88D00DE21AB /* WeatherAPI.swift in Sources */,
+				5E02423528080509007E4ADA /* mapViewController.swift in Sources */,
 				5E48F8B527EADABE00893A3F /* SceneDelegate.swift in Sources */,
 				3F75D43D27F39D8200DE21AB /* APIError.swift in Sources */,
 				3F75D4572807DEF800DE21AB /* DetailedTrailViewController.swift in Sources */,
