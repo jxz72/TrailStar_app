@@ -103,7 +103,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ3-IH-96U">
-                                <rect key="frame" x="20" y="505" width="59" height="14"/>
+                                <rect key="frame" x="20" y="505" width="85" height="14"/>
                                 <string key="text">TrailLength
 
 </string>
@@ -129,28 +129,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZT-1t-Ldw">
-                                <rect key="frame" x="174" y="504" width="67" height="14"/>
-                                <string key="text">Temperature
-
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQc-iT-38M">
-                                <rect key="frame" x="175" y="775" width="74" height="14"/>
-                                <string key="text">Temperature2
-
-
-
-</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQc-iT-38M">
+                                <rect key="frame" x="181" y="776" width="47" height="14"/>
+                                <string key="text">Descrip2</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bel-s9-aIy">
-                                <rect key="frame" x="20" y="775" width="66" height="14"/>
+                                <rect key="frame" x="20" y="775" width="93" height="14"/>
                                 <string key="text">TrailLength2
 
 
@@ -197,6 +184,12 @@
                                 </constraints>
                                 <buttonConfiguration key="configuration" style="plain"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Descrip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZT-1t-Ldw">
+                                <rect key="frame" x="185" y="504" width="41" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -210,7 +203,7 @@
                             <constraint firstItem="LQ3-IH-96U" firstAttribute="top" secondItem="xPL-u9-o64" secondAttribute="bottom" constant="3" id="8M2-o9-fm2"/>
                             <constraint firstItem="9w4-rg-TOB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="9na-IK-MTG"/>
                             <constraint firstItem="6ZT-1t-Ldw" firstAttribute="top" secondItem="eoq-1f-SbL" secondAttribute="bottom" constant="9" id="Bu4-LA-wmz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ZT-1t-Ldw" secondAttribute="trailing" constant="173" id="DpT-Im-lI2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ZT-1t-Ldw" secondAttribute="trailing" constant="188" id="DpT-Im-lI2"/>
                             <constraint firstItem="iKB-ne-NAs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Efr-vU-4Ak"/>
                             <constraint firstItem="bel-s9-aIy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="F4m-gR-Lv6"/>
                             <constraint firstItem="fCU-70-Cl3" firstAttribute="leading" secondItem="ULM-Va-mf1" secondAttribute="trailing" constant="110" id="FBv-ia-6fv"/>
@@ -218,11 +211,11 @@
                             <constraint firstItem="uRF-Ah-Edg" firstAttribute="top" secondItem="P32-xC-EIm" secondAttribute="bottom" constant="3" id="FNp-6u-6Ze"/>
                             <constraint firstItem="b3r-uB-TEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FlN-0R-GIx"/>
                             <constraint firstItem="9w4-rg-TOB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="G5l-JC-FMV"/>
-                            <constraint firstItem="6ZT-1t-Ldw" firstAttribute="leading" secondItem="LQ3-IH-96U" secondAttribute="trailing" constant="95" id="GDS-38-vQo"/>
+                            <constraint firstItem="6ZT-1t-Ldw" firstAttribute="leading" secondItem="LQ3-IH-96U" secondAttribute="trailing" constant="80" id="GDS-38-vQo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uRF-Ah-Edg" secondAttribute="trailing" constant="15" id="Gz2-D1-Oqm"/>
                             <constraint firstItem="xPL-u9-o64" firstAttribute="top" secondItem="P32-xC-EIm" secondAttribute="bottom" constant="8" symbolic="YES" id="IMf-8J-zsC"/>
                             <constraint firstItem="P32-xC-EIm" firstAttribute="top" secondItem="PmN-9D-iEL" secondAttribute="bottom" constant="8" symbolic="YES" id="IoI-Nk-h6v"/>
-                            <constraint firstItem="FQc-iT-38M" firstAttribute="top" secondItem="ULM-Va-mf1" secondAttribute="bottom" constant="7" id="Jho-s1-TTt"/>
+                            <constraint firstItem="FQc-iT-38M" firstAttribute="top" secondItem="ULM-Va-mf1" secondAttribute="bottom" constant="8" id="Jho-s1-TTt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bel-s9-aIy" secondAttribute="bottom" constant="73" id="K4M-Nt-TWU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PmN-9D-iEL" secondAttribute="trailing" constant="249" id="Kfg-nH-6x5"/>
                             <constraint firstItem="ULM-Va-mf1" firstAttribute="leading" secondItem="b3r-uB-TEh" secondAttribute="trailing" constant="94" id="PEZ-43-jPQ"/>
@@ -245,18 +238,24 @@
                             <constraint firstItem="LQ3-IH-96U" firstAttribute="top" secondItem="xPL-u9-o64" secondAttribute="bottom" constant="3" id="ren-LB-HeU"/>
                             <constraint firstItem="iKB-ne-NAs" firstAttribute="top" secondItem="uRF-Ah-Edg" secondAttribute="bottom" constant="43" id="spp-6A-2ZZ"/>
                             <constraint firstItem="eoq-1f-SbL" firstAttribute="leading" secondItem="xPL-u9-o64" secondAttribute="trailing" constant="99" id="uHU-rw-aO6"/>
-                            <constraint firstItem="FQc-iT-38M" firstAttribute="leading" secondItem="bel-s9-aIy" secondAttribute="trailing" constant="89" id="vM3-Aj-ndp"/>
+                            <constraint firstItem="FQc-iT-38M" firstAttribute="leading" secondItem="bel-s9-aIy" secondAttribute="trailing" constant="68" id="vM3-Aj-ndp"/>
                             <constraint firstItem="rFV-fc-3do" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="w6E-wy-ZeK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FQc-iT-38M" secondAttribute="bottom" constant="73" id="yUA-Is-yS7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FQc-iT-38M" secondAttribute="trailing" constant="165" id="ypN-xK-hV4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FQc-iT-38M" secondAttribute="bottom" constant="72" id="yUA-Is-yS7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FQc-iT-38M" secondAttribute="trailing" constant="186" id="ypN-xK-hV4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fCU-70-Cl3" secondAttribute="trailing" constant="15" id="zzm-UE-6Jv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Descrip" destination="6ZT-1t-Ldw" id="GaB-CU-9QX"/>
+                        <outlet property="Descrip2" destination="FQc-iT-38M" id="qmM-ZB-dnp"/>
                         <outlet property="Description1" destination="xPL-u9-o64" id="wR1-0x-jOB"/>
                         <outlet property="Description2" destination="b3r-uB-TEh" id="UDh-cJ-zWG"/>
                         <outlet property="TrailImage1" destination="P32-xC-EIm" id="snN-Tx-f2U"/>
                         <outlet property="TrailImage2" destination="iKB-ne-NAs" id="Gi6-CK-BHU"/>
+                        <outlet property="traillength" destination="LQ3-IH-96U" id="r8x-y3-oIi"/>
+                        <outlet property="traillength2" destination="bel-s9-aIy" id="dni-al-6PL"/>
+                        <outlet property="trailplace" destination="eoq-1f-SbL" id="Rnf-Fs-ZEQ"/>
+                        <outlet property="trailplace2" destination="ULM-Va-mf1" id="uhm-SU-6mX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

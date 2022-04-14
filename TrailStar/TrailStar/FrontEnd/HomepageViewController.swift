@@ -14,9 +14,20 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var TrailImage1: UIImageView!
     @IBOutlet weak var TrailImage2: UIImageView!
     
+    @IBOutlet weak var traillength: UILabel!
+    @IBOutlet weak var traillength2: UILabel!
+    
+    @IBOutlet weak var trailplace: UILabel!
+    @IBOutlet weak var trailplace2: UILabel!
+    
+    @IBOutlet weak var Descrip: UILabel!
+    @IBOutlet weak var Descrip2: UILabel!
+    
     @IBOutlet weak var Description1: UILabel!
     
+    
     @IBOutlet weak var Description2: UILabel!
+    
     let locationManager = CLLocationManager()
     
     var latitude: Double = 0
@@ -24,6 +35,7 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
         var trailImages = StockImageModule.getWeatherImages(weatherType: "clear");
@@ -56,11 +68,20 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
             
             var trail1: TrailSearchResult = nearbyTrails.randomElement()!
             
-            Description1.text = trail1.trail.name  + " - " + trail1.trail.description
+            Description1.text = trail1.trail.name
+            traillength.text = String(trail1.trail.length)
+            trailplace.text = String(trail1.trail.city + "," + trail1.trail.state)
+            Descrip.text = trail1.trail.description
+            
+            
+            
             
             var trail2: TrailSearchResult = nearbyTrails.randomElement()!
             
-            Description2.text = trail2.trail.name  + " - " + trail2.trail.description
+            Description2.text = trail2.trail.name
+            traillength2.text = String(trail2.trail.length)
+            trailplace2.text = String(trail2.trail.city + "," + trail1.trail.state)
+            Descrip2.text = trail2.trail.description
             
            
             
