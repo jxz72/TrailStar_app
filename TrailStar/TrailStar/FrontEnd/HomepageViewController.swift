@@ -10,10 +10,19 @@ import UIKit
 class HomepageViewController: UIViewController {
 
     
+    @IBOutlet weak var TrailImage1: UIImageView!
+    @IBOutlet weak var TrailImage2: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        var trailImages = StockImageModule.getWeatherImages(weatherType: "clear");
+        
+        TrailImage1.image = trailImages.randomElement()!;
+        TrailImage2.image = trailImages.randomElement()!;
+        
         // Do any additional setup after loading the view.
     }
     

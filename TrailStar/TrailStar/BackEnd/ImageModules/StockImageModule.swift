@@ -32,7 +32,6 @@ var clearImages: [UIImage] = [
     UIImage(named:"Clear1")!,
     UIImage(named:"Clear2")!,
     UIImage(named:"Clear3")!,
-    UIImage(named:"Clear4")!,
     UIImage(named:"Clear5")!,
     UIImage(named:"Clear6")!,
     UIImage(named:"Clear7")!,
