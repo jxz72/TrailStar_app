@@ -15,6 +15,7 @@
 		3F75D43D27F39D8200DE21AB /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D43C27F39D8200DE21AB /* APIError.swift */; };
 		3F75D44027F3A53800DE21AB /* TrailSearchModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D43F27F3A53800DE21AB /* TrailSearchModule.swift */; };
 		3F75D4472807D01700DE21AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75D4452807D01700DE21AB /* Main.storyboard */; };
+		3F75D4492807D1A700DE21AB /* JW_RSG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4482807D1A700DE21AB /* JW_RSG.swift */; };
 		5E12A4BE28050FC1000860E4 /* WeatherAPIModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E12A4BD28050FC1000860E4 /* WeatherAPIModule.swift */; };
 		5E48F8B327EADABD00893A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B227EADABD00893A3F /* AppDelegate.swift */; };
 		5E48F8B527EADABE00893A3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B427EADABD00893A3F /* SceneDelegate.swift */; };
@@ -31,6 +32,7 @@
 		3F75D43C27F39D8200DE21AB /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		3F75D43F27F3A53800DE21AB /* TrailSearchModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailSearchModule.swift; sourceTree = "<group>"; };
 		3F75D4462807D01700DE21AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../../detailPage/detailPage/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F75D4482807D1A700DE21AB /* JW_RSG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JW_RSG.swift; sourceTree = "<group>"; };
 		5E12A4BD28050FC1000860E4 /* WeatherAPIModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherAPIModule.swift; path = "../../../../../../../Downloads/final-team-project-k-jxz-weatherAPI/TrailStar/TrailStar/BackEnd/APIModules/WeatherAPIModule.swift"; sourceTree = "<group>"; };
 		5E48F8AF27EADABD00893A3F /* TrailStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E48F8B227EADABD00893A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		3F75D43E27F3A52400DE21AB /* SearchModules */ = {
 			isa = PBXGroup;
 			children = (
+				3F75D4482807D1A700DE21AB /* JW_RSG.swift */,
 				3F75D43F27F3A53800DE21AB /* TrailSearchModule.swift */,
 			);
 			path = SearchModules;
@@ -213,6 +216,7 @@
 				3F75D43B27F3991800DE21AB /* TrailAPIModule.swift in Sources */,
 				3F75D40A27F16BB000DE21AB /* ResultScore.swift in Sources */,
 				3F75D40427F16A0F00DE21AB /* TrailSearchResult.swift in Sources */,
+				3F75D4492807D1A700DE21AB /* JW_RSG.swift in Sources */,
 				3F75D44027F3A53800DE21AB /* TrailSearchModule.swift in Sources */,
 				3F75D40627F16A2600DE21AB /* WeatherData.swift in Sources */,
 				5E48F8B527EADABE00893A3F /* SceneDelegate.swift in Sources */,

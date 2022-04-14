@@ -2,7 +2,7 @@
 //  TrailSearchModule.swift
 //  TrailStar
 //
-//  Created by student on 3/29/22.
+//  Created by  William Convertino on 3/29/22.
 //
 
 import Foundation
