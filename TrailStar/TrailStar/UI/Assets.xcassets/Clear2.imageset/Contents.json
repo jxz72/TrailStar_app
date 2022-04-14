@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Couple Hiking at Summit of Hawksbill Mountain in the Linville Gorge Wilderness-fit(800,600).7ec14aef.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
