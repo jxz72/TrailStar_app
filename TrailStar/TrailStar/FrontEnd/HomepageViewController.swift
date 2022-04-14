@@ -19,8 +19,8 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var Description2: UILabel!
     let locationManager = CLLocationManager()
     
-    var latitude: Double = 35.9954
-    var longitude: Double = -78.9019
+    var latitude: Double = 0
+    var longitude: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +34,16 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
         
         let group = DispatchGroup()
         group.enter()
-        locationManager.requestAlwaysAuthorization()
-                locationManager.requestWhenInUseAuthorization()
-                if CLLocationManager.locationServicesEnabled() {
-                    locationManager.delegate = self
-                    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-                    locationManager.startUpdatingLocation()
-                }
+        
+        locationManager.requestWhenInUseAuthorization()
+              var currentLoc: CLLocation!
+              if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+              CLLocationManager.authorizationStatus() == .authorizedAlways) {
+                 currentLoc = locationManager.location
+                 latitude = currentLoc.coordinate.latitude
+                 longitude = currentLoc.coordinate.longitude
+              }
+        
         group.leave()
    
         do {
@@ -78,7 +81,8 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
             guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         latitude = manager.location!.coordinate.latitude
         longitude = manager.location!.coordinate.longitude
-        }
+        
+    }
     
 
     /*
