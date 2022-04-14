@@ -23,7 +23,6 @@ class UserInputViewController: UIViewController {
     
     func createDatePicker() {
         let toolbar = UIToolbar()
-        toolBar.sizeToFit()
         
         
     }

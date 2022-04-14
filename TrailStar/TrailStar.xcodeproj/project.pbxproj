@@ -22,6 +22,7 @@
 		3F75D4572807DEF800DE21AB /* DetailedTrailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4562807DEF800DE21AB /* DetailedTrailViewController.swift */; };
 		3F75D45A2807E26300DE21AB /* StockImageModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4592807E26300DE21AB /* StockImageModule.swift */; };
 		3F75D4622808B6AE00DE21AB /* SearchBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75D4612808B6AE00DE21AB /* SearchBar.storyboard */; };
+		3F75D4652808CD9F00DE21AB /* LocalTrailSearchModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4642808CD9F00DE21AB /* LocalTrailSearchModule.swift */; };
 		5E48F8B327EADABD00893A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B227EADABD00893A3F /* AppDelegate.swift */; };
 		5E48F8B527EADABE00893A3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B427EADABD00893A3F /* SceneDelegate.swift */; };
 		5E48F8B727EADABE00893A3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B627EADABE00893A3F /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		3F75D4562807DEF800DE21AB /* DetailedTrailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTrailViewController.swift; sourceTree = "<group>"; };
 		3F75D4592807E26300DE21AB /* StockImageModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockImageModule.swift; sourceTree = "<group>"; };
 		3F75D4612808B6AE00DE21AB /* SearchBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchBar.storyboard; sourceTree = "<group>"; };
+		3F75D4642808CD9F00DE21AB /* LocalTrailSearchModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTrailSearchModule.swift; sourceTree = "<group>"; };
 		5E48F8AF27EADABD00893A3F /* TrailStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E48F8B227EADABD00893A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E48F8B427EADABD00893A3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				3F75D4482807D1A700DE21AB /* JW_RSG.swift */,
 				3F75D43F27F3A53800DE21AB /* TrailSearchModule.swift */,
+				3F75D4642808CD9F00DE21AB /* LocalTrailSearchModule.swift */,
 			);
 			path = SearchModules;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				5E48F8B327EADABD00893A3F /* AppDelegate.swift in Sources */,
 				3F75D40827F16B4F00DE21AB /* TrailData.swift in Sources */,
 				3F75D43B27F3991800DE21AB /* TrailAPIModule.swift in Sources */,
+				3F75D4652808CD9F00DE21AB /* LocalTrailSearchModule.swift in Sources */,
 				3F75D45A2807E26300DE21AB /* StockImageModule.swift in Sources */,
 				3F75D40A27F16BB000DE21AB /* ResultScore.swift in Sources */,
 				A02FF8862808B25E00B63B69 /* SearchTableViewController.swift in Sources */,

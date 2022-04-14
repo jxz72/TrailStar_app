@@ -27,9 +27,7 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
     
     
     @IBOutlet weak var Description2: UILabel!
-    
-    let locationManager = CLLocationManager()
-    
+        
     var latitude: Double = 0
     var longitude: Double = 0
     
@@ -44,19 +42,7 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
         TrailImage2.image = trailImages.randomElement()!;
         
         
-        let group = DispatchGroup()
-        group.enter()
         
-        locationManager.requestWhenInUseAuthorization()
-              var currentLoc: CLLocation!
-              if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-              CLLocationManager.authorizationStatus() == .authorizedAlways) {
-                 currentLoc = locationManager.location
-                 latitude = currentLoc.coordinate.latitude
-                 longitude = currentLoc.coordinate.longitude
-              }
-        
-        group.leave()
    
         do {
             
