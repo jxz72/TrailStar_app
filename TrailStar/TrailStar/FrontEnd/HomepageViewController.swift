@@ -31,6 +31,8 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
     var latitude: Double = 0
     var longitude: Double = 0
     
+    let localSearchModule: LocalTrailSearchModule = LocalTrailSearchModule()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,32 +44,25 @@ class HomepageViewController: UIViewController, CLLocationManagerDelegate {
         TrailImage2.image = trailImages.randomElement()!;
         
         
-        
    
         do {
             
-            let nearbyTrails: [TrailSearchResult] = try TrailSearchModule.getTrailResults(latitude: latitude, longitude: longitude, date: "2022-14-05", days: 0)
+            var nearbyTrails: [TrailData] = try localSearchModule.getNearbyTrails()
             
-            if (nearbyTrails.count == 0) {
-                throw APIError.dataNotFound
-            }
+            var trail1: TrailData = nearbyTrails.randomElement()!
             
-            var trail1: TrailSearchResult = nearbyTrails.randomElement()!
-            
-            Description1.text = trail1.trail.name
-            traillength.text = String(trail1.trail.length)
-            trailplace.text = String(trail1.trail.city + "," + trail1.trail.state)
-            Descrip.text = trail1.trail.description
+            Description1.text = trail1.name
+            traillength.text = String(trail1.length)
+            trailplace.text = String(trail1.city + "," + trail1.state)
+            Descrip.text = trail1.description
             
             
+            var trail2: TrailData = nearbyTrails.randomElement()!
             
-            
-            var trail2: TrailSearchResult = nearbyTrails.randomElement()!
-            
-            Description2.text = trail2.trail.name
-            traillength2.text = String(trail2.trail.length)
-            trailplace2.text = String(trail2.trail.city + "," + trail1.trail.state)
-            Descrip2.text = trail2.trail.description
+            Description2.text = trail2.name
+            traillength2.text = String(trail2.length)
+            trailplace2.text = String(trail2.city + "," + trail1.state)
+            Descrip2.text = trail2.description
             
            
             

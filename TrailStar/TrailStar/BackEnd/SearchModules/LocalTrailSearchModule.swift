@@ -15,7 +15,7 @@ class LocalTrailSearchModule: ViewController, CLLocationManagerDelegate {
     var latitude: Double = 0
     var longitude: Double = 0
     
-    func getNearbyTrails() -> [TrailData] {
+    func getNearbyTrails() throws -> [TrailData] {
         let group = DispatchGroup()
         group.enter()
         
@@ -23,7 +23,9 @@ class LocalTrailSearchModule: ViewController, CLLocationManagerDelegate {
            CLLocationManager.authorizationStatus() != .authorizedAlways) {
             locationManager.requestWhenInUseAuthorization()
         } else {
-            
+            guard locationManager.location != nil else {
+                throw APIError.locationParsingFailure
+            }
             latitude = locationManager.location!.coordinate.latitude
             longitude = locationManager.location!.coordinate.longitude
             
@@ -34,11 +36,9 @@ class LocalTrailSearchModule: ViewController, CLLocationManagerDelegate {
         if (latitude == 0 && longitude == 0) {
             return []
         } else {
-            do {
-                return try TrailAPIModule.generateTrailList(latitude: latitude, longitude: longitude, limit: 15)
-            } catch {
-                return []
-            }
+            
+            return try TrailAPIModule.generateTrailList(latitude: latitude, longitude: longitude, limit: 15)
+        
             
         }
         
