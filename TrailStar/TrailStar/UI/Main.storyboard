@@ -80,6 +80,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="Description1" destination="xPL-u9-o64" id="wR1-0x-jOB"/>
+                        <outlet property="Description2" destination="b3r-uB-TEh" id="UDh-cJ-zWG"/>
                         <outlet property="TrailImage1" destination="P32-xC-EIm" id="snN-Tx-f2U"/>
                         <outlet property="TrailImage2" destination="iKB-ne-NAs" id="Gi6-CK-BHU"/>
                     </connections>
