@@ -10,39 +10,20 @@ import UIKit
 class detailViewController: UIViewController {
 
     @IBOutlet weak var trailLabel: UILabel!
-    @IBOutlet weak var rateLabel: UILabel!
     @IBOutlet weak var lengthLabel: UILabel!
-    @IBOutlet weak var tagLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var discriptionText: UITextView!
-    @IBOutlet weak var featureLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        updateUserInterface()
+
 
         // Do any additional setup after loading the view.
     }
-    
-    func updateUserInterface() {
-        trailLabel.text = trail.strTrail
-        rateLabel.text = trail.strRating
-        lengthLabel.text = trail.strRating
-        tagLabel.text = trail.strDiff
-        featureLabel.text = trail.strFeature
-        discriptionText.text = trail.strDiscription
         
-        guard let url = URL(string: trail.strTrailImage ?? "") else {return}
-        do {
-            let data = try Data(contentsOf: url)
-            self.imageView.image = UIImage(data: data)
-        } catch {
-            print("Error: Could not get image from url")
-        }
-        
-    }
-    
 
     /*
     // MARK: - Navigation
