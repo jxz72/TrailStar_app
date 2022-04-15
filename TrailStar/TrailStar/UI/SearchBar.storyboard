@@ -102,13 +102,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vSa-lr-lOs">
-                                <rect key="frame" x="104" y="186" width="204" height="34"/>
+                                <rect key="frame" x="104" y="237" width="204" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Travel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr6-pH-5YN">
-                                <rect key="frame" x="104" y="150" width="106" height="21"/>
+                                <rect key="frame" x="104" y="208" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -169,14 +169,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8A-1X-wmu">
+                                <rect key="frame" x="63" y="111" width="308" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="308" id="WPC-D1-IBA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkN-iJ-Ncz">
+                                <rect key="frame" x="63" y="140" width="308" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="308" id="VB7-KY-Bsp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fEg-ed-gMP"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H8A-1X-wmu" firstAttribute="leading" secondItem="fEg-ed-gMP" secondAttribute="leading" constant="63" id="NIa-VH-h4I"/>
+                            <constraint firstItem="YkN-iJ-Ncz" firstAttribute="top" secondItem="H8A-1X-wmu" secondAttribute="bottom" constant="8" symbolic="YES" id="cMD-Rh-SV0"/>
+                            <constraint firstItem="H8A-1X-wmu" firstAttribute="top" secondItem="fEg-ed-gMP" secondAttribute="top" constant="67" id="x1I-ru-FQk"/>
+                            <constraint firstItem="YkN-iJ-Ncz" firstAttribute="leading" secondItem="fEg-ed-gMP" secondAttribute="leading" constant="63" id="yf3-F4-nfN"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="cityTF" destination="pZr-Q6-iiR" id="12d-7H-PRf"/>
                         <outlet property="dateTF" destination="vSa-lr-lOs" id="jLa-gO-PIH"/>
                         <outlet property="stateTF" destination="s8H-nu-4El" id="0He-uE-PWf"/>
+                        <outlet property="title1" destination="H8A-1X-wmu" id="zca-c3-Fo2"/>
+                        <outlet property="title2" destination="YkN-iJ-Ncz" id="A1c-Q0-6f3"/>
                         <outlet property="yourmom" destination="vSa-lr-lOs" id="kl3-9f-om0"/>
                     </connections>
                 </viewController>
@@ -188,9 +214,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
