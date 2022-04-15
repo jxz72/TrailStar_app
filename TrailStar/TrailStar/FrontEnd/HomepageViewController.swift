@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-class HomepageViewController: UIViewController, CLLocationManagerDelegate {
+class HomepageViewController: UIViewController {
 
     
     @IBOutlet weak var TrailImage1: UIImageView!
