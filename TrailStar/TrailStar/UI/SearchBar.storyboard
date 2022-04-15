@@ -114,7 +114,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQb-WO-Lsd">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="United States" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQb-WO-Lsd">
                                 <rect key="frame" x="104" y="337" width="204" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -174,7 +174,9 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                     <connections>
+                        <outlet property="cityTF" destination="pZr-Q6-iiR" id="12d-7H-PRf"/>
                         <outlet property="dateTF" destination="vSa-lr-lOs" id="jLa-gO-PIH"/>
+                        <outlet property="stateTF" destination="s8H-nu-4El" id="0He-uE-PWf"/>
                         <outlet property="yourmom" destination="vSa-lr-lOs" id="kl3-9f-om0"/>
                     </connections>
                 </viewController>
