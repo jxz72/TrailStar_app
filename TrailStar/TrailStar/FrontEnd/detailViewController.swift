@@ -1,8 +1,8 @@
 //
 //  detailViewController.swift
-//  detailPage
+//  TrailStar
 //
-//  Created by Yile Hu on 4/14/22.
+//  Created by Yile Hu on 4/15/22.
 //
 
 import UIKit
