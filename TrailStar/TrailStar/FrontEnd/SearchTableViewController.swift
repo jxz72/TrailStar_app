@@ -63,6 +63,9 @@ class SearchTableViewController: UITableViewController {
         cell.trailRain.text = "testingRain"
         cell.trailRain.adjustsFontSizeToFitWidth = true
         // Configure the cell...
+        
+        cell.trailImage.layer.cornerRadius = 30
+        cell.trailImage.clipsToBounds = true
 
         return cell
     }
