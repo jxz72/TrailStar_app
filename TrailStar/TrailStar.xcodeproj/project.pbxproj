@@ -17,7 +17,6 @@
 		3F75D4492807D1A700DE21AB /* JW_RSG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4482807D1A700DE21AB /* JW_RSG.swift */; };
 		3F75D44B2807D30700DE21AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75D44A2807D30700DE21AB /* Main.storyboard */; };
 		3F75D44F2807D88D00DE21AB /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D44E2807D88D00DE21AB /* WeatherAPI.swift */; };
-		3F75D4532807DC9500DE21AB /* DetailedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75D4522807DC9500DE21AB /* DetailedView.storyboard */; };
 		3F75D4552807DEC700DE21AB /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4542807DEC700DE21AB /* HomepageViewController.swift */; };
 		3F75D4572807DEF800DE21AB /* DetailedTrailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4562807DEF800DE21AB /* DetailedTrailViewController.swift */; };
 		3F75D45A2807E26300DE21AB /* StockImageModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75D4592807E26300DE21AB /* StockImageModule.swift */; };
@@ -43,7 +42,6 @@
 		3F75D4482807D1A700DE21AB /* JW_RSG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JW_RSG.swift; sourceTree = "<group>"; };
 		3F75D44A2807D30700DE21AB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3F75D44E2807D88D00DE21AB /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
-		3F75D4522807DC9500DE21AB /* DetailedView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailedView.storyboard; sourceTree = "<group>"; };
 		3F75D4542807DEC700DE21AB /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		3F75D4562807DEF800DE21AB /* DetailedTrailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTrailViewController.swift; sourceTree = "<group>"; };
 		3F75D4592807E26300DE21AB /* StockImageModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockImageModule.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 		3F75D3FC27F168E700DE21AB /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				3F75D4522807DC9500DE21AB /* DetailedView.storyboard */,
 				3F75D4612808B6AE00DE21AB /* SearchBar.storyboard */,
 				3F75D44A2807D30700DE21AB /* Main.storyboard */,
 				5E48F8BB27EADAC300893A3F /* Assets.xcassets */,
@@ -88,11 +85,11 @@
 				5ECF9F8B280A664A00E45E6A /* UserInputViewController.swift */,
 				A02FF8852808B25E00B63B69 /* SearchTableViewCell.swift */,
 				A02FF8842808B25D00B63B69 /* SearchTableViewController.swift */,
+				3F75D4562807DEF800DE21AB /* DetailedTrailViewController.swift */,
 				5E48F8B227EADABD00893A3F /* AppDelegate.swift */,
 				5E48F8B427EADABD00893A3F /* SceneDelegate.swift */,
 				5E48F8B627EADABE00893A3F /* ViewController.swift */,
 				3F75D4542807DEC700DE21AB /* HomepageViewController.swift */,
-				3F75D4562807DEF800DE21AB /* DetailedTrailViewController.swift */,
 			);
 			path = FrontEnd;
 			sourceTree = "<group>";
@@ -232,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F75D4532807DC9500DE21AB /* DetailedView.storyboard in Resources */,
 				3F75D44B2807D30700DE21AB /* Main.storyboard in Resources */,
 				3F75D4622808B6AE00DE21AB /* SearchBar.storyboard in Resources */,
 				5E48F8BC27EADAC300893A3F /* Assets.xcassets in Resources */,

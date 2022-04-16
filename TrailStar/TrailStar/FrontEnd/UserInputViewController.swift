@@ -7,6 +7,22 @@
 
 import UIKit
 
+
+
+//These are global variables to represent search critera and search results
+
+var searchCity: String = "Durham"
+var searchState: String = "NC"
+var searchDays: Int = 0
+var searchDate: String = ""
+
+var resultTrailList: [TrailData] = []
+
+
+
+
+
+
 class UserInputViewController: UIViewController {
     
     
@@ -52,14 +68,17 @@ class UserInputViewController: UIViewController {
             if datePicker.date == datePicker.maximumDate {
                 dateNumber = 2
             }
+            searchDays = dateNumber
             dateTF.inputView = datePicker
             dateTF.text = formatDate(date: Date()) // today's date
+            searchDate = formatDate2(date: Date())
             
             //cityTF
             cityTF.autocorrectionType = .yes
             cityTF.textContentType = .addressCity
             print(cityTF.inputView as Any)
             cityString = cityTF.text!
+            //searchCity = cityString
             
             
             //state textfield / pickerview
@@ -78,6 +97,13 @@ class UserInputViewController: UIViewController {
             formatter.dateFormat = "MMMM dd yyyy"
             return formatter.string(from: date)
         }
+    
+        @objc func formatDate2(date: Date)->String{ //date picker
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-mm-dd"
+            return formatter.string(from: date)
+        }
+
 }
 
 
@@ -96,6 +122,7 @@ extension UserInputViewController:UIPickerViewDelegate,UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-           self.stateTF.text = states[row]
+        self.stateTF.text = states[row]
+        //searchState = states[row]
     }
 }
