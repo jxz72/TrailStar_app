@@ -9,11 +9,17 @@ import UIKit
 
 class UserInputViewController: UIViewController {
     
+    
     @IBOutlet weak var title1: UILabel!
     @IBOutlet weak var title2: UILabel!
     @IBOutlet weak var cityTF: UITextField! //TF stands for Text field
     @IBOutlet weak var stateTF: UITextField!
     @IBOutlet weak var dateTF: UITextField!
+    
+
+    
+     
+    
     
     var dateNumber : Int = 1; //0,1,2 corresponding to today, tmr, day after
     var cityString : String = "";
