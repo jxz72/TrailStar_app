@@ -17,7 +17,7 @@ class SearchTableViewController: UITableViewController {
         
         //call TrailSearchModule here
         //if from serach
-        loadTrailDataForSearch()
+        //loadTrailDataForSearch()
         //else // from history
         loadTrailDataForHistory()
     }

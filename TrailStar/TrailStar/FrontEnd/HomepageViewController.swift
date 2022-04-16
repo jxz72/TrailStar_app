@@ -28,6 +28,32 @@ class HomepageViewController: UIViewController {
     
     @IBOutlet weak var Description2: UILabel!
         
+    
+    @IBAction func button1AddTrail(_ sender: Any) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let container = appDelegate.persistentContainer
+        let coreDataContext = container.viewContext
+
+        let trailDataEntity = TrailDataEntity(context: coreDataContext)
+        trailDataEntity.country = "country1"
+        trailDataEntity.city = "city1"
+        trailDataEntity.length = 2
+        trailDataEntity.state = "state1"
+        trailDataEntity.name = "name1"
+        trailDataEntity.directionsBlurb = "directionsBlurb1"
+        trailDataEntity.desc = "desc"
+        
+        do {
+            try coreDataContext.save()
+            
+        } catch let error as NSError {
+            print("Could not save. error=\(error), error.userInfo=\(error.userInfo)")
+        }
+
+        
+    }
+    
     var latitude: Double = 0
     var longitude: Double = 0
     
