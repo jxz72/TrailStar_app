@@ -651,11 +651,9 @@
                                         <constraint firstItem="rxQ-B2-Anw" firstAttribute="leading" secondItem="jFD-rz-wcZ" secondAttribute="leading" id="KEm-6X-vtg"/>
                                         <constraint firstItem="rxQ-B2-Anw" firstAttribute="top" secondItem="FvR-3Z-5Tj" secondAttribute="topMargin" id="OhO-HZ-ibO"/>
                                         <constraint firstItem="rxQ-B2-Anw" firstAttribute="trailing" secondItem="FvR-3Z-5Tj" secondAttribute="trailingMargin" id="Vgt-gk-GQF"/>
-                                        <constraint firstItem="Hf7-cZ-89A" firstAttribute="top" secondItem="FvR-3Z-5Tj" secondAttribute="top" id="bsL-ah-5mt"/>
                                         <constraint firstItem="Hf7-cZ-89A" firstAttribute="bottom" secondItem="FvR-3Z-5Tj" secondAttribute="bottomMargin" id="g0y-kK-EWg"/>
                                         <constraint firstItem="jR2-R7-Lrk" firstAttribute="top" secondItem="jFD-rz-wcZ" secondAttribute="bottom" constant="8" symbolic="YES" id="j8V-R0-x9U"/>
                                         <constraint firstItem="jFD-rz-wcZ" firstAttribute="top" secondItem="rxQ-B2-Anw" secondAttribute="bottom" constant="8" symbolic="YES" id="oif-uB-8DE"/>
-                                        <constraint firstAttribute="bottom" secondItem="Hf7-cZ-89A" secondAttribute="bottom" id="p7m-gJ-73f"/>
                                         <constraint firstItem="Hf7-cZ-89A" firstAttribute="leading" secondItem="FvR-3Z-5Tj" secondAttribute="leadingMargin" id="pIF-4S-Z5f"/>
                                         <constraint firstItem="Hf7-cZ-89A" firstAttribute="top" secondItem="FvR-3Z-5Tj" secondAttribute="topMargin" constant="-2" id="t9W-mA-9fH"/>
                                         <constraint firstItem="rxQ-B2-Anw" firstAttribute="leading" secondItem="Hf7-cZ-89A" secondAttribute="trailing" constant="21" id="xFj-qn-0rP"/>
