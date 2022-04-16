@@ -46,10 +46,6 @@ class UserInputViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            title1.text = "Explore the"
-            title2.text = "Beautiful Nature"
-            title1.font = UIFont(name: "HelveticaNeue", size: 30.0)
-            title2.font = UIFont(name:"HelveticaNeue-Bold", size: 34.0)
             
             //date picker creation
             let datePicker = UIDatePicker()
@@ -85,8 +81,44 @@ class UserInputViewController: UIViewController {
             pickerView.dataSource = self
             pickerView.delegate = self
             stateTF.inputView = pickerView
+            
+            //toolbar (cancel and done buttons)
+            let toolBar = UIToolbar()
+            let toolBar1 = UIToolbar()
+            toolBar.barStyle = UIBarStyle.default
+            toolBar1.barStyle = UIBarStyle.default
+            toolBar.isTranslucent = true
+            toolBar1.isTranslucent = true
+            toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+            toolBar1.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+            toolBar.sizeToFit()
+            toolBar1.sizeToFit()
+
+            let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(UserInputViewController.donePressed(sender:)))
+            let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+            let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(UserInputViewController.donePressed(sender:)))
+            let doneButton1 = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(UserInputViewController.donePressed1(sender:)))
+            let spaceButton1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+            let cancelButton1 = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(UserInputViewController.donePressed1(sender:)))
+
+            toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+            toolBar1.setItems([cancelButton1, spaceButton, doneButton1], animated: false)
+            toolBar.isUserInteractionEnabled = true
+            toolBar1.isUserInteractionEnabled = true
+            stateTF.inputAccessoryView = toolBar
+            dateTF.inputAccessoryView = toolBar1
+        
         }
         
+        //two objc c functions for toolbar navigation
+        @objc func donePressed(sender:UIBarButtonItem){
+            //stateTF.inputView = pickerView
+            stateTF.resignFirstResponder()
+        }
+        @objc func donePressed1(sender:UIBarButtonItem){
+            //stateTF.inputView = pickerView
+            dateTF.resignFirstResponder()
+        }
         //two objc c functions for formatting date
         @objc func dateChange(datePicker: UIDatePicker){ //date picker
             dateTF.text = formatDate(date: datePicker.date)

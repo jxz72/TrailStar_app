@@ -49,7 +49,7 @@ class HomepageViewController: UIViewController {
             
             var nearbyTrails: [TrailData] = try localSearchModule.getNearbyTrails()
             
-            var trail1: TrailData = nearbyTrails.randomElement()!
+            var trail1: TrailData = nearbyTrails.randomElement()! //var changed to let
             
             Description1.text = trail1.name
             traillength.text = String(trail1.length)
