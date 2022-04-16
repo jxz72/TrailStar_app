@@ -15,6 +15,10 @@ class detailViewController: UIViewController {
     @IBOutlet weak var discriptionText: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var weatherLabel: UILabel!
     
     
     override func viewDidLoad() {
