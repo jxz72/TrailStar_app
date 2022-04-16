@@ -25,14 +25,14 @@ class TrailAPIModule {
     /*
      Generates trails from a given city, state, and country name
      */
-    static func generateTrailList(city: String, state: String, country: String, limit: Int=30) throws -> [TrailData] {
+    static func generateTrailList(city: String, state: String, country: String="United States", limit: Int=30) throws -> [TrailData] {
+        print("enter generateTrailList1 city=\(city), state=\(state)")
     
         let request = NSMutableURLRequest(url: NSURL(string: String(format: "https://trailapi-trailapi.p.rapidapi.com/activity/?limit=%d&q-city_cont=%@&q-country_cont=%@&q-state_cont=%@&q-activities_activity_type_name_eq=hiking",
                                                                     limit, formatURLQuery(query: city), formatURLQuery(query: country), formatURLQuery(query: state)
                                                                    ))! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)
-        
         return try generateTrailList(request: request);
         
     }
@@ -41,7 +41,7 @@ class TrailAPIModule {
      Generates trails from a given request
      */
     static func generateTrailList(request: NSMutableURLRequest) throws -> [TrailData] {
-        
+        print("enter generateTrailList2")
         
         var encodedTrailMap: TrailEncodingMap = [:]
         
@@ -75,11 +75,27 @@ class TrailAPIModule {
                 return;
             }
 
+            /*
+            print("printing jason")
+                do {
+                    let data1 =  try JSONSerialization.data(withJSONObject: jsonData, options: JSONSerialization.WritingOptions.prettyPrinted) // first of all convert json to the data
+                    let convertedString = String(data: data1, encoding: String.Encoding.utf8) // the data will be converted to the string
+                    print(convertedString ?? "defaultvalue")
+                } catch let myJSONError {
+                    print(myJSONError)
+                }
+
+            */
+            
             do {
+                print("JSONDATA: \(jsonData)")
+                
+                
                 
                 encodedTrailMap = try JSONDecoder().decode(TrailEncodingMap.self, from: jsonData)
                 
             } catch {
+                print("JSON Decoder error = \(error)" )
                 callError = APIError.unexpected(code: 0)
             }
             
@@ -103,10 +119,13 @@ class TrailAPIModule {
         }
         
         
-        
+        print("exit generateTrailList2")
+
         return trailDataList
         
     }
+    
+
     
     
     private static func formatURLQuery(query: String) -> String {
@@ -172,4 +191,7 @@ class TrailAPIModule {
     private struct Attribs: Codable {
         var length: String
     }
+    
+    
+    
 }

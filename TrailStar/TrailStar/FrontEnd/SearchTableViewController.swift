@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 
@@ -8,11 +6,27 @@ class SearchTableViewController: UITableViewController {
     @IBOutlet var table: UITableView!
     //let searchController = UISearchController(searchResultsController: nil)
     
+    let localSearchModule: LocalTrailSearchModule = LocalTrailSearchModule()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
         table.delegate = self
         table.rowHeight = 200
+        
+        
+        //call TrailSearchModule here
+        
+        do {
+            //resultTrailList = try TrailSearchModule.getTrailResults(city: searchCity, state: //searchState, country: "USA", limit: 1, date: searchDate, days: searchDays)
+            
+            resultTrailList = try localSearchModule.getNearbyTrails()
+        }
+        catch{
+            print("Error in API calls \(error)")
+        }
+        
+        
         
     }
 
@@ -25,7 +39,7 @@ class SearchTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return resultTrailList.count
     }
 
     
@@ -34,13 +48,16 @@ class SearchTableViewController: UITableViewController {
         
         cell.contentView.layer.cornerRadius = 5
         cell.contentView.layer.masksToBounds = true
-        cell.trailName.text = "testingName"
+        
+        cell.trailName.text = resultTrailList[indexPath.row].name
+        
+        
         cell.trailName.adjustsFontSizeToFitWidth = true
         
-        cell.trailLocation.text = "testingLocation"
+        cell.trailLocation.text = "\(resultTrailList[indexPath.row].city),  \(resultTrailList[indexPath.row].state), \(resultTrailList[indexPath.row].country)"
         cell.trailLocation.adjustsFontSizeToFitWidth = true
         
-        cell.trailSun.text = "testingSun"
+        cell.trailSun.text = resultTrailList[indexPath.row].description
         cell.trailSun.adjustsFontSizeToFitWidth = true
         
         cell.trailRain.text = "testingRain"
@@ -96,4 +113,30 @@ class SearchTableViewController: UITableViewController {
     }
     */
 
+    var valueToPass:String!
+
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        //println("You selected cell #\(indexPath.row)!")
+
+        // Get Cell Label
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
+
+        valueToPass = "currentCell.textLabel?.text"
+        performSegue(withIdentifier: "yourSegueIdentifer", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    
+    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+
+        //if (segue.identifier == "yourSegueIdentifer") {
+            // initialize new view controller and cast it as your view controller
+            let viewController = segue.destination as! DetailedTrailViewController
+            let selectRow = tableView.indexPathForSelectedRow?.row
+            // your new view controller should have property that will store passed value
+            //print("xxx \(valueToPass)")
+            viewController.passedValue = resultTrailList[selectRow!].name
+        //}
+    }
 }

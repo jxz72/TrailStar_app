@@ -7,13 +7,35 @@
 
 import UIKit
 
+
+
+//These are global variables to represent search critera and search results
+
+var searchCity: String = "Durham"
+var searchState: String = "NC"
+var searchDays: Int = 0
+var searchDate: String = ""
+
+var resultTrailList: [TrailData] = []
+
+
+
+
+
+
 class UserInputViewController: UIViewController {
+    
     
     @IBOutlet weak var title1: UILabel!
     @IBOutlet weak var title2: UILabel!
     @IBOutlet weak var cityTF: UITextField! //TF stands for Text field
     @IBOutlet weak var stateTF: UITextField!
     @IBOutlet weak var dateTF: UITextField!
+    
+
+    
+     
+    
     
     var dateNumber : Int = 1; //0,1,2 corresponding to today, tmr, day after
     var cityString : String = "";
@@ -46,14 +68,17 @@ class UserInputViewController: UIViewController {
             if datePicker.date == datePicker.maximumDate {
                 dateNumber = 2
             }
+            searchDays = dateNumber
             dateTF.inputView = datePicker
             dateTF.text = formatDate(date: Date()) // today's date
+            searchDate = formatDate2(date: Date())
             
             //cityTF
             cityTF.autocorrectionType = .yes
             cityTF.textContentType = .addressCity
             print(cityTF.inputView as Any)
             cityString = cityTF.text!
+            //searchCity = cityString
             
             
             //state textfield / pickerview
@@ -72,6 +97,13 @@ class UserInputViewController: UIViewController {
             formatter.dateFormat = "MMMM dd yyyy"
             return formatter.string(from: date)
         }
+    
+        @objc func formatDate2(date: Date)->String{ //date picker
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-mm-dd"
+            return formatter.string(from: date)
+        }
+
 }
 
 
@@ -87,5 +119,10 @@ extension UserInputViewController:UIPickerViewDelegate,UIPickerViewDataSource{
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return states[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.stateTF.text = states[row]
+        //searchState = states[row]
     }
 }

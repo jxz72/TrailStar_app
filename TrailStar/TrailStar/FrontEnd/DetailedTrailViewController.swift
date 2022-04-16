@@ -9,9 +9,12 @@ import UIKit
 
 class DetailedTrailViewController: UIViewController {
 
+    var passedValue:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("xxx \(passedValue)")
         // Do any additional setup after loading the view.
     }
     
