@@ -1,8 +1,8 @@
 //
 //  detailViewController.swift
-//  detailPage
+//  TrailStar
 //
-//  Created by Yile Hu on 4/14/22.
+//  Created by Yile Hu on 4/15/22.
 //
 
 import UIKit
@@ -15,6 +15,10 @@ class detailViewController: UIViewController {
     @IBOutlet weak var discriptionText: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var weatherLabel: UILabel!
     
     
     override func viewDidLoad() {
