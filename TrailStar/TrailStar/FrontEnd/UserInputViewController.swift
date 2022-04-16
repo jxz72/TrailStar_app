@@ -89,8 +89,8 @@ class UserInputViewController: UIViewController {
             toolBar1.barStyle = UIBarStyle.default
             toolBar.isTranslucent = true
             toolBar1.isTranslucent = true
-            toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
-            toolBar1.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+            toolBar.tintColor = UIColor(red: 255/255, green: 165/255, blue: 0/255, alpha: 1)
+            toolBar1.tintColor = UIColor(red: 255/255, green: 165/255, blue: 0/255, alpha: 1)
             toolBar.sizeToFit()
             toolBar1.sizeToFit()
 
