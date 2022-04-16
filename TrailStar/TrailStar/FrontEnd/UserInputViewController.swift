@@ -32,10 +32,18 @@ class UserInputViewController: UIViewController {
     @IBOutlet weak var stateTF: UITextField!
     @IBOutlet weak var dateTF: UITextField!
     
+    
+    @IBOutlet weak var buttonOne: UIButton!
+    @IBOutlet weak var buttonTwo: UIButton!
+    @IBOutlet weak var buttonThree: UIButton!
+    @IBOutlet weak var buttonFour: UIButton!
 
+    var buttonBgRest = UIColor(red: 254/255,
+                        green: 216/255,
+                        blue: 177/255,
+                        alpha: 0.5)
     
-     
-    
+
     
     var dateNumber : Int = 1; //0,1,2 corresponding to today, tmr, day after
     var cityString : String = "";
@@ -107,6 +115,17 @@ class UserInputViewController: UIViewController {
             toolBar1.isUserInteractionEnabled = true
             stateTF.inputAccessoryView = toolBar
             dateTF.inputAccessoryView = toolBar1
+            
+            //Length buttons
+            buttonOne.backgroundColor = buttonBgRest
+            buttonTwo.backgroundColor = buttonBgRest
+            buttonThree.backgroundColor = buttonBgRest
+            buttonFour.backgroundColor = buttonBgRest
+
+            buttonOne.isHighlighted = false
+            buttonTwo.isHighlighted = false
+            buttonThree.isHighlighted = false
+            buttonFour.isHighlighted = false
         
         }
         
@@ -135,7 +154,59 @@ class UserInputViewController: UIViewController {
             formatter.dateFormat = "yyyy-mm-dd"
             return formatter.string(from: date)
         }
-
+    
+    //action for length buttons
+    @IBAction func buttonDefault(sender:UIButton){
+        if(sender.isHighlighted == false){
+            sender.backgroundColor = buttonBgRest
+        }
+    }
+    
+    @IBAction func buttonPressed (sender: UIButton){
+        sender.isHighlighted = true
+        if(buttonOne.isHighlighted == true){
+            buttonOne.backgroundColor = UIColor.white
+            buttonOne.setTitleColor(UIColor.white, for: UIControl.State.highlighted)
+            
+            buttonFour.backgroundColor = buttonBgRest
+            buttonTwo.backgroundColor = buttonBgRest
+            buttonThree.backgroundColor = buttonBgRest
+            buttonTwo.isHighlighted = false
+            buttonThree.isHighlighted = false
+            buttonFour.isHighlighted = false
+        }
+        else if(buttonTwo.isHighlighted){
+            buttonTwo.backgroundColor = UIColor.white
+            buttonTwo.setTitleColor(UIColor.white, for: UIControl.State.highlighted)
+            buttonOne.backgroundColor = buttonBgRest
+            buttonFour.backgroundColor = buttonBgRest
+            buttonThree.backgroundColor = buttonBgRest
+            buttonOne.isHighlighted = false
+            buttonThree.isHighlighted = false
+            buttonFour.isHighlighted = false
+        }
+        else if(buttonThree.isHighlighted){
+            buttonThree.backgroundColor = UIColor.white
+            buttonThree.setTitleColor(UIColor.white, for: UIControl.State.highlighted)
+            buttonOne.backgroundColor = buttonBgRest
+            buttonTwo.backgroundColor = buttonBgRest
+            buttonFour.backgroundColor = buttonBgRest
+            buttonTwo.isHighlighted = false
+            buttonOne.isHighlighted = false
+            buttonFour.isHighlighted = false
+        }
+        else{
+            buttonFour.backgroundColor = UIColor.white
+            buttonFour.setTitleColor(UIColor.white, for: UIControl.State.highlighted)
+            buttonOne.backgroundColor = buttonBgRest
+            buttonTwo.backgroundColor = buttonBgRest
+            buttonThree.backgroundColor = buttonBgRest
+            buttonTwo.isHighlighted = false
+            buttonThree.isHighlighted = false
+            buttonOne.isHighlighted = false
+        }
+        print(sender.titleLabel?.text)
+    }
 }
 
 
