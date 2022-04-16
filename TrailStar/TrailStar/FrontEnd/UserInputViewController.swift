@@ -46,10 +46,6 @@ class UserInputViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            title1.text = "Explore the"
-            title2.text = "Beautiful Nature"
-            title1.font = UIFont(name: "HelveticaNeue", size: 30.0)
-            title2.font = UIFont(name:"HelveticaNeue-Bold", size: 34.0)
             
             //date picker creation
             let datePicker = UIDatePicker()
