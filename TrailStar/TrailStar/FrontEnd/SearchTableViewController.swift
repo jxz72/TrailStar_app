@@ -1,5 +1,5 @@
 import UIKit
-
+import CoreData
 
 class SearchTableViewController: UITableViewController {
 
@@ -16,19 +16,57 @@ class SearchTableViewController: UITableViewController {
         
         
         //call TrailSearchModule here
-        
+        //if from serach
+        loadTrailDataForSearch()
+        //else // from history
+        loadTrailDataForHistory()
+    }
+    
+    func loadTrailDataForSearch() {
         do {
             //resultTrailList = try TrailSearchModule.getTrailResults(city: searchCity, state: //searchState, country: "USA", limit: 1, date: searchDate, days: searchDays)
-            
+            resultTrailList.removeAll()
             resultTrailList = try localSearchModule.getNearbyTrails()
         }
         catch{
             print("Error in API calls \(error)")
         }
+
+    }
+    
+    func loadTrailDataForHistory() {
         
+        resultTrailList.removeAll()
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let container = appDelegate.persistentContainer
+        let coreDataContext = container.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "TrailDataEntity")
+        
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try coreDataContext.fetch(request)
+            
+            for trailDataEntity in result as! [TrailDataEntity] {
+
+                let trailData = TrailData( name: trailDataEntity.name ?? "", city: trailDataEntity.city ?? "", state: trailDataEntity.state ?? "", country: trailDataEntity.country ?? "United States", length: trailDataEntity.length ?? 5.0, description: trailDataEntity.description ?? "", directionsBlurb: trailDataEntity.directionsBlurb ?? "")
+
+
+                
+                resultTrailList.append( trailData )
+            }
+            
+        } catch {
+            
+            print("loadTrailDataForHistory Failed")
+        }
         
     }
+
+    
 
     // MARK: - Table view data source
 
