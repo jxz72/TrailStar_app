@@ -488,6 +488,7 @@
                                     <outlet property="trailName" destination="rxQ-B2-Anw" id="tYB-UA-xHy"/>
                                     <outlet property="trailRain" destination="15E-DF-c6m" id="vtn-Td-sd1"/>
                                     <outlet property="trailSun" destination="IkQ-3K-mGu" id="PWq-Pl-g01"/>
+                                    <segue destination="PwE-dz-iUn" kind="presentation" identifier="yourSegueIdentifer" id="JaE-Tz-dmc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -508,9 +509,9 @@
         <!--Title-->
         <scene sceneID="pb0-29-SC8">
             <objects>
-                <viewController id="PwE-dz-iUn" customClass="detailViewController" customModule="TrailStar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PwE-dz-iUn" customClass="DetailedTrailViewController" customModule="TrailStar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l95-9J-ShI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdm-UB-yrw">
@@ -679,15 +680,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="p4h-V5-xCL"/>
-                    <connections>
-                        <outlet property="discriptionLabel" destination="hkP-Br-GRl" id="sKt-Eh-yg4"/>
-                        <outlet property="discriptionText" destination="hkP-Br-GRl" id="ylY-34-SWF"/>
-                        <outlet property="imageView" destination="mdm-UB-yrw" id="BnR-sR-4GE"/>
-                        <outlet property="lengthLabel" destination="RU6-TR-4aw" id="msK-9E-rv7"/>
-                        <outlet property="locationLabel" destination="GVQ-U9-BvR" id="w2s-JT-4bD"/>
-                        <outlet property="scoreLabel" destination="mfK-71-j6e" id="clt-vz-kva"/>
-                        <outlet property="trailLabel" destination="h5z-aH-LN9" id="pN7-Qy-bST"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Wc-YN-HJC" sceneMemberID="firstResponder"/>
             </objects>

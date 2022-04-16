@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 
@@ -115,4 +113,30 @@ class SearchTableViewController: UITableViewController {
     }
     */
 
+    var valueToPass:String!
+
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        //println("You selected cell #\(indexPath.row)!")
+
+        // Get Cell Label
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
+
+        valueToPass = "currentCell.textLabel?.text"
+        performSegue(withIdentifier: "yourSegueIdentifer", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    
+    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+
+        //if (segue.identifier == "yourSegueIdentifer") {
+            // initialize new view controller and cast it as your view controller
+            let viewController = segue.destination as! DetailedTrailViewController
+            let selectRow = tableView.indexPathForSelectedRow?.row
+            // your new view controller should have property that will store passed value
+            //print("xxx \(valueToPass)")
+            viewController.passedValue = resultTrailList[selectRow!].name
+        //}
+    }
 }
