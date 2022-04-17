@@ -16,6 +16,8 @@ var searchState: String = "NC"
 var searchDays: Int = 0
 var searchDate: String = ""
 
+var searchPresentDate: String = ""
+
 var resultTrailList: [TrailData] = []
 
 
@@ -147,6 +149,8 @@ class UserInputViewController: UIViewController {
             searchDays = dateNumber
             dateTF.inputView = datePicker
             dateTF.text = formatDate(date: Date()) // today's date
+            
+            
             searchDate = formatDate2(date: Date())
             
             //cityTF
@@ -284,7 +288,8 @@ class UserInputViewController: UIViewController {
         print("xxxxx")
         searchCity = cityTF.text ?? "Durham"
         searchState = stateTF.text ?? "NC"
-         
+        
+        searchPresentDate = dateTF.text ?? "Today"
         /*
     //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
 
