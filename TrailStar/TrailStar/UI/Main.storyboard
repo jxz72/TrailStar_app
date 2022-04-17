@@ -793,7 +793,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06S-pr-lMR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06S-pr-lMR" userLabel="Sunny">
                                         <rect key="frame" x="157" y="66" width="62" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="1qX-5R-LWm"/>
@@ -930,10 +930,13 @@
                     <navigationItem key="navigationItem" title="Title" id="p4h-V5-xCL"/>
                     <connections>
                         <outlet property="mapView" destination="D04-Vy-BZQ" id="V8G-XJ-5FG"/>
+                        <outlet property="trailConditions" destination="06S-pr-lMR" id="CRN-9D-X7e"/>
                         <outlet property="trailDescription" destination="hkP-Br-GRl" id="deI-eA-kIf"/>
                         <outlet property="trailLength" destination="RU6-TR-4aw" id="Ula-Rk-Glw"/>
                         <outlet property="trailLocation" destination="GVQ-U9-BvR" id="xf2-Tp-cfv"/>
                         <outlet property="trailName" destination="h5z-aH-LN9" id="eQ4-c9-V8u"/>
+                        <outlet property="trailRain" destination="XhY-um-y6E" id="ezS-QD-DrK"/>
+                        <outlet property="trailTemperature" destination="72H-6j-08o" id="WFd-eP-VLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Wc-YN-HJC" sceneMemberID="firstResponder"/>
