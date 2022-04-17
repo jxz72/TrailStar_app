@@ -43,6 +43,11 @@ class HomepageViewController: UIViewController {
         TrailImage1.image = trailImages.randomElement()!;
         TrailImage2.image = trailImages.randomElement()!;
         
+        TrailImage1.layer.cornerRadius = 7
+        TrailImage1.clipsToBounds = true
+        TrailImage2.layer.cornerRadius = 7
+        TrailImage2.clipsToBounds = true
+        
         
    
         do {
