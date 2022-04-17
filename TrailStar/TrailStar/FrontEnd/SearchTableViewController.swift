@@ -90,9 +90,12 @@ class SearchTableViewController: UITableViewController {
         cell.contentView.layer.masksToBounds = true
         
         cell.trailName.text = resultTrailList[indexPath.row].name
+        cell.trailName.numberOfLines = 2
+        cell.trailName.translatesAutoresizingMaskIntoConstraints = false
+        cell.trailName.lineBreakMode = .byWordWrapping
         
         
-        cell.trailName.adjustsFontSizeToFitWidth = true
+        //cell.trailName.adjustsFontSizeToFitWidth = true
         
         cell.trailLocation?.text = "\(resultTrailList[indexPath.row].city),  \(resultTrailList[indexPath.row].state), \(resultTrailList[indexPath.row].country)"
         cell.trailLocation.adjustsFontSizeToFitWidth = true
