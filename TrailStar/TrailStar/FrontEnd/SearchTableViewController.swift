@@ -167,10 +167,10 @@ class SearchTableViewController: UITableViewController {
         //if (segue.identifier == "yourSegueIdentifer") {
             // initialize new view controller and cast it as your view controller
             let viewController = segue.destination as! DetailedTrailViewController
-            let selectRow = tableView.indexPathForSelectedRow?.row
+            let selectedRow = tableView.indexPathForSelectedRow?.row
             // your new view controller should have property that will store passed value
             //print("xxx \(valueToPass)")
-            viewController.passedValue = resultTrailList[selectRow!].name
+        viewController.selectedRow = selectedRow
         //}
     }
 }
