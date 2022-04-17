@@ -309,7 +309,7 @@
                                 <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="dateTF" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" background="note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oKT-hW-5SE" userLabel="dateTF">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Enter Date Here" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" background="note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oKT-hW-5SE" userLabel="dateTF">
                                 <rect key="frame" x="57" y="273.5" width="300" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="UMe-v6-QYG"/>
@@ -350,7 +350,7 @@
                                 <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="StateTF" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0TH-bg-h4a" userLabel="stateTF">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Enter State Here" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0TH-bg-h4a" userLabel="stateTF">
                                 <rect key="frame" x="57" y="440.5" width="300" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="NZ8-Qo-OTe"/>
@@ -359,7 +359,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="CityTF" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CD4-PW-tDw" userLabel="cityTF">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Enter City Here" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CD4-PW-tDw" userLabel="cityTF">
                                 <rect key="frame" x="57" y="374.5" width="300" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="g5w-iF-x4b"/>
@@ -925,7 +925,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7vF-uJ-xiY"/>
+        <segue reference="O4M-FF-aB0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
