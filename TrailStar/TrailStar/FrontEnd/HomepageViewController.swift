@@ -29,7 +29,10 @@ class HomepageViewController: UIViewController {
     
     
     @IBOutlet weak var Description2: UILabel!
-        
+    
+    var trail1: TrailData?
+    var trail2: TrailData?
+
     var latitude: Double = 0
     var longitude: Double = 0
     
@@ -55,8 +58,10 @@ class HomepageViewController: UIViewController {
         do {
             
             var nearbyTrails: [TrailData] = try localSearchModule.getNearbyTrails()
-            
-            if let trail1: TrailData = nearbyTrails.randomElement() {
+
+            trail1 = nearbyTrails.randomElement()
+
+            if let trail1 = trail1 {
                 
                 Descrip.text = trail1.name
                 traillength.text = String(trail1.length)
@@ -64,7 +69,9 @@ class HomepageViewController: UIViewController {
                 Descrip.text = trail1.description
             }
             
-            if let trail2: TrailData = nearbyTrails.randomElement() {
+            trail2 = nearbyTrails.randomElement()
+            
+            if let trail2 = trail2 {
                 Description2.text = trail2.name
                 traillength2.text = String(trail2.length)
                 trailplace2.text = String(trail2.city + "," + trail2.state)
@@ -91,7 +98,45 @@ class HomepageViewController: UIViewController {
         
     }
     
+    
+    func buttonAddTrail(_ trail: TrailData?) {
+        guard let trail = trail else {
+            return
+        }
 
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let container = appDelegate.persistentContainer
+        let coreDataContext = container.viewContext
+        
+        let trailDataEntity = TrailDataEntity(context: coreDataContext)
+        trailDataEntity.country = trail.country
+        trailDataEntity.city = trail.city
+        trailDataEntity.length = trail.length
+        trailDataEntity.state = trail.state
+        trailDataEntity.name = trail.name
+        trailDataEntity.directionsBlurb = trail.directionsBlurb
+        trailDataEntity.desc = trail.description
+        
+        do {
+            try coreDataContext.save()
+            
+        } catch let error as NSError {
+            print("Could not save. error=\(error), error.userInfo=\(error.userInfo)")
+        }
+
+    }
+    
+    
+    @IBAction func button1AddTrail(_ sender: Any) {
+        buttonAddTrail(trail1)
+    }
+    
+    
+    @IBAction func button2AddTrail(_ sender: Any) {
+        buttonAddTrail(trail2)
+    }
+    
     /*
     // MARK: - Navigation
 
