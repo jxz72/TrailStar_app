@@ -20,10 +20,12 @@ class HomepageViewController: UIViewController {
     @IBOutlet weak var trailplace: UILabel!
     @IBOutlet weak var trailplace2: UILabel!
     
-    @IBOutlet weak var Descrip: UILabel!
+
+   
     @IBOutlet weak var Descrip2: UILabel!
     
-    @IBOutlet weak var Description1: UILabel!
+ 
+    @IBOutlet weak var Descrip: UILabel!
     
     
     @IBOutlet weak var Description2: UILabel!
@@ -54,22 +56,20 @@ class HomepageViewController: UIViewController {
             
             var nearbyTrails: [TrailData] = try localSearchModule.getNearbyTrails()
             
-            var trail1: TrailData = nearbyTrails.randomElement()! //var changed to let
+            if let trail1: TrailData = nearbyTrails.randomElement() {
+                
+                Descrip.text = trail1.name
+                traillength.text = String(trail1.length)
+                trailplace.text = String(trail1.city + "," + trail1.state)
+                Descrip.text = trail1.description
+            }
             
-            Description1.text = trail1.name
-            traillength.text = String(trail1.length)
-            trailplace.text = String(trail1.city + "," + trail1.state)
-            Descrip.text = trail1.description
-            
-            
-            var trail2: TrailData = nearbyTrails.randomElement()!
-            
-            Description2.text = trail2.name
-            traillength2.text = String(trail2.length)
-            trailplace2.text = String(trail2.city + "," + trail1.state)
-            Descrip2.text = trail2.description
-            
-           
+            if let trail2: TrailData = nearbyTrails.randomElement() {
+                Description2.text = trail2.name
+                traillength2.text = String(trail2.length)
+                trailplace2.text = String(trail2.city + "," + trail2.state)
+                Descrip2.text = trail2.description
+            }
             
         } catch APIError.locationParsingFailure {
             print("Error: Couldn't find location");

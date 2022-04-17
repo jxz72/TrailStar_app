@@ -228,7 +228,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="aY2-8q-09j"/>
                     <connections>
-                        <outlet property="Description1" destination="xPL-u9-o64" id="wR1-0x-jOB"/>
+                        <outlet property="Descrip" destination="xPL-u9-o64" id="Mdm-ET-hxi"/>
+                        <outlet property="Descrip2" destination="b3r-uB-TEh" id="epK-5N-edP"/>
                         <outlet property="Description2" destination="b3r-uB-TEh" id="UDh-cJ-zWG"/>
                         <outlet property="TrailImage1" destination="P32-xC-EIm" id="snN-Tx-f2U"/>
                         <outlet property="TrailImage2" destination="iKB-ne-NAs" id="Gi6-CK-BHU"/>
