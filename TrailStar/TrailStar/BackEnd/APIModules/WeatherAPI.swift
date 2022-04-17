@@ -13,7 +13,9 @@ class WeatherAPI {
     //0 means just today, 1 means tomorrow, and 2 means two days from now.
     static func generateWeather(trailData: TrailData, date: String, days: Int) throws ->  WeatherData {
         //return try generateWeather(city: trailData.city, state: trailData.state, country: trailData.country, date: date, days: days)
-        return try generateWeather(city: trailData.city, state: trailData.state, country: "USA", date: date, days: days)
+        let trailStateAbbrevation = getStateAbbr(trailData.state)
+        
+        return try generateWeather(city: trailData.city, state: trailStateAbbrevation, country: "USA", date: date, days: days)
     }
     
     static func generateWeather(city: String, state: String, country: String, date: String, days: Int) throws ->  WeatherData {
@@ -107,6 +109,74 @@ class WeatherAPI {
         
         
         return query.replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
+    }
+    
+    //Convert state to state abbrevation:
+    static func getStateAbbr(_ state: String) -> String {
+        var ret: String = state
+        
+        switch state {
+        case "Alabama": ret = "AL"
+        case "Alaska": ret = "AK"
+        case "American Samoa": ret = "AS"
+        case "Arizona": ret = "AZ"
+        case "Arkansas": ret = "AR"
+        case "California": ret = "CA"
+        case "Colorado" : ret = "CO"
+        case "Connecticut": ret = "CT"
+        case "Delaware": ret = "DE"
+        case "District of Columbia": ret = "DC"
+        case "Florida": ret = "FL"
+        case "Georgia": ret = "GA"
+        case "Guam": ret = "GU"
+        case "Hawaii": ret = "HI"
+        case "Idaho": ret = "ID"
+        case "Illinois": ret = "IL"
+        case "Indiana": ret = "IN"
+        case "Iowa": ret = "IA"
+        case "Kansas": ret = "KS"
+        case "Kentucky": ret = "KY"
+        case "Louisiana": ret = "LA"
+        case "Maine": ret = "ME"
+        case "Maryland": ret = "MD"
+        case "Massachusetts": ret = "MA"
+        case "Michigan": ret = "MI"
+        case "Minnesota": ret = "MN"
+        case "Minor Outlying Islands": ret =  "UM"
+        case "Mississippi": ret = "MS"
+        case "Missouri": ret = "MO"
+        case "Montana": ret = "MT"
+        case "Nebraska": ret = "NE"
+        case "Nevada": ret = "NV"
+        case "New Hampshire": ret =  "NH"
+        case "New Jersey": ret = "NJ"
+        case "New Mexico": ret = "NM"
+        case "New York": ret = "NY"
+        case "North Carolina": ret = "NC"
+        case "North Dakota": ret = "ND"
+        case "Northern Mariana Islands": ret = "CM"
+        case "Ohio": ret = "OH"
+        case "Oklahoma": ret = "OK"
+        case "Oregon": ret = "OR"
+        case "Pennsylvania": ret = "PA"
+        case "Puerto Rico": ret = "PR"
+        case "Rhode Island": ret = "RI"
+        case "South Carolina": ret = "SC"
+        case "South Dakota": ret = "SD"
+        case "Tennessee": ret = "TN"
+        case "Texas": ret = "TX"
+        case "U.S. Virgin Islands": ret = "VI"
+        case "Utah": ret = "UT"
+        case "Vermont": ret = "VT"
+        case "Virginia": ret = "VA"
+        case "Washington": ret = "WA"
+        case "West Virginia": ret = "WV"
+        case "Wisconsin": ret = "WI"
+        case "Wyoming" : ret = "WY"
+        default: ret = "NC"
+        }
+        
+        return ret
     }
     
     

@@ -44,6 +44,9 @@ class DetailedTrailViewController: UIViewController {
         //WeatherAPI call
         do {
             let weatherForTrail: WeatherData = try WeatherAPI.generateWeather(trailData: resultTrailList[selectedRow!], date: searchDate, days: searchDays)
+            print("Weather For Trail: \(weatherForTrail)")
+            
+            
         }
         catch{
             print("error: \(error)")
