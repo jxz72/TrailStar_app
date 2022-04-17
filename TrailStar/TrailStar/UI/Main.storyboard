@@ -17,220 +17,123 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRAILS NEAR YOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmN-9D-iEL">
-                                <rect key="frame" x="20" y="220" width="220" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="vyc-dn-gSa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tpa-rk-b25">
-                                <rect key="frame" x="20" y="297" width="338" height="198"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="198" id="Dgo-tR-YZf"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangetopoPattern" translatesAutoresizingMaskIntoConstraints="NO" id="TLE-bZ-VNG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="393"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qZ6-QN-Wfr">
-                                <rect key="frame" x="57" y="566.5" width="337" height="193.5"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Name NO.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPL-u9-o64">
-                                <rect key="frame" x="20" y="451" width="338" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="nPI-Vj-K3P"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="textColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3r-uB-TEh">
-                                <rect key="frame" x="57" y="710" width="191" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="191" id="iGT-fL-PoO"/>
-                                </constraints>
-                                <string key="text">TrailName NO. 2
-
-
-
-
-</string>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="textColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCU-70-Cl3" userLabel="Button2">
-                                <rect key="frame" x="355" y="707" width="45" height="31"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
-                                <connections>
-                                    <action selector="button2AddTrail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yJw-ix-TYU"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKB-ne-NAs">
-                                <rect key="frame" x="57" y="517.5" width="337" height="193.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="193.5" id="ONw-ER-T7R"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ3-IH-96U">
-                                <rect key="frame" x="182" y="476" width="176" height="14"/>
-                                <string key="text">TrailLength: 10 miles
-
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULM-Va-mf1">
-                                <rect key="frame" x="57" y="735" width="249" height="14"/>
-                                <string key="text">City, State 2
-
-
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bel-s9-aIy">
-                                <rect key="frame" x="238" y="737" width="156" height="14"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="vzx-4k-u5a"/>
-                                </constraints>
-                                <string key="text">TrailLength2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-Ah-Edg">
-                                <rect key="frame" x="319" y="447" width="45" height="31"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
-                                <connections>
-                                    <action selector="button1AddTrail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ph5-nA-z90"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-2P-bKv">
-                                <rect key="frame" x="0.0" y="32" width="414" height="180"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OkQ-Sf-dte">
+                                <rect key="frame" x="0.0" y="174" width="414" height="722"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Hiking Journey " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w4-rg-TOB">
-                                        <rect key="frame" x="20" y="63" width="304" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the first trail near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPL-u9-o64">
+                                        <rect key="frame" x="40" y="304" width="302" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the second trail near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3r-uB-TEh">
+                                        <rect key="frame" x="41" y="558" width="279" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starts Now With TrailStar" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmc-TH-csu">
-                                        <rect key="frame" x="20" y="96" width="295.5" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCU-70-Cl3" userLabel="Button2">
+                                        <rect key="frame" x="340" y="555" width="45" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="1" green="0.52309004189999997" blue="0.0012503010419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="button2AddTrail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yJw-ix-TYU"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULM-Va-mf1">
+                                        <rect key="frame" x="41.5" y="583" width="271.5" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">City, State 2
+
+
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-Ah-Edg">
+                                        <rect key="frame" x="340" y="301" width="45" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="button1AddTrail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ph5-nA-z90"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Durham, North Carolina" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoq-1f-SbL">
+                                        <rect key="frame" x="41.5" y="336" width="271" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P32-xC-EIm">
+                                        <rect key="frame" x="39.5" y="109" width="332.5" height="194"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starts Now With TrailStar" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmc-TH-csu">
+                                        <rect key="frame" x="39.5" y="52.5" width="289" height="31.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Hiking Journey " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w4-rg-TOB">
+                                        <rect key="frame" x="39.5" y="18.5" width="232.5" height="32.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TRAILS NEAR YOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmN-9D-iEL">
+                                        <rect key="frame" x="39.5" y="91" width="128.5" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKB-ne-NAs">
+                                        <rect key="frame" x="41" y="371" width="333" height="186"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 miles" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bel-s9-aIy">
+                                        <rect key="frame" x="305" y="589" width="66" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ3-IH-96U">
+                                        <rect key="frame" x="197" y="337" width="176" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text"> 10 miles
+
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="9w4-rg-TOB" secondAttribute="trailing" constant="90" id="HYn-ql-4aW"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xmc-TH-csu" secondAttribute="bottom" constant="44" id="I0N-es-930"/>
-                                    <constraint firstItem="9w4-rg-TOB" firstAttribute="leading" secondItem="Xfh-2P-bKv" secondAttribute="leading" constant="20" id="SR5-7d-b7u"/>
-                                    <constraint firstItem="9w4-rg-TOB" firstAttribute="top" secondItem="Xfh-2P-bKv" secondAttribute="top" constant="63" id="gwn-1O-OFc"/>
-                                    <constraint firstItem="9w4-rg-TOB" firstAttribute="leading" secondItem="Xmc-TH-csu" secondAttribute="leading" id="hgf-oV-Rf7"/>
-                                    <constraint firstAttribute="bottom" secondItem="9w4-rg-TOB" secondAttribute="bottom" constant="82" id="nP7-y3-jZJ"/>
-                                    <constraint firstItem="Xmc-TH-csu" firstAttribute="top" secondItem="Xfh-2P-bKv" secondAttribute="top" constant="96" id="twS-Nv-oLt"/>
-                                </constraints>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="36"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durham, North Carolina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoq-1f-SbL">
-                                <rect key="frame" x="20" y="476" width="166" height="14"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="ahy-GF-USO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P32-xC-EIm">
-                                <rect key="frame" x="20" y="248" width="338" height="203"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="qZ6-QN-Wfr" firstAttribute="leading" secondItem="b3r-uB-TEh" secondAttribute="leading" id="0Yg-GH-IsS"/>
-                            <constraint firstItem="xPL-u9-o64" firstAttribute="top" secondItem="P32-xC-EIm" secondAttribute="bottom" id="12n-cV-1mc"/>
-                            <constraint firstItem="bel-s9-aIy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="238" id="27X-zy-BNu"/>
-                            <constraint firstItem="eoq-1f-SbL" firstAttribute="firstBaseline" secondItem="LQ3-IH-96U" secondAttribute="firstBaseline" id="7M2-Dv-Gmx"/>
-                            <constraint firstItem="P32-xC-EIm" firstAttribute="trailing" secondItem="xPL-u9-o64" secondAttribute="trailing" id="AHu-zV-1tL"/>
-                            <constraint firstItem="iKB-ne-NAs" firstAttribute="top" secondItem="uRF-Ah-Edg" secondAttribute="bottom" constant="39.5" id="BD9-PP-kiq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P32-xC-EIm" secondAttribute="trailing" constant="56" id="BFQ-P2-toE"/>
-                            <constraint firstItem="eoq-1f-SbL" firstAttribute="baseline" secondItem="LQ3-IH-96U" secondAttribute="baseline" id="Bsd-Ac-2Nq"/>
-                            <constraint firstItem="b3r-uB-TEh" firstAttribute="leading" secondItem="ULM-Va-mf1" secondAttribute="leading" id="DEu-7x-buO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ULM-Va-mf1" secondAttribute="trailing" constant="108" id="DO1-y9-EKc"/>
-                            <constraint firstItem="iKB-ne-NAs" firstAttribute="leading" secondItem="b3r-uB-TEh" secondAttribute="leading" id="Efm-JX-l5k"/>
-                            <constraint firstItem="xPL-u9-o64" firstAttribute="centerY" secondItem="uRF-Ah-Edg" secondAttribute="centerY" id="G1x-Kw-pBG"/>
-                            <constraint firstItem="Xfh-2P-bKv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KMe-8f-5Aw"/>
-                            <constraint firstItem="PmN-9D-iEL" firstAttribute="top" secondItem="Xfh-2P-bKv" secondAttribute="bottom" constant="8" symbolic="YES" id="LDN-LO-bSd"/>
-                            <constraint firstItem="iKB-ne-NAs" firstAttribute="trailing" secondItem="bel-s9-aIy" secondAttribute="trailing" id="OM7-B5-Kxn"/>
-                            <constraint firstItem="tpa-rk-b25" firstAttribute="trailing" secondItem="xPL-u9-o64" secondAttribute="trailing" id="P4U-iB-fS2"/>
-                            <constraint firstItem="P32-xC-EIm" firstAttribute="leading" secondItem="xPL-u9-o64" secondAttribute="leading" id="PNT-0E-wOh"/>
-                            <constraint firstItem="ULM-Va-mf1" firstAttribute="top" secondItem="iKB-ne-NAs" secondAttribute="bottom" constant="30" id="Qnp-EK-s2O"/>
-                            <constraint firstItem="PmN-9D-iEL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qvh-FM-6x1"/>
-                            <constraint firstItem="iKB-ne-NAs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VtL-z3-zAB"/>
-                            <constraint firstItem="eoq-1f-SbL" firstAttribute="top" secondItem="xPL-u9-o64" secondAttribute="bottom" constant="3" id="Vzr-VV-N1p"/>
-                            <constraint firstItem="uRF-Ah-Edg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="321" id="YKa-ic-CPx"/>
-                            <constraint firstItem="iKB-ne-NAs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="YS3-wM-rSa"/>
-                            <constraint firstItem="PmN-9D-iEL" firstAttribute="leading" secondItem="P32-xC-EIm" secondAttribute="leading" id="aMP-7f-GvB"/>
-                            <constraint firstItem="bel-s9-aIy" firstAttribute="top" secondItem="fCU-70-Cl3" secondAttribute="bottom" constant="2" id="aud-OT-Nlu"/>
-                            <constraint firstItem="qZ6-QN-Wfr" firstAttribute="top" secondItem="tpa-rk-b25" secondAttribute="bottom" constant="71.5" id="c8b-Jm-Usr"/>
-                            <constraint firstItem="xPL-u9-o64" firstAttribute="trailing" secondItem="LQ3-IH-96U" secondAttribute="trailing" id="cKs-Z7-W6p"/>
-                            <constraint firstItem="bel-s9-aIy" firstAttribute="baseline" secondItem="ULM-Va-mf1" secondAttribute="firstBaseline" id="gW0-qI-8pw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bel-s9-aIy" secondAttribute="bottom" constant="56" id="gZd-6d-ngq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PmN-9D-iEL" secondAttribute="trailing" constant="174" id="kEt-rb-1J9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qZ6-QN-Wfr" secondAttribute="bottom" constant="53" id="kGu-hb-zme"/>
-                            <constraint firstItem="ULM-Va-mf1" firstAttribute="top" secondItem="b3r-uB-TEh" secondAttribute="bottom" constant="10" id="nSi-nm-6P1"/>
-                            <constraint firstItem="iKB-ne-NAs" firstAttribute="top" secondItem="eoq-1f-SbL" secondAttribute="bottom" constant="27.5" id="ndK-hd-WfR"/>
-                            <constraint firstItem="LQ3-IH-96U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="182" id="ov7-lE-kES"/>
-                            <constraint firstAttribute="trailing" secondItem="Xfh-2P-bKv" secondAttribute="trailing" id="p8f-eB-lTQ"/>
-                            <constraint firstItem="xPL-u9-o64" firstAttribute="leading" secondItem="eoq-1f-SbL" secondAttribute="leading" id="pAh-tn-zCy"/>
-                            <constraint firstItem="b3r-uB-TEh" firstAttribute="top" secondItem="fCU-70-Cl3" secondAttribute="top" id="pFQ-wa-D81"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eoq-1f-SbL" secondAttribute="trailing" constant="228" id="rOA-zy-cNj"/>
-                            <constraint firstItem="tpa-rk-b25" firstAttribute="top" secondItem="PmN-9D-iEL" secondAttribute="bottom" constant="49" id="sDr-V1-zRc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ULM-Va-mf1" secondAttribute="bottom" constant="58" id="t1w-7t-4UF"/>
-                            <constraint firstItem="P32-xC-EIm" firstAttribute="top" secondItem="PmN-9D-iEL" secondAttribute="bottom" id="uDt-II-aXP"/>
-                            <constraint firstItem="iKB-ne-NAs" firstAttribute="top" secondItem="tpa-rk-b25" secondAttribute="bottom" constant="22.5" id="uYu-aL-qqi"/>
-                            <constraint firstItem="tpa-rk-b25" firstAttribute="leading" secondItem="eoq-1f-SbL" secondAttribute="leading" id="vDl-HK-rEd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fCU-70-Cl3" secondAttribute="trailing" constant="14" id="yG6-Qj-yas"/>
-                            <constraint firstItem="Xfh-2P-bKv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-56" id="yNY-U0-vUv"/>
-                            <constraint firstItem="qZ6-QN-Wfr" firstAttribute="trailing" secondItem="bel-s9-aIy" secondAttribute="trailing" id="yld-dY-9Uv"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" selectedImage="homekit" catalog="system" id="a9o-Oh-gGd"/>
                     <navigationItem key="navigationItem" id="aY2-8q-09j"/>
@@ -241,6 +144,7 @@
                         <outlet property="Description2" destination="b3r-uB-TEh" id="UDh-cJ-zWG"/>
                         <outlet property="TrailImage1" destination="P32-xC-EIm" id="snN-Tx-f2U"/>
                         <outlet property="TrailImage2" destination="iKB-ne-NAs" id="Gi6-CK-BHU"/>
+                        <outlet property="mainView" destination="OkQ-Sf-dte" id="0SX-rk-ebu"/>
                         <outlet property="traillength" destination="LQ3-IH-96U" id="r8x-y3-oIi"/>
                         <outlet property="traillength2" destination="bel-s9-aIy" id="dni-al-6PL"/>
                         <outlet property="trailplace" destination="eoq-1f-SbL" id="Rnf-Fs-ZEQ"/>
@@ -992,6 +896,7 @@
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="note" catalog="system" width="128" height="106"/>
+        <image name="orangetopoPattern" width="2537" height="2705"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

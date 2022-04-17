@@ -1,15 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "Blog-Body-Image-Hiking.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
+      "filename" : "coupleWalking.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },

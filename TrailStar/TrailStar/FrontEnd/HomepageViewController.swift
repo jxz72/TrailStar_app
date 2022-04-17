@@ -24,7 +24,8 @@ class HomepageViewController: UIViewController {
    
     @IBOutlet weak var Descrip2: UILabel!
     
- 
+    @IBOutlet weak var mainView: UIView!
+    
     @IBOutlet weak var Descrip: UILabel!
     
     
@@ -40,6 +41,10 @@ class HomepageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainView.backgroundColor = UIColor(red: 250/255,
+                                           green: 250/255,
+                                           blue: 250/255,
+                                           alpha: 1)
         
         
         
@@ -62,10 +67,10 @@ class HomepageViewController: UIViewController {
             trail1 = nearbyTrails.randomElement()
 
             if let trail1 = trail1 {
-                
                 Descrip.text = trail1.name
-                traillength.text = String(trail1.length)
-                trailplace.text = String(trail1.city + "," + trail1.state)
+                Descrip.adjustsFontSizeToFitWidth = true
+                traillength.text = String(trail1.length) + " mi"
+                trailplace.text = String(trail1.city + ", " + trail1.state)
                 Descrip.text = trail1.description
             }
             
@@ -73,8 +78,9 @@ class HomepageViewController: UIViewController {
             
             if let trail2 = trail2 {
                 Description2.text = trail2.name
-                traillength2.text = String(trail2.length)
-                trailplace2.text = String(trail2.city + "," + trail2.state)
+                Description2.adjustsFontSizeToFitWidth = true
+                traillength2.text = String(trail2.length) + " mi"
+                trailplace2.text = String(trail2.city + ", " + trail2.state)
                 Descrip2.text = trail2.description
             }
             
@@ -86,7 +92,7 @@ class HomepageViewController: UIViewController {
             print("Error connecting to API");
         }
         
-        
+        //trailName.adjustsFontSizeToFitWidth = true
         print("Application Started");
         // Do any additional setup after loading the view.
     }
