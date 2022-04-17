@@ -51,6 +51,10 @@ class UserInputViewController: UIViewController {
     var pickerView = UIPickerView() //picker for states initialized
     let states = ["Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Guam", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Minor Outlying Islands", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Northern Mariana Islands", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "U.S. Virgin Islands", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
 
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        searchCity = cityTF.text!
+    }
         override func viewDidLoad() {
             super.viewDidLoad()
             
@@ -82,7 +86,7 @@ class UserInputViewController: UIViewController {
             cityTF.textContentType = .addressCity
             print(cityTF.inputView as Any)
             cityString = cityTF.text!
-            //searchCity = cityString
+            searchCity = cityString
             
             
             //state textfield / pickerview
@@ -207,6 +211,26 @@ class UserInputViewController: UIViewController {
         }
         print(sender.titleLabel?.text)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    print("xxxxx")
+        searchCity = cityTF.text ?? "Durham"
+        searchState = stateTF.text ?? "NC"
+         
+        /*
+    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+
+        //if (segue.identifier == "yourSegueIdentifer") {
+            // initialize new view controller and cast it as your view controller
+            let viewController = segue.destination as! DetailedTrailViewController
+            let selectedRow = tableView.indexPathForSelectedRow?.row
+            // your new view controller should have property that will store passed value
+            //print("xxx \(valueToPass)")
+        viewController.selectedRow = selectedRow
+        //}
+         */
+    }
+
 }
 
 

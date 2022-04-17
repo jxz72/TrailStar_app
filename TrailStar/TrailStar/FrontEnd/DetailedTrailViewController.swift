@@ -32,8 +32,7 @@ class DetailedTrailViewController: UIViewController {
         //populating view
         trailName.text = resultTrailList[selectedRow!].name
         trailName.adjustsFontSizeToFitWidth = true
-        //trailLocation.text = "\(resultTrailList[selectedRow!].city),  \(resultTrailList[selectedRow!].state), \(resultTrailList[selectedRow!].country)"
-        trailLocation.text = "\(resultTrailList[selectedRow!].city),  \(resultTrailList[selectedRow!].state), USA)"
+        trailLocation.text = "\(resultTrailList[selectedRow!].city),  \(resultTrailList[selectedRow!].state), USA"
         trailLength.text = "\(resultTrailList[selectedRow!].length) miles"
         
         trailDescription.text = "\(resultTrailList[selectedRow!].description)"
@@ -90,20 +89,51 @@ extension DetailedTrailViewController: CLLocationManagerDelegate, MKMapViewDeleg
         let trailLong = -82.2270568
         
         
-        let trailCoords = CLLocationCoordinate2D(latitude: trailLat,
-            longitude: trailLong)
+        //calling Geocoder to get coordinates
+        let geocoder = CLGeocoder()
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let region = MKCoordinateRegion(center: trailCoords, span: span)
+        print("\(searchCity), \(searchState)")
         
-        mapView.setRegion(region, animated: true)
-       
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = trailCoords
-        annotation.title = resultTrailList[selectedRow!].name
-        //annotation.subtitle = "\(resultTrailList[selectedRow!].length) miles"
-        mapView.addAnnotation(annotation)
+        geocoder.geocodeAddressString("\(searchCity), \(searchState)") {
+            (placemarks, error) in
+            
+            
+            print("enter completion")
+            
+            
+            guard error == nil else {
+                print("geo error=\(error)")
+                return
+            }
+        
+        
+            if let first = placemarks?.first?.location?.coordinate {
+            
+                print("first=\(first)")
+                let trailCoords = CLLocationCoordinate2D(latitude: first.latitude,
+                    longitude: first.longitude)
+                
+                let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+                let region = MKCoordinateRegion(center: trailCoords, span: span)
+                
+                self.mapView.setRegion(region, animated: true)
+               
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = trailCoords
+                annotation.title = resultTrailList[self.selectedRow!].name
+                //annotation.subtitle = "\(resultTrailList[selectedRow!].length) miles"
+                self.mapView.addAnnotation(annotation)
 
+                self.view.layoutIfNeeded()
+
+                
+            } else {
+                print("first is nil")
+            }
+            
+            
+            
+    }
     
     }
     

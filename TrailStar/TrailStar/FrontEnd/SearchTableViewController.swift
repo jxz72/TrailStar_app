@@ -1,5 +1,6 @@
 import UIKit
 import CoreData
+import CoreLocation
 
 class SearchTableViewController: UITableViewController {
 
@@ -23,6 +24,42 @@ class SearchTableViewController: UITableViewController {
     }
     
     func loadTrailDataForSearch() {
+        resultTrailList.removeAll()
+
+        let geocoder = CLGeocoder()
+        
+        print("\(searchCity), \(searchState)")
+        
+        geocoder.geocodeAddressString("\(searchCity), \(searchState)") {
+            (placemarks, error) in
+            
+            
+            print("enter completion")
+            
+            
+            guard error == nil else {
+                print("geo error=\(error)")
+                return
+            }
+            
+            
+            if let first = placemarks?.first?.location?.coordinate {
+            
+                print("firt=\(first)")
+            resultTrailList = try! TrailAPIModule.generateTrailList(latitude: first.latitude, longitude: first.longitude, limit: 15)
+            } else {
+                print("first is nil")
+            }
+            
+            self.tableView.reloadData()
+            
+            return
+            
+        }
+        
+    }
+
+    func loadTrailDataForSearch1() {
         do {
             //resultTrailList = try TrailSearchModule.getTrailResults(city: searchCity, state: //searchState, country: "USA", limit: 1, date: searchDate, days: searchDays)
             resultTrailList.removeAll()
