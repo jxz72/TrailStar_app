@@ -17,7 +17,7 @@ class SearchTableViewController: UITableViewController {
         
         //call TrailSearchModule here
         //if from serach
-        loadTrailDataForSearch()
+        //loadTrailDataForSearch()
         //else // from history
         loadTrailDataForHistory()
     }
@@ -92,15 +92,8 @@ class SearchTableViewController: UITableViewController {
         
         cell.trailName.adjustsFontSizeToFitWidth = true
         
-        cell.trailLocation.text = "\(resultTrailList[indexPath.row].city),  \(resultTrailList[indexPath.row].state), \(resultTrailList[indexPath.row].country)"
+        cell.trailLocation?.text = "\(resultTrailList[indexPath.row].city),  \(resultTrailList[indexPath.row].state), \(resultTrailList[indexPath.row].country)"
         cell.trailLocation.adjustsFontSizeToFitWidth = true
-        
-        cell.trailSun.text = resultTrailList[indexPath.row].description
-        cell.trailSun.adjustsFontSizeToFitWidth = true
-        
-        cell.trailRain.text = "testingRain"
-        cell.trailRain.adjustsFontSizeToFitWidth = true
-        // Configure the cell...
         
         cell.trailImage.layer.cornerRadius = 30
         cell.trailImage.clipsToBounds = true

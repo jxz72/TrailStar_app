@@ -59,9 +59,12 @@
                                 <color key="textColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCU-70-Cl3">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCU-70-Cl3" userLabel="Button2">
                                 <rect key="frame" x="355" y="707" width="45" height="31"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button2AddTrail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yJw-ix-TYU"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKB-ne-NAs">
                                 <rect key="frame" x="57" y="517.5" width="337" height="193.5"/>
@@ -134,6 +137,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-Ah-Edg">
                                 <rect key="frame" x="319" y="447" width="45" height="31"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button1AddTrail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ph5-nA-z90"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-2P-bKv">
                                 <rect key="frame" x="0.0" y="32" width="414" height="180"/>
@@ -661,6 +667,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="trailImage" destination="Hf7-cZ-89A" id="2pr-AQ-cN9"/>
+                                    <outlet property="trailLocation" destination="o2P-vC-TpD" id="WaC-Po-kgk"/>
                                     <outlet property="trailName" destination="rxQ-B2-Anw" id="tYB-UA-xHy"/>
                                     <segue destination="PwE-dz-iUn" kind="presentation" identifier="yourSegueIdentifer" id="JaE-Tz-dmc"/>
                                 </connections>
