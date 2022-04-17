@@ -13,7 +13,7 @@ class SearchTableViewController: UITableViewController {
         super.viewDidLoad()
         table.dataSource = self
         table.delegate = self
-        table.rowHeight = 200
+        table.rowHeight = 178
         
         listTitle.text = historySelected ? "Trails Saved" : "Trails Found"
 
