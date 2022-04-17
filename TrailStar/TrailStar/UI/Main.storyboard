@@ -340,7 +340,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="STATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewC-Hn-NEA">
-                                <rect key="frame" x="57" y="416.5" width="146" height="18"/>
+                                <rect key="frame" x="57" y="402.5" width="146" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="aL1-2c-LuD"/>
                                     <constraint firstAttribute="width" constant="146" id="jNZ-V2-68c"/>
@@ -350,7 +350,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUW-My-bit">
-                                <rect key="frame" x="57" y="324.5" width="300" height="22"/>
+                                <rect key="frame" x="57" y="320.5" width="300" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="FOW-3t-XA8"/>
                                     <constraint firstAttribute="height" constant="22" id="GJs-Sn-iFM"/>
@@ -360,7 +360,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CITY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzM-hQ-tdn">
-                                <rect key="frame" x="58" y="351.5" width="37" height="18"/>
+                                <rect key="frame" x="58" y="340.5" width="37" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="7td-y0-QEH"/>
                                     <constraint firstAttribute="height" constant="18" id="Pmz-Bl-2fP"/>
@@ -370,7 +370,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0TH-bg-h4a" userLabel="stateTF">
-                                <rect key="frame" x="57" y="436.5" width="300" height="34"/>
+                                <rect key="frame" x="57" y="422.5" width="300" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="gGA-mn-gIP"/>
                                     <constraint firstAttribute="width" constant="300" id="xzY-Wa-HKj"/>
@@ -380,7 +380,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CD4-PW-tDw" userLabel="cityTF">
-                                <rect key="frame" x="57" y="370.5" width="300" height="34"/>
+                                <rect key="frame" x="57" y="360.5" width="300" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="2Vl-wo-XcO"/>
                                     <constraint firstAttribute="height" constant="34" id="vaU-el-HqX"/>
@@ -390,7 +390,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ideal trail length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxZ-3i-JMX">
-                                <rect key="frame" x="58" y="489.5" width="300" height="22"/>
+                                <rect key="frame" x="58" y="471.5" width="300" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="bog-7C-t69"/>
                                     <constraint firstAttribute="width" constant="300" id="fTX-MC-On3"/>
@@ -400,7 +400,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ko-ve-8xZ">
-                                <rect key="frame" x="57" y="517.5" width="146" height="35"/>
+                                <rect key="frame" x="57" y="499.5" width="146" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="7tp-bn-pOh"/>
                                     <constraint firstAttribute="width" constant="146" id="rrf-dK-Rc7"/>
@@ -423,7 +423,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvX-fB-4Y4">
-                                <rect key="frame" x="211" y="516" width="146" height="35"/>
+                                <rect key="frame" x="211" y="498" width="146" height="35"/>
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted">
@@ -442,7 +442,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoS-9y-zuG">
-                                <rect key="frame" x="57" y="565.5" width="146" height="33.5"/>
+                                <rect key="frame" x="57" y="547.5" width="146" height="33.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33.5" id="iWT-kL-6MX"/>
                                     <constraint firstAttribute="width" constant="146" id="s3N-KI-3EJ"/>
@@ -464,8 +464,8 @@
                                     <action selector="buttonPressedWithSender:" destination="t9U-T2-t1L" eventType="touchUpInside" id="ZsN-Qx-Wfl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-GZ-qZO">
-                                <rect key="frame" x="211" y="566" width="146" height="33.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-GZ-qZO">
+                                <rect key="frame" x="211" y="548" width="146" height="33.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="ObS-Ft-svx"/>
                                     <constraint firstAttribute="height" constant="33.5" id="sL2-HP-5Zd"/>
@@ -488,7 +488,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrO-II-DfX">
-                                <rect key="frame" x="58" y="687" width="300" height="53.5"/>
+                                <rect key="frame" x="58" y="668" width="300" height="53.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.96862745100000003" green="0.73442979580000001" blue="0.56581003210000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <buttonConfiguration key="configuration" style="filled" buttonSize="large">

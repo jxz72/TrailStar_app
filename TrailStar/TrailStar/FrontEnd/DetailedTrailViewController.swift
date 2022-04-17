@@ -31,7 +31,7 @@ class DetailedTrailViewController: UIViewController {
         
         //populating view
         trailName.text = resultTrailList[selectedRow!].name
-        trailName.adjustsFontSizeToFitWidth = true
+        //trailName.adjustsFontSizeToFitWidth = true
         //trailLocation.text = "\(resultTrailList[selectedRow!].city),  \(resultTrailList[selectedRow!].state), \(resultTrailList[selectedRow!].country)"
         trailLocation.text = "\(resultTrailList[selectedRow!].city),  \(resultTrailList[selectedRow!].state), USA)"
         trailLength.text = "\(resultTrailList[selectedRow!].length) miles"
