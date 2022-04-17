@@ -15,16 +15,21 @@ class SearchTableViewController: UITableViewController {
         table.delegate = self
         table.rowHeight = 200
         
-        
-        //call TrailSearchModule here
-        //if from serach
-        loadTrailDataForSearch()
-        //else // from history
-        //loadTrailDataForHistory()
-    }
+        listTitle.text = historySelected ? "Trails Saved" : "Trails Found"
+
+
+         resultTrailList.removeAll()
+
+         if ( historySelected ) {
+             loadTrailDataForHistory()
+         }
+         else {
+             loadTrailDataForSearch()
+         }
+     }
+     
     
     func loadTrailDataForSearch() {
-        resultTrailList.removeAll()
 
         let geocoder = CLGeocoder()
         
@@ -118,7 +123,9 @@ class SearchTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return resultTrailList.count
     }
-
+    
+    @IBOutlet weak var listTitle: UILabel!
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! SearchTableViewCell

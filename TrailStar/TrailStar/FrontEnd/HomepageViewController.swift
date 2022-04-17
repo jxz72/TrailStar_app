@@ -7,6 +7,108 @@
 
 import UIKit
 import CoreLocation
+import CoreData
+
+func findTrailDataEntity(_ trail: TrailData?) -> TrailDataEntity? {
+    guard let trail = trail else {
+        return nil
+    }
+    
+    var trailDataEntity: TrailDataEntity?
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let container = appDelegate.persistentContainer
+    let coreDataContext = container.viewContext
+    
+    let predicate = NSPredicate(format: "name == %@", trail.name)
+    
+    let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "TrailDataEntity")
+    request.predicate = predicate
+    
+    request.returnsObjectsAsFaults = false
+    
+    do {
+        let result = try coreDataContext.fetch(request)
+        
+        if ( result.count > 0 ) {
+            trailDataEntity = result.first as? TrailDataEntity
+        }
+    } catch {
+        print("addTrailDataEntity fetch failed error = \(error)" )
+    }
+    
+    return trailDataEntity
+}
+
+func addTrailDataEntity(_ trail: TrailData?) {
+    guard let trail = trail else {
+        return
+    }
+    
+    var trailDataEntity: TrailDataEntity?
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let container = appDelegate.persistentContainer
+    let coreDataContext = container.viewContext
+    
+    trailDataEntity = findTrailDataEntity( trail )
+    
+    if ( trailDataEntity == nil ) {
+        trailDataEntity = TrailDataEntity(context: coreDataContext)
+    }
+    
+    if let trailDataEntity = trailDataEntity {
+        trailDataEntity.country = trail.country
+        trailDataEntity.city = trail.city
+        trailDataEntity.length = trail.length
+        trailDataEntity.state = trail.state
+        trailDataEntity.name = trail.name
+        trailDataEntity.directionsBlurb = trail.directionsBlurb
+        trailDataEntity.desc = trail.description
+        
+        do {
+            try coreDataContext.save()
+            
+        } catch let error as NSError {
+            print("Could not save. error=\(error), error.userInfo=\(error.userInfo)")
+        }
+    }
+}
+
+func deleteTrailDataEntity(_ trail: TrailData?) {
+    guard let trail = trail else {
+        return
+    }
+    
+    var trailDataEntity: TrailDataEntity?
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let container = appDelegate.persistentContainer
+    let coreDataContext = container.viewContext
+    
+    
+    let predicate = NSPredicate(format: "name == %@", trail.name)
+    
+    let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "TrailDataEntity")
+    request.predicate = predicate
+    
+    request.returnsObjectsAsFaults = false
+    
+    do {
+        let result = try coreDataContext.fetch(request)
+        
+        if ( result.count > 0 ) {
+            trailDataEntity = result.first as? TrailDataEntity
+        }
+    } catch {
+        print("addTrailDataEntity fetch failed error = \(error)" )
+    }
+    
+    if let trailDataEntity = trailDataEntity {
+        coreDataContext.delete( trailDataEntity )
+    }
+}
+
 
 class HomepageViewController: UIViewController {
 
@@ -106,33 +208,8 @@ class HomepageViewController: UIViewController {
     
     
     func buttonAddTrail(_ trail: TrailData?) {
-        guard let trail = trail else {
-            return
-        }
-
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let container = appDelegate.persistentContainer
-        let coreDataContext = container.viewContext
-        
-        let trailDataEntity = TrailDataEntity(context: coreDataContext)
-        trailDataEntity.country = trail.country
-        trailDataEntity.city = trail.city
-        trailDataEntity.length = trail.length
-        trailDataEntity.state = trail.state
-        trailDataEntity.name = trail.name
-        trailDataEntity.directionsBlurb = trail.directionsBlurb
-        trailDataEntity.desc = trail.description
-        
-        do {
-            try coreDataContext.save()
-            
-        } catch let error as NSError {
-            print("Could not save. error=\(error), error.userInfo=\(error.userInfo)")
-        }
-
+        addTrailDataEntity( trail )
     }
-    
     
     @IBAction func button1AddTrail(_ sender: Any) {
         buttonAddTrail(trail1)

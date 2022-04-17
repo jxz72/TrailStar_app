@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class DetailedTrailViewController: UIViewController {
     
@@ -21,6 +22,25 @@ class DetailedTrailViewController: UIViewController {
     @IBOutlet weak var trailTemperature: UILabel!
     @IBOutlet weak var trailConditions: UILabel!
     @IBOutlet weak var trailRain: UILabel!
+    
+    
+    @IBOutlet weak var heartButton: UIButton!
+    
+    @IBAction func heartButtonAction(_ sender: Any) {
+        if let trailDataEntry = findTrailDataEntity(resultTrailList[selectedRow!]) {
+            
+            deleteTrailDataEntity( resultTrailList[selectedRow!] )
+            
+            let heartImage = UIImage(systemName: "heart")
+            heartButton.setImage(heartImage, for: .normal)
+        }
+        else {
+            addTrailDataEntity( resultTrailList[selectedRow!] )
+            
+            let heartImage = UIImage(systemName: "heart.fill")
+            heartButton.setImage(heartImage, for: .normal)
+        }
+    }
     
     var selectedRow:Int!
     
@@ -48,9 +68,21 @@ class DetailedTrailViewController: UIViewController {
         //Populate the mapkit
         populateMap()
         
+        var weatherDays = searchDays
+        
+        if let trailDataEntry = findTrailDataEntity(resultTrailList[selectedRow!]) {
+            
+            weatherDays = 0
+            
+            let heartImage = UIImage(systemName: "heart.fill")
+            heartButton.setImage(heartImage, for: .normal)
+            
+        }
+        
+        
         //WeatherAPI call
         do {
-            let weatherForTrail: WeatherData = try WeatherAPI.generateWeather(trailData: resultTrailList[selectedRow!], date: searchDate, days: searchDays)
+            let weatherForTrail: WeatherData = try WeatherAPI.generateWeather(trailData: resultTrailList[selectedRow!], date: searchDate, days: weatherDays)
             print("Weather For Trail: \(weatherForTrail)")
             trailTemperature.text = "\(round(weatherForTrail.temperature))F"
             trailConditions.text = weatherForTrail.conditions
@@ -60,6 +92,7 @@ class DetailedTrailViewController: UIViewController {
         catch{
             print("error: \(error)")
         }
+        
         
         
         

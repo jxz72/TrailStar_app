@@ -7,6 +7,8 @@
 
 import UIKit
 
+var historySelected = false
+
 class TabBarController: UITabBarController, UITabBarControllerDelegate  {
 
     override func viewDidLoad() {
@@ -27,4 +29,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate  {
     }
     */
 
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+            print("Selected view controller")
+            historySelected = ( self.selectedIndex == 2 )
+            print ("historySelected=\(historySelected)")
+        }
 }
