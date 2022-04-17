@@ -35,10 +35,14 @@ class DetailedTrailViewController: UIViewController {
         //populating view
         trailName.text = resultTrailList[selectedRow!].name
         trailName.adjustsFontSizeToFitWidth = true
-        trailLocation.text = "\(resultTrailList[selectedRow!].city),  \(resultTrailList[selectedRow!].state), USA"
-        trailLength.text = "\(resultTrailList[selectedRow!].length) miles"
+        trailLocation.text = "\(resultTrailList[selectedRow!].city), \(resultTrailList[selectedRow!].state), USA"
+        trailLength.text = "\(resultTrailList[selectedRow!].length) mi"
         
         trailDescription.text = "\(resultTrailList[selectedRow!].description)"
+        //cell.trailName.text = resultTrailList[indexPath.row].name
+        trailConditions.numberOfLines = 3
+        trailConditions.translatesAutoresizingMaskIntoConstraints = false
+        trailConditions.lineBreakMode = .byWordWrapping
         
         
         //Populate the mapkit
