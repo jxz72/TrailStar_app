@@ -27,6 +27,7 @@
 		5E48F8BC27EADAC300893A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E48F8BB27EADAC300893A3F /* Assets.xcassets */; };
 		5E974EEC280BC1BD00AEF4EC /* TrailDataEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E974EEA280BC1BD00AEF4EC /* TrailDataEntity+CoreDataClass.swift */; };
 		5E974EED280BC1BD00AEF4EC /* TrailDataEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E974EEB280BC1BD00AEF4EC /* TrailDataEntity+CoreDataProperties.swift */; };
+		5E974EEF280BFCBE00AEF4EC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E974EEE280BFCBE00AEF4EC /* TabBarController.swift */; };
 		5ECF9F8C280A664A00E45E6A /* UserInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF9F8B280A664A00E45E6A /* UserInputViewController.swift */; };
 		5ECF9FB3280B1B2900E45E6A /* TrailStar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF9FB1280B1B2900E45E6A /* TrailStar.xcdatamodeld */; };
 		A02FF8862808B25E00B63B69 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FF8842808B25D00B63B69 /* SearchTableViewController.swift */; };
@@ -56,6 +57,7 @@
 		5E48F8C027EADAC300893A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E974EEA280BC1BD00AEF4EC /* TrailDataEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrailDataEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		5E974EEB280BC1BD00AEF4EC /* TrailDataEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrailDataEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5E974EEE280BFCBE00AEF4EC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5ECF9F8B280A664A00E45E6A /* UserInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputViewController.swift; sourceTree = "<group>"; };
 		5ECF9FB2280B1B2900E45E6A /* TrailStar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrailStar.xcdatamodel; sourceTree = "<group>"; };
 		A02FF8842808B25D00B63B69 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				5E48F8B427EADABD00893A3F /* SceneDelegate.swift */,
 				5E48F8B627EADABE00893A3F /* ViewController.swift */,
 				3F75D4542807DEC700DE21AB /* HomepageViewController.swift */,
+				5E974EEE280BFCBE00AEF4EC /* TabBarController.swift */,
 			);
 			path = FrontEnd;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				5E48F8B727EADABE00893A3F /* ViewController.swift in Sources */,
 				5E48F8B327EADABD00893A3F /* AppDelegate.swift in Sources */,
 				3F75D40827F16B4F00DE21AB /* TrailData.swift in Sources */,
+				5E974EEF280BFCBE00AEF4EC /* TabBarController.swift in Sources */,
 				5ECF9FB3280B1B2900E45E6A /* TrailStar.xcdatamodeld in Sources */,
 				3F75D43B27F3991800DE21AB /* TrailAPIModule.swift in Sources */,
 				5E974EED280BC1BD00AEF4EC /* TrailDataEntity+CoreDataProperties.swift in Sources */,

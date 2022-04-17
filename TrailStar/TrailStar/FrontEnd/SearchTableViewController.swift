@@ -17,9 +17,9 @@ class SearchTableViewController: UITableViewController {
         
         //call TrailSearchModule here
         //if from serach
-        //loadTrailDataForSearch()
+        loadTrailDataForSearch()
         //else // from history
-        loadTrailDataForHistory()
+        //loadTrailDataForHistory()
     }
     
     func loadTrailDataForSearch() {
@@ -27,6 +27,8 @@ class SearchTableViewController: UITableViewController {
             //resultTrailList = try TrailSearchModule.getTrailResults(city: searchCity, state: //searchState, country: "USA", limit: 1, date: searchDate, days: searchDays)
             resultTrailList.removeAll()
             resultTrailList = try localSearchModule.getNearbyTrails()
+            //resultTrailList = try TrailSearchModule.getTrailResults(city: searchCity, state: searchState, country: "USA", limit: 1, date: searchDate, days: searchDays)
+
         }
         catch{
             print("Error in API calls \(error)")

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Homepage View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomepageViewController" customModule="TrailStar" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,7 +232,9 @@
                             <constraint firstItem="qZ6-QN-Wfr" firstAttribute="trailing" secondItem="bel-s9-aIy" secondAttribute="trailing" id="yld-dY-9Uv"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="homekit" catalog="system" id="a9o-Oh-gGd"/>
                     <navigationItem key="navigationItem" id="aY2-8q-09j"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Descrip" destination="xPL-u9-o64" id="Mdm-ET-hxi"/>
                         <outlet property="Descrip2" destination="b3r-uB-TEh" id="epK-5N-edP"/>
@@ -252,7 +254,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Yix-AX-7DM">
             <objects>
-                <tabBarController id="I0h-mt-6sv" sceneMemberID="viewController">
+                <tabBarController id="I0h-mt-6sv" customClass="TabBarController" customModule="TrailStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7H9-TU-bVq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
