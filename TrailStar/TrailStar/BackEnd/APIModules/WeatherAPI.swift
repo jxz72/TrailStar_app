@@ -9,7 +9,7 @@ import Foundation
 
 class WeatherAPI {
     private static func formatURLQuery(query: String) -> String {
-        return query.replacingOccurrences(of: " ", with: "%20", options: .literal, range: nil)
+        return query.replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
     }
     
     //date must be in form: yyyy-mm-dd. For example, April 5th 2022 is: 2022-04-05
@@ -35,7 +35,23 @@ class WeatherAPI {
         let group = DispatchGroup()
         group.enter()
 
-        let url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=f826a4ae7cab467981a192902220204&q=" + city + "," + state + "," + country + "&days=" + "3" + "&aqi=no&alerts=no")!
+        print("city:\(city)")
+        print("state:\(state)")
+        
+        print("url=https://api.weatherapi.com/v1/forecast.json?key=f826a4ae7cab467981a192902220204&q=\(city),\(state),USA&days=3&aqi=no&alerts=no")
+
+        /*
+        guard let url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=f826a4ae7cab467981a192902220204&q=" + city + "," + state + "," + "USA" + "&days=" + "3" + "&aqi=no&alerts=no") else{
+            */
+
+        /*
+        guard let url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=f826a4ae7cab467981a192902220204&q=Apex,NC,USA&days=3&aqi=no&alerts=no") else{
+            */
+
+        guard let url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=f826a4ae7cab467981a192902220204&q=ChapelHill,NC,USA&days=3&aqi=no&alerts=no") else{
+            print("url is nil")
+            return weatherAtCity
+        }
         
         let dataTask = session.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
             

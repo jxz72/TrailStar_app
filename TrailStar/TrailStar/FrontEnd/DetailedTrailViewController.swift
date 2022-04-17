@@ -8,14 +8,37 @@
 import UIKit
 
 class DetailedTrailViewController: UIViewController {
-
-    var passedValue:String!
+    
+    @IBOutlet weak var trailName: UILabel!
+    @IBOutlet weak var trailLocation: UILabel!
+    @IBOutlet weak var trailLength: UILabel!
+    
+    var selectedRow:Int!
+    
+    //resultTrailList[selectedRow!]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("xxx \(passedValue)")
         // Do any additional setup after loading the view.
+        
+        
+        //populating view
+        trailName.text = resultTrailList[selectedRow!].name
+        //trailLocation.text = "\(resultTrailList[selectedRow!].city),  \(resultTrailList[selectedRow!].state), \(resultTrailList[selectedRow!].country)"
+        trailLocation.text = "\(resultTrailList[selectedRow!].city),  \(resultTrailList[selectedRow!].state), USA)"
+        trailLength.text = "\(resultTrailList[selectedRow!].length) miles"
+        
+        //WeatherAPI call
+        do {
+
+            let weatherForTrail: WeatherData = try WeatherAPI.generateWeather(trailData: resultTrailList[selectedRow!], date: searchDate, days: searchDays)
+        
+        }
+        catch{
+            print("error: \(error)")
+        }
+        
     }
     
 
