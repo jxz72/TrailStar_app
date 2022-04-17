@@ -8,10 +8,6 @@
 import Foundation
 
 class WeatherAPI {
-    private static func formatURLQuery(query: String) -> String {
-        return query.replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
-    }
-    
     //date must be in form: yyyy-mm-dd. For example, April 5th 2022 is: 2022-04-05
     //days = number of days in advance that we are predicting. Can go from 0 to 2.
     //0 means just today, 1 means tomorrow, and 2 means two days from now.
@@ -47,8 +43,8 @@ class WeatherAPI {
         /*
         guard let url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=f826a4ae7cab467981a192902220204&q=Apex,NC,USA&days=3&aqi=no&alerts=no") else{
             */
-
-        guard let url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=f826a4ae7cab467981a192902220204&q=ChapelHill,NC,USA&days=3&aqi=no&alerts=no") else{
+        let updatedCity = cityFormatURLQuery(query: city)
+        guard let url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=f826a4ae7cab467981a192902220204&q=\(updatedCity),NC,USA&days=3&aqi=no&alerts=no") else{
             print("url is nil")
             return weatherAtCity
         }
@@ -85,7 +81,6 @@ class WeatherAPI {
                     weatherAtCity.temperature = retTemperature
                     weatherAtCity.conditions = retConditions
                     weatherAtCity.rainChance = retRainChance
-
                 }
                 
             }
@@ -105,6 +100,14 @@ class WeatherAPI {
         
     }
     
+    private static func cityFormatURLQuery(query: String) -> String {
+        return query.replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
+    }
+    private static func stateFormatURLQuery(query: String) -> String {
+        
+        
+        return query.replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
+    }
     
     
     

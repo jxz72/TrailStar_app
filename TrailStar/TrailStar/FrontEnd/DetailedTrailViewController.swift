@@ -14,6 +14,7 @@ class DetailedTrailViewController: UIViewController {
     @IBOutlet weak var trailName: UILabel!
     @IBOutlet weak var trailLocation: UILabel!
     @IBOutlet weak var trailLength: UILabel!
+    @IBOutlet weak var trailDescription: UITextView!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -34,18 +35,21 @@ class DetailedTrailViewController: UIViewController {
         trailLocation.text = "\(resultTrailList[selectedRow!].city),  \(resultTrailList[selectedRow!].state), USA)"
         trailLength.text = "\(resultTrailList[selectedRow!].length) miles"
         
+        trailDescription.text = "\(resultTrailList[selectedRow!].description)"
+        
         
         //Populate the mapkit
         populateMap()
         
         //WeatherAPI call
         do {
-
             let weatherForTrail: WeatherData = try WeatherAPI.generateWeather(trailData: resultTrailList[selectedRow!], date: searchDate, days: searchDays)
         }
         catch{
             print("error: \(error)")
         }
+        
+        
         
     }
     
