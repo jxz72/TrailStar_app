@@ -632,6 +632,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="5aN-uP-1fk"/>
                     <connections>
+                        <outlet property="listTitle" destination="wJO-Q9-9Mx" id="DXz-Tz-k65"/>
                         <outlet property="table" destination="A7U-gu-Lmd" id="NJv-N1-JGT"/>
                     </connections>
                 </tableViewController>
@@ -872,6 +873,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="">
                                     <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="heartButtonAction:" destination="PwE-dz-iUn" eventType="touchUpInside" id="09B-Yz-Duv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yQO-6G-rqG"/>
@@ -907,6 +911,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="p4h-V5-xCL"/>
                     <connections>
+                        <outlet property="HeartButton" destination="ojy-9c-0uk" id="Mdw-xd-EUR"/>
+                        <outlet property="heartButton" destination="ojy-9c-0uk" id="mx3-23-l4F"/>
                         <outlet property="mapView" destination="D04-Vy-BZQ" id="V8G-XJ-5FG"/>
                         <outlet property="trailConditions" destination="06S-pr-lMR" id="CRN-9D-X7e"/>
                         <outlet property="trailDescription" destination="hkP-Br-GRl" id="deI-eA-kIf"/>
