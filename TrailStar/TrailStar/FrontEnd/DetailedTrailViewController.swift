@@ -18,6 +18,9 @@ class DetailedTrailViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var trailTemperature: UILabel!
+    @IBOutlet weak var trailConditions: UILabel!
+    @IBOutlet weak var trailRain: UILabel!
     
     var selectedRow:Int!
     
@@ -45,7 +48,9 @@ class DetailedTrailViewController: UIViewController {
         do {
             let weatherForTrail: WeatherData = try WeatherAPI.generateWeather(trailData: resultTrailList[selectedRow!], date: searchDate, days: searchDays)
             print("Weather For Trail: \(weatherForTrail)")
-            
+            trailTemperature.text = "\(round(weatherForTrail.temperature))F"
+            trailConditions.text = weatherForTrail.conditions
+            trailRain.text = "\(weatherForTrail.rainChance / 100) %"
             
         }
         catch{
@@ -88,8 +93,8 @@ extension DetailedTrailViewController: CLLocationManagerDelegate, MKMapViewDeleg
         
         //let trailLat = 36.001678
         //let trailLong = -78.939767
-        let trailLat = 34.9387279
-        let trailLong = -82.2270568
+        //let trailLat = 34.9387279
+        //let trailLong = -82.2270568
         
         
         //calling Geocoder to get coordinates
