@@ -131,6 +131,10 @@ class SearchTableViewController: UITableViewController {
         cell.trailName.translatesAutoresizingMaskIntoConstraints = false
         cell.trailName.lineBreakMode = .byWordWrapping
         
+        cell.trailLocation.numberOfLines = 2
+        cell.trailLocation.translatesAutoresizingMaskIntoConstraints = false
+        cell.trailLocation.lineBreakMode = .byWordWrapping
+        
         
         //cell.trailName.adjustsFontSizeToFitWidth = true
         

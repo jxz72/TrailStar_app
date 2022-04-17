@@ -557,11 +557,11 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bux-ve-1sq">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trails Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJO-Q9-9Mx">
-                                            <rect key="frame" x="99.5" y="42" width="215" height="29"/>
+                                            <rect key="frame" x="99.5" y="37" width="215" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -571,18 +571,18 @@
                                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="157" id="ku4-A0-3Qt" customClass="SearchTableViewCell" customModule="TrailStar" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="142.5" width="414" height="157"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="135" id="ku4-A0-3Qt" customClass="SearchTableViewCell" customModule="TrailStar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="142.5" width="414" height="135"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ku4-A0-3Qt" id="FvR-3Z-5Tj" customClass="SearchTableViewCell" customModule="TrailStar" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hf7-cZ-89A">
-                                            <rect key="frame" x="20" y="0.0" width="136" height="157"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clear8" translatesAutoresizingMaskIntoConstraints="NO" id="Hf7-cZ-89A">
+                                            <rect key="frame" x="20" y="0.0" width="136" height="143"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a very long name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxQ-B2-Anw">
@@ -593,16 +593,16 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location: Durham, North Carolina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2P-vC-TpD">
-                                            <rect key="frame" x="173" y="89" width="202" height="21"/>
+                                            <rect key="frame" x="173" y="69" width="221" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trail Length: 10 miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-nA-Swy">
-                                            <rect key="frame" x="173" y="118" width="119.5" height="21"/>
+                                            <rect key="frame" x="173" y="104" width="221" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -669,12 +669,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt8-qQ-rzn">
-                                <rect key="frame" x="20" y="578" width="90" height="17"/>
+                                <rect key="frame" x="20" y="578" width="116" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="YHu-Mx-JTo"/>
-                                    <constraint firstAttribute="width" constant="90" id="pwG-cf-HbH"/>
+                                    <constraint firstAttribute="width" constant="116" id="pwG-cf-HbH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -822,13 +822,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hkP-Br-GRl">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hkP-Br-GRl">
                                 <rect key="frame" x="18" y="599" width="378" height="159"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">The ride up High Drive is about a mile and completely uphill.  At the top of the hill, take the trail to the right (labeled Penrose Multi-use trail 665).  The other users of this trail include motorcycles so be careful!  The trail is very well maintained and hard to lose.  Alot of loose gravel, banked turns,  and crazy mogul like jumps make this trail awesome.  The trail goes down about 3 miles before ending at a parking lot.  Go out the parking lot and turn right onto the gravel road.  This road leads back to your car and goes through two tunnels and some high rock canyons.  Very scenic, very fast, and very fun.  Do the loop a couple times for a good workout.</string>
+                                <color key="backgroundColor" red="1" green="0.84029954139999996" blue="0.63201302250000002" alpha="0.43450200162975994" colorSpace="custom" customColorSpace="sRGB"/>
+                                <mutableString key="text">The ride up High Drive is about a mile and completely uphill.  At the top of the hill, take the trail to the right (labeled Penrose Multi-use trail 665).  The other users of this trail include motorcycles so be careful!  The trail is very well maintained and hard to lose.  Alot of loose gravel, banked turns,  and crazy mogul like jumps make this trail awesome.  The trail goes down about 3 miles before ending at a parking lot.  Go out the parking lot and turn right onto the gravel road.  This road leads back to your car and goes through two tunnels and some high rock canyons.  Very scenic, very fast, and very fun.  Do the loop a couple times for a good workout.</mutableString>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVw-hB-dM9">
                                 <rect key="frame" x="20" y="27" width="33" height="36"/>
@@ -868,7 +874,7 @@
                             <constraint firstItem="Mt8-qQ-rzn" firstAttribute="top" secondItem="XRa-H9-ybj" secondAttribute="bottom" constant="14" id="0VL-BM-NPQ"/>
                             <constraint firstItem="h5z-aH-LN9" firstAttribute="top" secondItem="D04-Vy-BZQ" secondAttribute="bottom" constant="13" id="5hO-eV-3pV"/>
                             <constraint firstItem="h5z-aH-LN9" firstAttribute="leading" secondItem="XRa-H9-ybj" secondAttribute="trailing" constant="-375" id="6YA-bH-qcD"/>
-                            <constraint firstItem="h5z-aH-LN9" firstAttribute="leading" secondItem="Mt8-qQ-rzn" secondAttribute="trailing" constant="-90" id="9vK-DX-Bev"/>
+                            <constraint firstItem="h5z-aH-LN9" firstAttribute="leading" secondItem="Mt8-qQ-rzn" secondAttribute="trailing" constant="-116" id="9vK-DX-Bev"/>
                             <constraint firstItem="h5z-aH-LN9" firstAttribute="centerY" secondItem="l95-9J-ShI" secondAttribute="centerY" constant="-68.5" id="E8f-R5-dNy"/>
                             <constraint firstItem="GVQ-U9-BvR" firstAttribute="top" secondItem="h5z-aH-LN9" secondAttribute="bottom" constant="19" id="GgA-Jc-lN3"/>
                             <constraint firstItem="9XJ-F5-Bck" firstAttribute="leading" secondItem="xl0-TN-7rv" secondAttribute="trailing" constant="3" id="Jfi-6X-wKp"/>
@@ -876,7 +882,7 @@
                             <constraint firstItem="h5z-aH-LN9" firstAttribute="centerX" secondItem="l95-9J-ShI" secondAttribute="centerX" constant="1" id="Mbp-ZU-jYh"/>
                             <constraint firstItem="ojy-9c-0uk" firstAttribute="leading" secondItem="GVQ-U9-BvR" secondAttribute="trailing" constant="-3" id="RHy-Ur-8IS"/>
                             <constraint firstItem="9XJ-F5-Bck" firstAttribute="top" secondItem="GVQ-U9-BvR" secondAttribute="bottom" constant="2" id="SSX-Sy-LXO"/>
-                            <constraint firstItem="hkP-Br-GRl" firstAttribute="top" secondItem="h5z-aH-LN9" secondAttribute="bottom" constant="209" id="T4p-yR-qMU"/>
+                            <constraint firstItem="hkP-Br-GRl" firstAttribute="top" secondItem="h5z-aH-LN9" secondAttribute="bottom" constant="232" id="T4p-yR-qMU"/>
                             <constraint firstItem="D04-Vy-BZQ" firstAttribute="centerX" secondItem="l95-9J-ShI" secondAttribute="centerX" id="Uq5-Qw-WC5"/>
                             <constraint firstItem="D04-Vy-BZQ" firstAttribute="trailing" secondItem="yQO-6G-rqG" secondAttribute="trailing" id="alL-l3-A1r"/>
                             <constraint firstItem="xl0-TN-7rv" firstAttribute="leading" secondItem="h5z-aH-LN9" secondAttribute="leading" constant="2" id="bgh-6E-spf"/>
@@ -886,7 +892,7 @@
                             <constraint firstItem="D04-Vy-BZQ" firstAttribute="leading" secondItem="yQO-6G-rqG" secondAttribute="leading" id="hXy-nc-3Ee"/>
                             <constraint firstItem="h5z-aH-LN9" firstAttribute="leading" secondItem="hkP-Br-GRl" secondAttribute="trailing" constant="-376" id="hnR-ox-kF0"/>
                             <constraint firstItem="D04-Vy-BZQ" firstAttribute="top" secondItem="l95-9J-ShI" secondAttribute="top" id="njk-C7-Mtw"/>
-                            <constraint firstItem="yQO-6G-rqG" firstAttribute="bottom" secondItem="hkP-Br-GRl" secondAttribute="bottom" constant="7" id="oLd-kb-gOT"/>
+                            <constraint firstItem="yQO-6G-rqG" firstAttribute="bottom" secondItem="hkP-Br-GRl" secondAttribute="bottom" constant="84" id="oLd-kb-gOT"/>
                             <constraint firstItem="xl0-TN-7rv" firstAttribute="leading" secondItem="h5z-aH-LN9" secondAttribute="leading" constant="2" id="teZ-Yr-YuX"/>
                         </constraints>
                     </view>
@@ -950,6 +956,7 @@
         <segue reference="O4M-FF-aB0"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Clear8" width="271" height="186"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="heart" catalog="system" width="128" height="109"/>
@@ -963,6 +970,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
