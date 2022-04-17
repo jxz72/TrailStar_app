@@ -2,7 +2,7 @@
 //  UserInputViewController.swift
 //  TrailStar
 //
-//  Created by Sunny Hao on 4/14/22.
+//  Created by student on 4/14/22.
 //
 
 import UIKit
@@ -50,7 +50,75 @@ class UserInputViewController: UIViewController {
     
     var pickerView = UIPickerView() //picker for states initialized
     let states = ["Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Guam", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Minor Outlying Islands", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Northern Mariana Islands", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "U.S. Virgin Islands", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
-
+    
+/*
+    func getStateAbbr(_ state: String) -> String {
+        var ret: String = "NC"
+        
+        switch state {
+        case "Alabama": ret = "AL"
+        case "Alaska": ret = "AK"
+        case "American Samoa": ret = "AS"
+        case "Arizona": ret = "AZ"
+        case "Arkansas": ret = "AR"
+        case "California": ret = "CA"
+        case "Colorado" : ret = "CO"
+        case "Connecticut": ret = "CT"
+        case "Delaware": ret = "DE"
+        case "District of Columbia": ret = "DC"
+        case "Florida": ret = "FL"
+        case "Georgia": ret = "GA"
+        case "Guam": ret = "GU"
+        case "Hawaii": ret = "HI"
+        case "Idaho": ret = "ID"
+        case "Illinois": ret = "IL"
+        case "Indiana": ret = "IN"
+        case "Iowa": ret = "IA"
+        case "Kansas": ret = "KS"
+        case "Kentucky": ret = "KY"
+        case "Louisiana": ret = "LA"
+        case "Maine": ret = "ME"
+        case "Maryland": ret = "MD"
+        case "Massachusetts": ret = "MA"
+        case "Michigan": ret = "MI"
+        case "Minnesota": ret = "MN"
+        case "Minor Outlying Islands": ret =  "UM"
+        case "Mississippi": ret = "MS"
+        case "Missouri": ret = "MO"
+        case "Montana": ret = "MT"
+        case "Nebraska": ret = "NE"
+        case "Nevada": ret = "NV"
+        case "New Hampshire": ret =  "NH"
+        case "New Jersey": ret = "NJ"
+        case "New Mexico": ret = "NM"
+        case "New York": ret = "NY"
+        case "North Carolina": ret = "NC"
+        case "North Dakota": ret = "ND"
+        case "Northern Mariana Islands": ret = "CM"
+        case "Ohio": ret = "OH"
+        case "Oklahoma": ret = "OK"
+        case "Oregon": ret = "OR"
+        case "Pennsylvania": ret = "PA"
+        case "Puerto Rico": ret = "PR"
+        case "Rhode Island": ret = "RI"
+        case "South Carolina": ret = "SC"
+        case "South Dakota": ret = "SD"
+        case "Tennessee": ret = "TN"
+        case "Texas": ret = "TX"
+        case "U.S. Virgin Islands": ret = "VI"
+        case "Utah": ret = "UT"
+        case "Vermont": ret = "VT"
+        case "Virginia": ret = "VA"
+        case "Washington": ret = "WA"
+        case "West Virginia": ret = "WV"
+        case "Wisconsin": ret = "WI"
+        case "Wyoming" : ret = "WY"
+        default: ret = "NC"
+        }
+        
+        return ret
+    }
+ */
     
     override func viewWillDisappear(_ animated: Bool) {
         searchCity = cityTF.text!
@@ -213,7 +281,7 @@ class UserInputViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-    print("xxxxx")
+        print("xxxxx")
         searchCity = cityTF.text ?? "Durham"
         searchState = stateTF.text ?? "NC"
          
@@ -230,7 +298,6 @@ class UserInputViewController: UIViewController {
         //}
          */
     }
-
 }
 
 
