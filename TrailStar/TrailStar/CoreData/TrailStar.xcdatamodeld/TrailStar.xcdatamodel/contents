@@ -5,11 +5,13 @@
         <attribute name="country" optional="YES" attributeType="String"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="directionsBlurb" optional="YES" attributeType="String"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="length" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lon" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="state" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="TrailDataEntity" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="TrailDataEntity" positionX="-63" positionY="-18" width="128" height="164"/>
     </elements>
 </model>

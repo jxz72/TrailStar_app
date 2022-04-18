@@ -2,7 +2,7 @@
 //  TrailDataEntity+CoreDataProperties.swift
 //  TrailStar
 //
-//  Created by Jeffrey Zhou on 4/16/22.
+//  Created by Jeffrey Zhou on 4/17/22.
 //
 //
 
@@ -23,6 +23,8 @@ extension TrailDataEntity {
     @NSManaged public var length: Float
     @NSManaged public var name: String?
     @NSManaged public var state: String?
+    @NSManaged public var lat: Double
+    @NSManaged public var lon: Double
 
 }
 

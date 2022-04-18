@@ -65,6 +65,8 @@ func addTrailDataEntity(_ trail: TrailData?) {
         trailDataEntity.name = trail.name
         trailDataEntity.directionsBlurb = trail.directionsBlurb
         trailDataEntity.desc = trail.desc
+        trailDataEntity.lat = trail.latitude ?? 0.0
+        trailDataEntity.lon = trail.longitude ?? 0.0
         
         print("in addTrailDataEntity trailDataEntity.desc=\(trailDataEntity.desc)")
         

@@ -74,7 +74,14 @@ class DetailedTrailViewController: UIViewController {
         
         
         //Populate the mapkit
-        populateMap()
+        if let lat = resultTrailList[selectedRow!].latitude, let lon = resultTrailList[selectedRow!].latitude{
+            populateMapLatLon(lat: lat, lon: lon)
+            //populateMapCity()
+        }
+        else{
+            populateMapCity()
+        }
+        
         
         var weatherDays = searchDays
         
@@ -117,9 +124,33 @@ class DetailedTrailViewController: UIViewController {
 
 extension DetailedTrailViewController: CLLocationManagerDelegate, MKMapViewDelegate {
     //var locationManager = CLLocationManager()
+    func populateMapLatLon(lat : Double, lon : Double) {
+        
+        print("populateMapLatLon entered. Coords: \(lat) \(lon)")
+
+        // Do any additional setup after loading the view.
+        mapView.delegate = self
+      
+        let trailCoords = CLLocationCoordinate2D(latitude: lat,
+            longitude: lon)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: trailCoords, span: span)
+        
+        self.mapView.setRegion(region, animated: true)
+       
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = trailCoords
+        annotation.title = resultTrailList[self.selectedRow!].name
+        //annotation.subtitle = "\(resultTrailList[selectedRow!].length) miles"
+        self.mapView.addAnnotation(annotation)
+
+        self.view.layoutIfNeeded()
+      
+    }
     
-    func populateMap() {
-        print("populate map entered")
+    func populateMapCity() {
+        print("populateMapCity map entered")
 
         // Do any additional setup after loading the view.
         //locationManager.delegate = self
@@ -167,7 +198,9 @@ extension DetailedTrailViewController: CLLocationManagerDelegate, MKMapViewDeleg
                 //annotation.subtitle = "\(resultTrailList[selectedRow!].length) miles"
                 self.mapView.addAnnotation(annotation)
 
+                self.view.setNeedsLayout()
                 self.view.layoutIfNeeded()
+
 
                 
             } else {

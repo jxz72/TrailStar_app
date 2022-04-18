@@ -98,9 +98,11 @@ class SearchTableViewController: UITableViewController {
                                            city: trailDataEntity.city ?? "",
                                            state: trailDataEntity.state ?? "",
                                            country: trailDataEntity.country ?? "United States",
-                                           length: trailDataEntity.length ?? 5.0,
+                                           length: trailDataEntity.length,
                                            desc: trailDataEntity.desc ?? "",
-                                           directionsBlurb: trailDataEntity.directionsBlurb ?? "")
+                                           directionsBlurb: trailDataEntity.directionsBlurb ?? "",
+                                           latitude: trailDataEntity.lat,
+                                           longitude: trailDataEntity.lon )
                 
                 resultTrailList.append( trailData )
             }
