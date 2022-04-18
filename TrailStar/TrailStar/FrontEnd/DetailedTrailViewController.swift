@@ -29,6 +29,8 @@ class DetailedTrailViewController: UIViewController {
     @IBOutlet weak var heartButton: UIButton!
     
     @IBAction func heartButtonAction(_ sender: Any) {
+        coreDataChanged = true
+        
         if let trailDataEntry = findTrailDataEntity(resultTrailList[selectedRow!]) {
             
             deleteTrailDataEntity( resultTrailList[selectedRow!] )
@@ -81,7 +83,6 @@ class DetailedTrailViewController: UIViewController {
             
         }
         
-        
         //WeatherAPI call
         do {
             trailDate.text = "On \(searchPresentDate)"
@@ -96,14 +97,7 @@ class DetailedTrailViewController: UIViewController {
         catch {
             print("error: \(error)")
         }
-        
-        
-        
-        
     }
-    
-     
-    
 
     /*
     // MARK: - Navigation
@@ -114,10 +108,6 @@ class DetailedTrailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    
-
 }
 
 

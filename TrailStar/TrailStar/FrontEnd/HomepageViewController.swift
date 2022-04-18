@@ -66,6 +66,8 @@ func addTrailDataEntity(_ trail: TrailData?) {
         trailDataEntity.directionsBlurb = trail.directionsBlurb
         trailDataEntity.desc = trail.description
         
+        print("in addTrailDataEntity trailDataEntity.desc=\(trailDataEntity.desc)")
+        
         do {
             try coreDataContext.save()
             
