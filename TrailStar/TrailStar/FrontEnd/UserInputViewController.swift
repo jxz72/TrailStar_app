@@ -15,6 +15,7 @@ var searchCity: String = "Durham"
 var searchState: String = "NC"
 var searchDays: Int = 0
 var searchDate: String = ""
+var searchLength: Float = 1
 
 var searchPresentDate: String = ""
 
@@ -22,6 +23,8 @@ var resultTrailList: [TrailData] = []
 
 class UserInputViewController: UIViewController {
     
+    
+    var trailLength: Float?
     
     @IBOutlet weak var title1: UILabel!
     @IBOutlet weak var title2: UILabel!
@@ -277,13 +280,32 @@ class UserInputViewController: UIViewController {
             buttonOne.isHighlighted = false
         }
         print(sender.titleLabel?.text)
+        guard (sender.titleLabel != nil && sender.titleLabel!.text != nil) else {
+            return
+        }
+        
+        switch sender.titleLabel!.text!.prefix(1) {
+        case "<":
+            trailLength = 1
+        case "1":
+            trailLength = 2.5
+        case "5":
+            trailLength = 7.5
+        case ">":
+            trailLength = 10
+        default:
+            print("Couldn't access button")
+            break
+        
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         print("xxxxx")
         searchCity = cityTF.text ?? "Durham"
         searchState = stateTF.text ?? "NC"
-        
+        searchLength = trailLength ?? 1.0
         searchPresentDate = dateTF.text ?? "Today"
         /*
     //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){

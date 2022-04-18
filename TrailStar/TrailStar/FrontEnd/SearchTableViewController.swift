@@ -68,6 +68,7 @@ class SearchTableViewController: UITableViewController {
             
                 print("first=\(first)")
                 resultTrailList = try! TrailAPIModule.generateTrailList(latitude: first.latitude, longitude: first.longitude, limit: 15)
+                resultTrailList.sort{generateTrailLengthScore(resultLength: $0.length, optimalLength: searchLength) < generateTrailLengthScore(resultLength: $1.length, optimalLength: searchLength) }
                 print("resultTrailList.count=\(resultTrailList.count)")
             } else {
                 print("first is nil")
