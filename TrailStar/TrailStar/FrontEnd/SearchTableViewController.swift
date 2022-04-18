@@ -151,6 +151,8 @@ class SearchTableViewController: UITableViewController {
         cell.trailLocation?.text = "\(resultTrailList[indexPath.row].city), \(resultTrailList[indexPath.row].state), \(resultTrailList[indexPath.row].country)"
         cell.trailLocation.adjustsFontSizeToFitWidth = true
         
+        cell.trailLength.text = "Trail Length: \(resultTrailList[indexPath.row].length) miles"
+        
         cell.trailImage.layer.cornerRadius = 30
         cell.trailImage.clipsToBounds = true
 
