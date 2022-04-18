@@ -621,7 +621,7 @@
                                     <outlet property="trailImage" destination="Hf7-cZ-89A" id="2pr-AQ-cN9"/>
                                     <outlet property="trailLocation" destination="o2P-vC-TpD" id="WaC-Po-kgk"/>
                                     <outlet property="trailName" destination="rxQ-B2-Anw" id="tYB-UA-xHy"/>
-                                    <segue destination="PwE-dz-iUn" kind="presentation" identifier="yourSegueIdentifer" id="JaE-Tz-dmc"/>
+                                    <segue destination="PwE-dz-iUn" kind="show" identifier="yourSegueIdentifer" id="JaE-Tz-dmc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -645,7 +645,7 @@
             <objects>
                 <viewController id="PwE-dz-iUn" customClass="DetailedTrailViewController" customModule="TrailStar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l95-9J-ShI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSf-u0-t3x">
@@ -656,10 +656,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="D04-Vy-BZQ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="352"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colorado Springs, USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVQ-U9-BvR">
-                                <rect key="frame" x="22" y="386" width="323" height="20"/>
+                                <rect key="frame" x="22" y="413" width="323" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="323" id="pAe-I5-1vF"/>
                                     <constraint firstAttribute="height" constant="20" id="sjH-f2-UK3"/>
@@ -669,7 +669,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xl0-TN-7rv">
-                                <rect key="frame" x="22" y="408" width="88" height="17"/>
+                                <rect key="frame" x="22" y="435" width="88" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="K22-K9-yZ0"/>
                                     <constraint firstAttribute="height" constant="17" id="dku-nK-EJk"/>
@@ -679,7 +679,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt8-qQ-rzn">
-                                <rect key="frame" x="20" y="578" width="116" height="17"/>
+                                <rect key="frame" x="20" y="605" width="116" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="YHu-Mx-JTo"/>
                                     <constraint firstAttribute="width" constant="116" id="pwG-cf-HbH"/>
@@ -696,7 +696,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRa-H9-ybj" userLabel="Orange view">
-                                <rect key="frame" x="19" y="437" width="376" height="127"/>
+                                <rect key="frame" x="19" y="464" width="376" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On 04/02/2022" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHD-7Z-Alv">
                                         <rect key="frame" x="18.5" y="14" width="339" height="15"/>
@@ -823,7 +823,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XJ-F5-Bck" userLabel="Trail Length">
-                                <rect key="frame" x="113" y="408" width="275" height="17"/>
+                                <rect key="frame" x="113" y="435" width="275" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="Kkv-5w-gQu"/>
                                     <constraint firstAttribute="height" constant="17" id="fpK-zc-aD9"/>
@@ -833,7 +833,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hkP-Br-GRl">
-                                <rect key="frame" x="18" y="599" width="378" height="159"/>
+                                <rect key="frame" x="18" y="626" width="378" height="103"/>
                                 <color key="backgroundColor" red="1" green="0.84029954139999996" blue="0.63201302250000002" alpha="0.43450200162975994" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">The ride up High Drive is about a mile and completely uphill.  At the top of the hill, take the trail to the right (labeled Penrose Multi-use trail 665).  The other users of this trail include motorcycles so be careful!  The trail is very well maintained and hard to lose.  Alot of loose gravel, banked turns,  and crazy mogul like jumps make this trail awesome.  The trail goes down about 3 miles before ending at a parking lot.  Go out the parking lot and turn right onto the gravel road.  This road leads back to your car and goes through two tunnels and some high rock canyons.  Very scenic, very fast, and very fun.  Do the loop a couple times for a good workout.</string>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -846,17 +846,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVw-hB-dM9">
-                                <rect key="frame" x="20" y="27" width="33" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="arrow.backward" catalog="system" symbolScale="large"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duke Forest " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5z-aH-LN9">
-                                <rect key="frame" x="20" y="338" width="376" height="29"/>
+                                <rect key="frame" x="20" y="365" width="376" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="C5H-sb-Ht7"/>
                                     <constraint firstAttribute="width" constant="376" id="DLz-nL-p2j"/>
@@ -868,7 +859,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojy-9c-0uk">
-                                <rect key="frame" x="342" y="381" width="46" height="31"/>
+                                <rect key="frame" x="342" y="408" width="46" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
                                     <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
@@ -973,7 +964,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Clear8" width="271" height="186"/>
-        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="coupleNew" width="2281" height="1119.3333740234375"/>
         <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="heart" catalog="system" width="128" height="109"/>

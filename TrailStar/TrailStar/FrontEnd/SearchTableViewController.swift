@@ -37,11 +37,7 @@ class SearchTableViewController: UITableViewController {
         
         geocoder.geocodeAddressString("\(searchCity), \(searchState)") {
             (placemarks, error) in
-            
-            
-            print("enter completion")
-            
-            
+                        
             guard error == nil else {
                 print("geo error=\(error)")
                 return
@@ -58,26 +54,9 @@ class SearchTableViewController: UITableViewController {
             
             self.tableView.reloadData()
             
-            return
-            
         }
-        
     }
 
-    func loadTrailDataForSearch1() {
-        do {
-            //resultTrailList = try TrailSearchModule.getTrailResults(city: searchCity, state: //searchState, country: "USA", limit: 1, date: searchDate, days: searchDays)
-            resultTrailList.removeAll()
-            resultTrailList = try localSearchModule.getNearbyTrails()
-            //resultTrailList = try TrailSearchModule.getTrailResults(city: searchCity, state: searchState, country: "USA", limit: 1, date: searchDate, days: searchDays)
-
-        }
-        catch{
-            print("Error in API calls \(error)")
-        }
-
-    }
-    
     func loadTrailDataForHistory() {
         
         resultTrailList.removeAll()
@@ -97,8 +76,6 @@ class SearchTableViewController: UITableViewController {
             for trailDataEntity in result as! [TrailDataEntity] {
 
                 let trailData = TrailData( name: trailDataEntity.name ?? "", city: trailDataEntity.city ?? "", state: trailDataEntity.state ?? "", country: trailDataEntity.country ?? "United States", length: trailDataEntity.length ?? 5.0, description: trailDataEntity.description ?? "", directionsBlurb: trailDataEntity.directionsBlurb ?? "")
-
-
                 
                 resultTrailList.append( trailData )
             }
@@ -107,6 +84,8 @@ class SearchTableViewController: UITableViewController {
             
             print("loadTrailDataForHistory Failed")
         }
+        
+        self.tableView.reloadData()
         
     }
 
@@ -200,8 +179,6 @@ class SearchTableViewController: UITableViewController {
     }
     */
 
-    var valueToPass:String!
-
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         //println("You selected cell #\(indexPath.row)!")
 
@@ -209,21 +186,13 @@ class SearchTableViewController: UITableViewController {
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
 
-        valueToPass = "currentCell.textLabel?.text"
         performSegue(withIdentifier: "yourSegueIdentifer", sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-    
-    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        let viewController = segue.destination as! DetailedTrailViewController
+        let selectedRow = tableView.indexPathForSelectedRow?.row
 
-        //if (segue.identifier == "yourSegueIdentifer") {
-            // initialize new view controller and cast it as your view controller
-            let viewController = segue.destination as! DetailedTrailViewController
-            let selectedRow = tableView.indexPathForSelectedRow?.row
-            // your new view controller should have property that will store passed value
-            //print("xxx \(valueToPass)")
         viewController.selectedRow = selectedRow
-        //}
     }
 }
