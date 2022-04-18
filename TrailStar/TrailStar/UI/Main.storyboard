@@ -625,6 +625,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="trailImage" destination="Hf7-cZ-89A" id="2pr-AQ-cN9"/>
+                                    <outlet property="trailLength" destination="U0r-nA-Swy" id="Q5v-G1-cq7"/>
                                     <outlet property="trailLocation" destination="o2P-vC-TpD" id="WaC-Po-kgk"/>
                                     <outlet property="trailName" destination="rxQ-B2-Anw" id="tYB-UA-xHy"/>
                                     <segue destination="PwE-dz-iUn" kind="show" identifier="yourSegueIdentifer" id="JaE-Tz-dmc"/>
