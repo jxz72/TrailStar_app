@@ -153,7 +153,7 @@ class SearchTableViewController: UITableViewController {
         cell.trailLocation.adjustsFontSizeToFitWidth = true
         
         cell.trailLength.text = "Trail Length: \(resultTrailList[indexPath.row].length) miles"
-        
+        cell.trailImage.image = StockImageModule.getWeatherImages(weatherType: "Clear").randomElement()!
         cell.trailImage.layer.cornerRadius = 30
         cell.trailImage.clipsToBounds = true
 
