@@ -16,6 +16,8 @@ class SearchTableViewController: UITableViewController {
         table.dataSource = self
         table.delegate = self
         table.rowHeight = 178
+        //table.rowHeight = UITableView.automaticDimension
+        
         
         listTitle.text = historySelected ? "Trails Saved" : "Trails Found"
         
@@ -152,10 +154,13 @@ class SearchTableViewController: UITableViewController {
         cell.trailLocation?.text = "\(resultTrailList[indexPath.row].city), \(resultTrailList[indexPath.row].state), \(resultTrailList[indexPath.row].country)"
         cell.trailLocation.adjustsFontSizeToFitWidth = true
         
-        cell.trailLength.text = "Trail Length: \(resultTrailList[indexPath.row].length) miles"
+        cell.trailLength.text = "Trail Length: \(resultTrailList[indexPath.row].length) mi"
         cell.trailImage.image = StockImageModule.getWeatherImages(weatherType: "Clear").randomElement()!
         cell.trailImage.layer.cornerRadius = 30
         cell.trailImage.clipsToBounds = true
+        //cell.isUserInteractionEnabled = false
+        //cell.layoutIfNeeded()
+
 
         return cell
     }
