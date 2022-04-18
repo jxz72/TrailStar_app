@@ -146,7 +146,15 @@ class UserInputViewController: UIViewController {
             }
             searchDays = dateNumber
             dateTF.inputView = datePicker
-            dateTF.text = formatDate(date: Date()) // today's date
+            dateTF.placeholder = "Enter a date"
+            cityTF.layer.borderWidth = 0.5
+            //dateTF.text = formatDate(date: Date())
+            //dateTF.placeholder = "Choose a date here"
+            //formatDate(date: Date()) // today's date
+            dateTF.layer.borderWidth = 0.5
+            dateTF.layer.cornerRadius = 5
+            //dateTF.BorderStyle = .roundedRect
+            dateTF.layer.borderColor = UIColor.systemOrange.cgColor
             
             
             searchDate = formatDate2(date: Date())
@@ -155,6 +163,9 @@ class UserInputViewController: UIViewController {
             cityTF.autocorrectionType = .yes
             cityTF.textContentType = .addressCity
             cityTF.placeholder = "Enter city name here"
+            cityTF.layer.borderWidth = 0.5
+            cityTF.layer.cornerRadius = 5
+            cityTF.layer.borderColor = UIColor.systemOrange.cgColor
             print(cityTF.inputView as Any)
             cityString = cityTF.text!
             searchCity = cityString
@@ -164,7 +175,10 @@ class UserInputViewController: UIViewController {
             pickerView.dataSource = self
             pickerView.delegate = self
             stateTF.inputView = pickerView
-            stateTF.placeholder = "Enter State name here"
+            stateTF.placeholder = "Enter state name here"
+            stateTF.layer.borderWidth = 0.5
+            stateTF.layer.cornerRadius = 5
+            stateTF.layer.borderColor = UIColor.systemOrange.cgColor
             
             //toolbar (cancel and done buttons)
             let toolBar = UIToolbar()
