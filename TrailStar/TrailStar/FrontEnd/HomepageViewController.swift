@@ -77,6 +77,7 @@ func addTrailDataEntity(_ trail: TrailData?) {
 
 func deleteTrailDataEntity(_ trail: TrailData?) {
     guard let trail = trail else {
+        print("in deleteTrailDataEntity trail is nil")
         return
     }
     
@@ -97,15 +98,14 @@ func deleteTrailDataEntity(_ trail: TrailData?) {
     do {
         let result = try coreDataContext.fetch(request)
         
-        if ( result.count > 0 ) {
-            trailDataEntity = result.first as? TrailDataEntity
+        for rec in result {
+            coreDataContext.delete( rec as! NSManagedObject )
+            print("delete one rec")
         }
+        
+        try coreDataContext.save()
     } catch {
         print("addTrailDataEntity fetch failed error = \(error)" )
-    }
-    
-    if let trailDataEntity = trailDataEntity {
-        coreDataContext.delete( trailDataEntity )
     }
 }
 
