@@ -95,7 +95,7 @@ class DetailedTrailViewController: UIViewController {
             print("Weather For Trail: \(weatherForTrail)")
             trailTemperature.text = "\(round(weatherForTrail.temperature))F"
             trailConditions.text = weatherForTrail.conditions
-            trailRain.text = "\(weatherForTrail.rainChance / 100) %"
+            trailRain.text = "\(weatherForTrail.rainChance) %"
             
         }
         catch {
