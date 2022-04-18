@@ -58,7 +58,7 @@ class DetailedTrailViewController: UIViewController {
         trailLocation.text = "\(resultTrailList[selectedRow!].city), \(resultTrailList[selectedRow!].state), USA"
         trailLength.text = "\(resultTrailList[selectedRow!].length) mi"
         
-        trailDescription.text = "    " + "\(resultTrailList[selectedRow!].description)"
+        trailDescription.text = "\(resultTrailList[selectedRow!].description)"
         //cell.trailName.text = resultTrailList[indexPath.row].name
         trailConditions.numberOfLines = 3
         trailConditions.translatesAutoresizingMaskIntoConstraints = false
