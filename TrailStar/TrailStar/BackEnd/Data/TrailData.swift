@@ -11,7 +11,7 @@ struct TrailData {
     var state: String
     var country: String
     var length: Float
-    var description: String
+    var desc: String
     var directionsBlurb: String
     var latitude: Double?
     var longitude: Double?
@@ -25,7 +25,7 @@ let TEST_TRAIL_DATA: TrailData = TrailData(
     state: "state",
     country: "country",
     length: 0.0,
-    description: "description",
+    desc: "description",
     directionsBlurb: "directions",
     latitude: 0,
     longitude: 0

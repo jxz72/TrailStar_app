@@ -139,7 +139,7 @@ class TrailAPIModule {
             state: encoding.state,
             country: encoding.country,
             length: Float(encoding.activities.hiking.length)!,
-            description: encoding.trailsDescription,
+            desc: encoding.trailsDescription,
             directionsBlurb: encoding.directions,
             latitude: Double(encoding.lat),
             longitude: Double(encoding.lon)
