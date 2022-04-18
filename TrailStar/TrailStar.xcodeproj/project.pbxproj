@@ -32,7 +32,6 @@
 		5ECF9FB3280B1B2900E45E6A /* TrailStar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF9FB1280B1B2900E45E6A /* TrailStar.xcdatamodeld */; };
 		A02FF8862808B25E00B63B69 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FF8842808B25D00B63B69 /* SearchTableViewController.swift */; };
 		A02FF8872808B25E00B63B69 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FF8852808B25E00B63B69 /* SearchTableViewCell.swift */; };
-		A07BB82F280CE4BB002C6EE8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07BB82E280CE4BA002C6EE8 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +62,6 @@
 		5ECF9FB2280B1B2900E45E6A /* TrailStar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrailStar.xcdatamodel; sourceTree = "<group>"; };
 		A02FF8842808B25D00B63B69 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		A02FF8852808B25E00B63B69 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		A07BB82E280CE4BA002C6EE8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				3F75D44A2807D30700DE21AB /* Main.storyboard */,
-				A07BB82E280CE4BA002C6EE8 /* Launch Screen.storyboard */,
 				5E48F8BB27EADAC300893A3F /* Assets.xcassets */,
 			);
 			path = UI;
@@ -249,7 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A07BB82F280CE4BB002C6EE8 /* Launch Screen.storyboard in Resources */,
 				3F75D44B2807D30700DE21AB /* Main.storyboard in Resources */,
 				5E48F8BC27EADAC300893A3F /* Assets.xcassets in Resources */,
 			);
@@ -415,8 +411,9 @@
 				DEVELOPMENT_TEAM = 34873VWVYP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrailStar/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"We use this to find trails nearby\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"We use this to find trails nearby\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -427,6 +424,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
+				NEW_SETTING1 = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeff.guy.TrailStar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -445,8 +443,9 @@
 				DEVELOPMENT_TEAM = 34873VWVYP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrailStar/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"We use this to find trails nearby\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"We use this to find trails nearby\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -457,6 +456,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
+				NEW_SETTING1 = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeff.guy.TrailStar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
