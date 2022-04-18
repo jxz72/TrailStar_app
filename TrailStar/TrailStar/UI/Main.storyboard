@@ -27,7 +27,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkQ-Sf-dte">
                                 <rect key="frame" x="0.0" y="174" width="414" height="722"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the first trail near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPL-u9-o64">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Falls Lake State Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPL-u9-o64">
                                         <rect key="frame" x="41.5" y="304" width="302" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="302" id="CYL-q6-q6Y"/>
@@ -40,7 +40,7 @@
                                         <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the second trail near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3r-uB-TEh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lake Crabtree County Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3r-uB-TEh">
                                         <rect key="frame" x="41.5" y="558" width="278.5" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="278.5" id="7Fl-tL-fqq"/>
@@ -54,15 +54,13 @@
                                             <constraint firstAttribute="width" constant="271.5" id="ULo-Ri-HRp"/>
                                             <constraint firstAttribute="height" constant="27" id="ywc-Ek-bom"/>
                                         </constraints>
-                                        <string key="text">City, State 2
-
-
+                                        <string key="text">Morrisville, North Carolina
 </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durham, North Carolina" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoq-1f-SbL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wake Forest, North Carolina" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoq-1f-SbL">
                                         <rect key="frame" x="41.5" y="333" width="271" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="V7T-5A-XHh"/>
@@ -110,7 +108,7 @@
                                             <constraint firstAttribute="width" constant="333" id="jTh-aq-Q7i"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 miles" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bel-s9-aIy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16 miles" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bel-s9-aIy">
                                         <rect key="frame" x="317" y="587" width="56" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -122,7 +120,7 @@
                                             <constraint firstAttribute="width" constant="176" id="K92-GB-Gsr"/>
                                             <constraint firstAttribute="height" constant="16" id="woW-P5-PKf"/>
                                         </constraints>
-                                        <string key="text"> 10 miles
+                                        <string key="text"> 3.0 miles
 
 </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -229,6 +227,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="dUz-Hr-irM" kind="relationship" relationship="viewControllers" id="WGP-Th-jhd"/>
@@ -678,7 +677,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="D04-Vy-BZQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="352"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colorado Springs, USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVQ-U9-BvR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durham, North Carolina, USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVQ-U9-BvR">
                                 <rect key="frame" x="22" y="413" width="323" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="323" id="pAe-I5-1vF"/>
@@ -842,7 +841,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XJ-F5-Bck" userLabel="Trail Length">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XJ-F5-Bck" userLabel="Trail Length">
                                 <rect key="frame" x="113" y="435" width="275" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="Kkv-5w-gQu"/>
