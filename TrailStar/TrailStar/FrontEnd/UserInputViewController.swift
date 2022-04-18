@@ -20,11 +20,6 @@ var searchPresentDate: String = ""
 
 var resultTrailList: [TrailData] = []
 
-
-
-
-
-
 class UserInputViewController: UIViewController {
     
     

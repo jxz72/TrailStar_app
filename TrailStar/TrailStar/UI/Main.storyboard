@@ -646,7 +646,7 @@
             </objects>
             <point key="canvasLocation" x="708.69565217391312" y="-676.33928571428567"/>
         </scene>
-        <!--Title-->
+        <!--Detailed Trail View Controller-->
         <scene sceneID="pb0-29-SC8">
             <objects>
                 <viewController id="PwE-dz-iUn" customClass="DetailedTrailViewController" customModule="TrailStar" customModuleProvider="target" sceneMemberID="viewController">
@@ -839,7 +839,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hkP-Br-GRl">
-                                <rect key="frame" x="18" y="599" width="378" height="159"/>
+                                <rect key="frame" x="18" y="626" width="378" height="103"/>
                                 <color key="backgroundColor" red="1" green="0.84029954139999996" blue="0.63201302250000002" alpha="0.43450200162975994" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">The ride up High Drive is about a mile and completely uphill.  At the top of the hill, take the trail to the right (labeled Penrose Multi-use trail 665).  The other users of this trail include motorcycles so be careful!  The trail is very well maintained and hard to lose.  Alot of loose gravel, banked turns,  and crazy mogul like jumps make this trail awesome.  The trail goes down about 3 miles before ending at a parking lot.  Go out the parking lot and turn right onto the gravel road.  This road leads back to your car and goes through two tunnels and some high rock canyons.  Very scenic, very fast, and very fun.  Do the loop a couple times for a good workout.</string>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -906,7 +906,7 @@
                             <constraint firstItem="xl0-TN-7rv" firstAttribute="leading" secondItem="h5z-aH-LN9" secondAttribute="leading" constant="2" id="teZ-Yr-YuX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="p4h-V5-xCL"/>
+                    <navigationItem key="navigationItem" id="p4h-V5-xCL"/>
                     <connections>
                         <outlet property="HeartButton" destination="ojy-9c-0uk" id="Mdw-xd-EUR"/>
                         <outlet property="heartButton" destination="ojy-9c-0uk" id="mx3-23-l4F"/>

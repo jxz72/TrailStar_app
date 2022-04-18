@@ -2,6 +2,8 @@ import UIKit
 import CoreData
 import CoreLocation
 
+var coreDataChanged = false
+
 class SearchTableViewController: UITableViewController {
 
     @IBOutlet var table: UITableView!
@@ -16,20 +18,39 @@ class SearchTableViewController: UITableViewController {
         table.rowHeight = 178
         
         listTitle.text = historySelected ? "Trails Saved" : "Trails Found"
-
-
-         resultTrailList.removeAll()
-
-         if ( historySelected ) {
-             loadTrailDataForHistory()
-         }
-         else {
-             loadTrailDataForSearch()
-         }
+        
+        reloadCoreData()
+        
+        print("SearchTableViewController viewDidLoad")
      }
+       
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        print("viewWillAppear in coreDataChanged=\(coreDataChanged)")
+        if ( coreDataChanged ) {
+            print("calling reloadData in viewWillAppear")
+            coreDataChanged = false
+            reloadCoreData()
+        }
+        
+    }
+    
      
+    func reloadCoreData() {
+        print("in reloadCoreData")
+        resultTrailList.removeAll()
+
+        if ( historySelected ) {
+            loadTrailDataForHistory()
+        }
+        else {
+            loadTrailDataForSearch()
+        }
+    }
     
     func loadTrailDataForSearch() {
+        print("in loadTrailDataForSearch")
 
         let geocoder = CLGeocoder()
         
@@ -43,23 +64,21 @@ class SearchTableViewController: UITableViewController {
                 return
             }
             
-            
             if let first = placemarks?.first?.location?.coordinate {
             
-                print("firt=\(first)")
-            resultTrailList = try! TrailAPIModule.generateTrailList(latitude: first.latitude, longitude: first.longitude, limit: 15)
+                print("first=\(first)")
+                resultTrailList = try! TrailAPIModule.generateTrailList(latitude: first.latitude, longitude: first.longitude, limit: 15)
+                print("resultTrailList.count=\(resultTrailList.count)")
             } else {
                 print("first is nil")
             }
             
             self.tableView.reloadData()
-            
         }
     }
 
     func loadTrailDataForHistory() {
-        
-        resultTrailList.removeAll()
+        print("in loadTrailDataForHistory")
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let container = appDelegate.persistentContainer
@@ -75,7 +94,13 @@ class SearchTableViewController: UITableViewController {
             
             for trailDataEntity in result as! [TrailDataEntity] {
 
-                let trailData = TrailData( name: trailDataEntity.name ?? "", city: trailDataEntity.city ?? "", state: trailDataEntity.state ?? "", country: trailDataEntity.country ?? "United States", length: trailDataEntity.length ?? 5.0, description: trailDataEntity.description ?? "", directionsBlurb: trailDataEntity.directionsBlurb ?? "")
+                let trailData = TrailData( name: trailDataEntity.name ?? "",
+                                           city: trailDataEntity.city ?? "",
+                                           state: trailDataEntity.state ?? "",
+                                           country: trailDataEntity.country ?? "United States",
+                                           length: trailDataEntity.length ?? 5.0,
+                                           description: trailDataEntity.description ?? "",
+                                           directionsBlurb: trailDataEntity.directionsBlurb ?? "")
                 
                 resultTrailList.append( trailData )
             }
@@ -86,7 +111,6 @@ class SearchTableViewController: UITableViewController {
         }
         
         self.tableView.reloadData()
-        
     }
 
     
