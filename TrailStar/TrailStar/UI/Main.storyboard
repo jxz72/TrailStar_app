@@ -597,7 +597,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clear8" translatesAutoresizingMaskIntoConstraints="NO" id="Hf7-cZ-89A">
-                                            <rect key="frame" x="26" y="12" width="136" height="161"/>
+                                            <rect key="frame" x="26" y="12" width="136" height="155"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a very long name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxQ-B2-Anw">
@@ -839,7 +839,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hkP-Br-GRl">
-                                <rect key="frame" x="18" y="626" width="378" height="103"/>
+                                <rect key="frame" x="18" y="626" width="378" height="187"/>
                                 <color key="backgroundColor" red="1" green="0.84029954139999996" blue="0.63201302250000002" alpha="0.43450200162975994" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">The ride up High Drive is about a mile and completely uphill.  At the top of the hill, take the trail to the right (labeled Penrose Multi-use trail 665).  The other users of this trail include motorcycles so be careful!  The trail is very well maintained and hard to lose.  Alot of loose gravel, banked turns,  and crazy mogul like jumps make this trail awesome.  The trail goes down about 3 miles before ending at a parking lot.  Go out the parking lot and turn right onto the gravel road.  This road leads back to your car and goes through two tunnels and some high rock canyons.  Very scenic, very fast, and very fun.  Do the loop a couple times for a good workout.</string>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -902,7 +902,7 @@
                             <constraint firstItem="D04-Vy-BZQ" firstAttribute="leading" secondItem="yQO-6G-rqG" secondAttribute="leading" id="hXy-nc-3Ee"/>
                             <constraint firstItem="h5z-aH-LN9" firstAttribute="leading" secondItem="hkP-Br-GRl" secondAttribute="trailing" constant="-376" id="hnR-ox-kF0"/>
                             <constraint firstItem="D04-Vy-BZQ" firstAttribute="top" secondItem="l95-9J-ShI" secondAttribute="top" id="njk-C7-Mtw"/>
-                            <constraint firstItem="yQO-6G-rqG" firstAttribute="bottom" secondItem="hkP-Br-GRl" secondAttribute="bottom" constant="84" id="oLd-kb-gOT"/>
+                            <constraint firstItem="yQO-6G-rqG" firstAttribute="bottom" secondItem="hkP-Br-GRl" secondAttribute="bottom" id="oLd-kb-gOT"/>
                             <constraint firstItem="xl0-TN-7rv" firstAttribute="leading" secondItem="h5z-aH-LN9" secondAttribute="leading" constant="2" id="teZ-Yr-YuX"/>
                         </constraints>
                     </view>
