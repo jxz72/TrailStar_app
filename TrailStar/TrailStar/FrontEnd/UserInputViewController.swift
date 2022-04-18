@@ -154,6 +154,7 @@ class UserInputViewController: UIViewController {
             //cityTF
             cityTF.autocorrectionType = .yes
             cityTF.textContentType = .addressCity
+            cityTF.placeholder = "Enter city name here"
             print(cityTF.inputView as Any)
             cityString = cityTF.text!
             searchCity = cityString
@@ -163,6 +164,7 @@ class UserInputViewController: UIViewController {
             pickerView.dataSource = self
             pickerView.delegate = self
             stateTF.inputView = pickerView
+            stateTF.placeholder = "Enter State name here"
             
             //toolbar (cancel and done buttons)
             let toolBar = UIToolbar()
