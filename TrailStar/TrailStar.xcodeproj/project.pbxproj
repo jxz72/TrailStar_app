@@ -25,6 +25,7 @@
 		5E48F8B527EADABE00893A3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B427EADABD00893A3F /* SceneDelegate.swift */; };
 		5E48F8B727EADABE00893A3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F8B627EADABE00893A3F /* ViewController.swift */; };
 		5E48F8BC27EADAC300893A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E48F8BB27EADAC300893A3F /* Assets.xcassets */; };
+		5E730BFC280D03EE00B67A1D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E730BFB280D03EE00B67A1D /* Launch Screen.storyboard */; };
 		5E974EEC280BC1BD00AEF4EC /* TrailDataEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E974EEA280BC1BD00AEF4EC /* TrailDataEntity+CoreDataClass.swift */; };
 		5E974EED280BC1BD00AEF4EC /* TrailDataEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E974EEB280BC1BD00AEF4EC /* TrailDataEntity+CoreDataProperties.swift */; };
 		5E974EEF280BFCBE00AEF4EC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E974EEE280BFCBE00AEF4EC /* TabBarController.swift */; };
@@ -55,6 +56,7 @@
 		5E48F8B627EADABE00893A3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E48F8BB27EADAC300893A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E48F8C027EADAC300893A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E730BFB280D03EE00B67A1D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5E974EEA280BC1BD00AEF4EC /* TrailDataEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrailDataEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		5E974EEB280BC1BD00AEF4EC /* TrailDataEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrailDataEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		5E974EEE280BFCBE00AEF4EC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		3F75D3FC27F168E700DE21AB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5E730BFB280D03EE00B67A1D /* Launch Screen.storyboard */,
 				3F75D44A2807D30700DE21AB /* Main.storyboard */,
 				5E48F8BB27EADAC300893A3F /* Assets.xcassets */,
 			);
@@ -246,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E730BFC280D03EE00B67A1D /* Launch Screen.storyboard in Resources */,
 				3F75D44B2807D30700DE21AB /* Main.storyboard in Resources */,
 				5E48F8BC27EADAC300893A3F /* Assets.xcassets in Resources */,
 			);

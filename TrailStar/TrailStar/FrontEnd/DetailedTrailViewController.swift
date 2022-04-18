@@ -62,7 +62,11 @@ class DetailedTrailViewController: UIViewController {
         trailLocation.text = "\(resultTrailList[selectedRow!].city), \(resultTrailList[selectedRow!].state), USA"
         trailLength.text = "\(resultTrailList[selectedRow!].length) mi"
         
-        trailDescription.text = "\(resultTrailList[selectedRow!].description)"
+        let trail: TrailData = resultTrailList[selectedRow!]
+        print("trail=\(trail)")
+        let desc = trail.desc
+        print("desc=\(desc)")
+        trailDescription.text = "\(desc)"
         //cell.trailName.text = resultTrailList[indexPath.row].name
         trailConditions.numberOfLines = 3
         trailConditions.translatesAutoresizingMaskIntoConstraints = false
@@ -169,9 +173,6 @@ extension DetailedTrailViewController: CLLocationManagerDelegate, MKMapViewDeleg
             } else {
                 print("first is nil")
             }
-            
-            
-            
     }
     
     }
