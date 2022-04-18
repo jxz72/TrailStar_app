@@ -26,6 +26,9 @@ func generateJWScore (trailResult: TrailSearchResult, optimalTrail: TrailData, o
 }
 
 func generateTrailLengthScore(resultLength: Float, optimalLength: Float) -> Int {
+    if (resultLength == 0) {
+        return MAX_SCORE
+    }
     return Int(
         pow(resultLength - optimalLength, 2)
         * optimalLength
