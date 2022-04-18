@@ -133,7 +133,6 @@ class HomepageViewController: UIViewController {
     @IBOutlet weak var Descrip: UILabel!
     
     
-    @IBOutlet weak var Description2: UILabel!
     
     var trail1: TrailData?
     var trail2: TrailData?
@@ -180,8 +179,8 @@ class HomepageViewController: UIViewController {
             trail2 = nearbyTrails.randomElement()
             
             if let trail2 = trail2 {
-                Description2.text = trail2.name
-                Description2.adjustsFontSizeToFitWidth = true
+                Descrip2.text = trail2.name
+                Descrip2.adjustsFontSizeToFitWidth = true
                 traillength2.text = String(trail2.length) + " mi"
                 trailplace2.text = String(trail2.city + ", " + trail2.state)
             }
@@ -199,6 +198,25 @@ class HomepageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if findTrailDataEntity(trail1) != nil {
+            let heartImage = UIImage(systemName: "heart.fill")
+            button1.setImage(heartImage, for: .normal)
+        }
+
+        if findTrailDataEntity(trail2) != nil {
+            let heartImage = UIImage(systemName: "heart.fill")
+            button2.setImage(heartImage, for: .normal)
+        }
+        
+    }
+
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         latitude = manager.location!.coordinate.latitude
@@ -206,18 +224,31 @@ class HomepageViewController: UIViewController {
         
     }
     
-    
-    func buttonAddTrail(_ trail: TrailData?) {
-        addTrailDataEntity( trail )
+    func buttonAddTrail(_ trail: TrailData?, _ sender: UIButton) {
+        coreDataChanged = true
+        
+        if findTrailDataEntity(trail) != nil {
+            
+            deleteTrailDataEntity( trail )
+            
+            let heartImage = UIImage(systemName: "heart")
+            sender.setImage(heartImage, for: .normal)
+        }
+        else {
+            addTrailDataEntity( trail )
+            
+            let heartImage = UIImage(systemName: "heart.fill")
+            sender.setImage(heartImage, for: .normal)
+        }
     }
-    
+
     @IBAction func button1AddTrail(_ sender: Any) {
-        buttonAddTrail(trail1)
+        buttonAddTrail(trail1, button1)
     }
     
     
     @IBAction func button2AddTrail(_ sender: Any) {
-        buttonAddTrail(trail2)
+        buttonAddTrail(trail1, button2)
     }
     
     /*

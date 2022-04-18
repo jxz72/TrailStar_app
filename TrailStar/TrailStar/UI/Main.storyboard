@@ -208,6 +208,8 @@
                         <outlet property="Descrip2" destination="b3r-uB-TEh" id="epK-5N-edP"/>
                         <outlet property="TrailImage1" destination="P32-xC-EIm" id="snN-Tx-f2U"/>
                         <outlet property="TrailImage2" destination="iKB-ne-NAs" id="Gi6-CK-BHU"/>
+                        <outlet property="button1" destination="uRF-Ah-Edg" id="b6m-co-2Z1"/>
+                        <outlet property="button2" destination="fCU-70-Cl3" id="agX-BA-B3s"/>
                         <outlet property="mainView" destination="OkQ-Sf-dte" id="0SX-rk-ebu"/>
                         <outlet property="traillength" destination="LQ3-IH-96U" id="r8x-y3-oIi"/>
                         <outlet property="traillength2" destination="bel-s9-aIy" id="dni-al-6PL"/>
