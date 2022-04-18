@@ -52,7 +52,7 @@ class TrailSearchModule {
     //date must be in form: yyyy-mm-dd. For example, April 5th 2022 is: 2022-04-05
     //days = number of days in advance that we are predicting. Can go from 0 to 2.
     //0 means just today, 1 means tomorrow, and 2 means two days from now.
-    static func getTrailResults(city: String, state: String, country: String, limit: Int=30, date: String, days: Int) throws -> [TrailData] {
+    static func getTrailResults(city: String, state: String, country: String, limit: Int=30, date: String, days: Int, length: Float?) throws -> [TrailData] {
         
         /*
         let geoloc = getGeoLocation(city: city, state: state)
@@ -60,7 +60,7 @@ class TrailSearchModule {
         print("xx\(geoloc!.latitude)")
         */
          
-        let trailList: [TrailData] = try TrailAPIModule.generateTrailList(city: city, state: state, country: country, limit: limit)
+        var trailList: [TrailData] = try TrailAPIModule.generateTrailList(city: city, state: state, country: country, limit: limit)
         
         /*
         var trailResultList: [TrailSearchResult] = []
@@ -75,6 +75,10 @@ class TrailSearchModule {
         
         return trailResultList
         */
+        if (length != nil) {
+            trailList.sort{generateTrailLengthScore(resultLength: $0.length, optimalLength: length!) < generateTrailLengthScore(resultLength: $1.length, optimalLength: length!) }
+        }
+        
         return trailList
     }
     

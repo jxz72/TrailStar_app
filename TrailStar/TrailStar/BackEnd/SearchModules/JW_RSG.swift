@@ -35,3 +35,4 @@ func generateTrailLengthScore(resultLength: Float, optimalLength: Float) -> Int 
 func generateDescription(score: Int) -> String {
     return DESCRIPTION_RANGES[(score * (DESCRIPTION_RANGES.count-1))/MAX_SCORE]
 }
+
