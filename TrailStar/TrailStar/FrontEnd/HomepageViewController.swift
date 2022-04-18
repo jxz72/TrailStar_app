@@ -175,7 +175,6 @@ class HomepageViewController: UIViewController {
                 Descrip.adjustsFontSizeToFitWidth = true
                 traillength.text = String(trail1.length) + " mi"
                 trailplace.text = String(trail1.city + ", " + trail1.state)
-                Descrip.text = trail1.desc
             }
             
             trail2 = nearbyTrails.randomElement()
@@ -185,7 +184,6 @@ class HomepageViewController: UIViewController {
                 Description2.adjustsFontSizeToFitWidth = true
                 traillength2.text = String(trail2.length) + " mi"
                 trailplace2.text = String(trail2.city + ", " + trail2.state)
-                Descrip2.text = trail2.desc
             }
             
         } catch APIError.locationParsingFailure {
