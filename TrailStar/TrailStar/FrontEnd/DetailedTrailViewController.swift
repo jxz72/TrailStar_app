@@ -19,6 +19,8 @@ class DetailedTrailViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var trailDate: UILabel!
+    
     @IBOutlet weak var trailTemperature: UILabel!
     @IBOutlet weak var trailConditions: UILabel!
     @IBOutlet weak var trailRain: UILabel!
@@ -82,6 +84,8 @@ class DetailedTrailViewController: UIViewController {
         
         //WeatherAPI call
         do {
+            trailDate.text = "On \(searchPresentDate)"
+            
             let weatherForTrail: WeatherData = try WeatherAPI.generateWeather(trailData: resultTrailList[selectedRow!], date: searchDate, days: weatherDays)
             print("Weather For Trail: \(weatherForTrail)")
             trailTemperature.text = "\(round(weatherForTrail.temperature))F"
@@ -89,7 +93,7 @@ class DetailedTrailViewController: UIViewController {
             trailRain.text = "\(weatherForTrail.rainChance / 100) %"
             
         }
-        catch{
+        catch {
             print("error: \(error)")
         }
         
